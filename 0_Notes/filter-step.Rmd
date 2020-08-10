@@ -1,0 +1,69 @@
+---
+title: "Exon-Cap-Filtering"
+author: "Jennifer Gardner"
+date: "7/2/2020"
+output: html_document
+---
+
+## Create Genious Table
+From assembled nf folder
+File -> new folder -> nf
+Go to nf folder in explorer -> select all -> drag and drop to import window in genious
+When asked select import as lists
+When asked about alignments -> import as separate sequences
+Will then get a table with summary of number of sequences in each gene
+Click check mark on upper right of table to select all
+File -> Export -> selected sequences -> set file type to .csv -> select documents table in genious pop-up (not sequences) to get csv with number of sequences
+
+## Analyze Genious Table
+Load dependencies and import table created by genious
+```{r, warning = FALSE, message = FALSE}
+library(tidyverse)
+sequences <- read.csv("1_assemblednew/assemble_result_supp/4284 documents from nf.csv")
+```
+
+```{r}
+head(sequences)
+```
+
+```{r}
+sequences$seq.num <- as.factor(sequences$X..Sequences)
+length(levels(sequences$seq.num))
+range(sequences$X..Sequences)
+```
+
+```{r}
+seq.counts <- as.data.frame(matrix(NA, nrow = 0, ncol = 2))
+for (i in 2:98){
+  test.dat <- sequences %>% filter(X..Sequences > i) %>% count()
+  row.dat <- c(i,test.dat$n)
+  seq.counts <- rbind(seq.counts, row.dat)
+}
+colnames(seq.counts) <- c("NumSeqGreaterThan", "GenesRetained")
+head(seq.counts)
+tail(seq.counts)
+```
+
+```{r}
+ggplot(seq.counts) + geom_line(aes(x = NumSeqGreaterThan, y = GenesRetained)) + geom_hline(yintercept = 3000)
+```
+```{r}
+45/98
+98*.5
+```
+
+From looking at the seq.count table to retain > 3000 genes (Calder's level) need to retain genes with >45 sequences. Problem this is accounts for genes captured in fewer than 46% of the sample. To retain genes captured in greater than 50% of the sample, would result in retaining genes with greater than 49 sequences, and retains 2917 genes 
+
+##Analyze Output about number of genes per sample
+```{r}
+enriched <- read.csv("1_assemblednew/assemble_result_supp/enriched_gene.csv")
+hist(enriched$Num..of.enriched.genes)
+enriched %>% filter(Num..of.enriched.genes <= 1000)
+```
+
+## Filtering Plan
+1. Proceed with all samples (only two with < 1000 genes, only 1 (CspM) with less than 500)
+2. Retain genes represented in 50% of samples, 49 or greater to keep close to 1000 genes retained
+  a. Said antoher way, filter genes represented in fewer than 49% of samples.
+
+  
