@@ -1,0 +1,430 @@
+Number of avaliable CPU is 24
+
+Wrapper will be run in 24 threads
+
+You will use '/home/users/cli/bin/perl' to run the scripts under $PATH
+
+Samples including AJOR_UW153152_S416 AJOR_UW155714_S474 AOPE_UW159762_S478 ATAN_UW150813_S404 AUNA_UW150790_S402 AUNA_UW150804_S403 AUNG_UW111933_S440 CAMB_UW152101_S459 CAMB_UW154478_S467 CAMB_UW158238_S448 CBOW_UW116034_S483 CBOW_UW119291_S389 CCAN_UW152005_S458 CCOL_UW119446_3_S392 CCOM_UW113669_S480 CCUR_UW153150_S469 CCYC_UW150847_S408 CCYC_UW151026_S409 CCYP_UW117988_S445 CCYP_UW119289_S388 CECT_UW150772_S401 CECT_UW153151_S464 CFAU_UW117078_S443 CFAU_UW156084_S475 CFUR_UW119389_2_S391 CFUR_UW150838_S405 CGIL_UW154885_S425 CGIL_UW154932_S427 CIAC_FAKU145603_S449 CLER_UW117918_S444 CLYC_UW159763_S468 CMEL_UW150588_S399 CMEL_UW153307_2_S418 CMEL_UW154677_S424 COST_UW49435_S479 CPHA_UW151261_S457 CSCO_UW151302_S411 CSCO_UW151304_S412 CSIM_UW154482_2_S421 CSIM_UW154482_3_S422 CSPA_UW154503_S471 CSPA_UW155710_S430 CSPA_UW158306_S477 CSPM_UW155719_S413 CSTA_UW119196_S386 CSTA_UW155711_S387 ECAU_UW119593_2_S394 ECAU_UW119593_S393 EORB_UW119821_S397 EORB_UW151223_S410 ETRE_UW150845_2_S406 ETRE_UW150845_3_S407 LCAL_UW157321_S432 LCAL_UW158059_S447 LCUR_UW44503_3_S438 LCUR_UW44504_S439 LCYC_UW151759_S455 LDEN_UW155676_4_S473 LDEN_UW155676_5_S429 LFAB_UW153118_S462 LFAB_UW153122_S463 LFLE_UW119829_S398 LFLE_UW159752_S433 LFLO_UW151666_S454 LFUC_UW155026_S428 LGIB_UW153834_2_S466 LGIB_UW153834_S465 LGRE_UW112669_S441 LMAR_UW153108_S461 LMAR_UW153127_S415 LNAN_UW119179_2_S452 LNAN_UW119179_3_S453 LOCH_UW49438_S434 LPUL_UW115848_S482 LSIM_UW44502_S437 LTUN_UW153126_S456 LTUN_UW154464_S420 NPEL_UW155470_S472 PALB_UW151419_S414 PCEP_UW153529_S470 PCOP_UW118898_S451 PDAC_UW153045_S460 PDAC_UW154897_S426 PGAR_UW118897_S446 PGRA_UW119304_S390 PGRA_UW155715_S431 PHOL_UW153155_S417 PMEN_UW115470_S481 PMEN_UW150606_S400 PPEC_UW153526_2_S423 PPEN_UW119192_S385 PPTY_UW116036_S442 PROS_UW153323_S419 PULO_UW119776_S395 PULO_UW119777_S396 RATT_UW116039_S450 RBAR_UW157184_S476 will be assembled
+
+########### Start Running exonerate_best.pl ###########
+Command:  exonerate_best.pl --queryp /home/users/cli/ocean/reference_and_genome/Oreochromis_niloticus_17675/Oreochromis_niloticus_4434.aa.fas --assembled /home/users/cli/ocean/Calder/jenny1/run_dir/assembled --filtered /home/users/cli/ocean/Calder/jenny1/run_dir/filtered --similarity 60 --stop_codons 0 --samplelist /home/users/cli/ocean/Calder/jenny1/samplelist.txt --cpu 24
+
+Start filtering contigs in parallel
+Start filtering contigs in LFAB_UW153122_S463
+Contigs of LFAB_UW153122_S463 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LFAB_UW153122_S463/ 
+Exonerate results of LFAB_UW153122_S463 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LFAB_UW153122_S463/ 
+Names of overlapped contigs of LFAB_UW153122_S463 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LFAB_UW153122_S463/ 
+Start filtering contigs in LFLE_UW119829_S398
+Contigs of LFLE_UW119829_S398 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LFLE_UW119829_S398/ 
+Exonerate results of LFLE_UW119829_S398 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LFLE_UW119829_S398/ 
+Names of overlapped contigs of LFLE_UW119829_S398 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LFLE_UW119829_S398/ 
+Start filtering contigs in LGIB_UW153834_S465
+Contigs of LGIB_UW153834_S465 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LGIB_UW153834_S465/ 
+Exonerate results of LGIB_UW153834_S465 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LGIB_UW153834_S465/ 
+Names of overlapped contigs of LGIB_UW153834_S465 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LGIB_UW153834_S465/ 
+Start filtering contigs in PDAC_UW154897_S426
+Contigs of PDAC_UW154897_S426 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PDAC_UW154897_S426/ 
+Exonerate results of PDAC_UW154897_S426 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PDAC_UW154897_S426/ 
+Names of overlapped contigs of PDAC_UW154897_S426 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PDAC_UW154897_S426/ 
+Start filtering contigs in LSIM_UW44502_S437
+Contigs of LSIM_UW44502_S437 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LSIM_UW44502_S437/ 
+Exonerate results of LSIM_UW44502_S437 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LSIM_UW44502_S437/ 
+Names of overlapped contigs of LSIM_UW44502_S437 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LSIM_UW44502_S437/ 
+Start filtering contigs in LNAN_UW119179_2_S452
+Contigs of LNAN_UW119179_2_S452 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LNAN_UW119179_2_S452/ 
+Exonerate results of LNAN_UW119179_2_S452 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LNAN_UW119179_2_S452/ 
+Names of overlapped contigs of LNAN_UW119179_2_S452 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LNAN_UW119179_2_S452/ 
+Start filtering contigs in COST_UW49435_S479
+Contigs of COST_UW49435_S479 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/COST_UW49435_S479/ 
+Exonerate results of COST_UW49435_S479 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/COST_UW49435_S479/ 
+Names of overlapped contigs of COST_UW49435_S479 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/COST_UW49435_S479/ 
+Start filtering contigs in LCUR_UW44503_3_S438
+Contigs of LCUR_UW44503_3_S438 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LCUR_UW44503_3_S438/ 
+Exonerate results of LCUR_UW44503_3_S438 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LCUR_UW44503_3_S438/ 
+Names of overlapped contigs of LCUR_UW44503_3_S438 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LCUR_UW44503_3_S438/ 
+Start filtering contigs in CBOW_UW116034_S483
+Contigs of CBOW_UW116034_S483 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CBOW_UW116034_S483/ 
+Exonerate results of CBOW_UW116034_S483 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CBOW_UW116034_S483/ 
+Names of overlapped contigs of CBOW_UW116034_S483 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CBOW_UW116034_S483/ 
+Start filtering contigs in CCAN_UW152005_S458
+Contigs of CCAN_UW152005_S458 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCAN_UW152005_S458/ 
+Exonerate results of CCAN_UW152005_S458 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCAN_UW152005_S458/ 
+Names of overlapped contigs of CCAN_UW152005_S458 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCAN_UW152005_S458/ 
+Start filtering contigs in CECT_UW153151_S464
+Contigs of CECT_UW153151_S464 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CECT_UW153151_S464/ 
+Exonerate results of CECT_UW153151_S464 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CECT_UW153151_S464/ 
+Names of overlapped contigs of CECT_UW153151_S464 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CECT_UW153151_S464/ 
+Start filtering contigs in PULO_UW119776_S395
+Contigs of PULO_UW119776_S395 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PULO_UW119776_S395/ 
+Exonerate results of PULO_UW119776_S395 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PULO_UW119776_S395/ 
+Names of overlapped contigs of PULO_UW119776_S395 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PULO_UW119776_S395/ 
+Start filtering contigs in CMEL_UW150588_S399
+Contigs of CMEL_UW150588_S399 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CMEL_UW150588_S399/ 
+Exonerate results of CMEL_UW150588_S399 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CMEL_UW150588_S399/ 
+Names of overlapped contigs of CMEL_UW150588_S399 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CMEL_UW150588_S399/ 
+Start filtering contigs in PROS_UW153323_S419
+Contigs of PROS_UW153323_S419 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PROS_UW153323_S419/ 
+Exonerate results of PROS_UW153323_S419 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PROS_UW153323_S419/ 
+Names of overlapped contigs of PROS_UW153323_S419 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PROS_UW153323_S419/ 
+Start filtering contigs in CBOW_UW119291_S389
+Contigs of CBOW_UW119291_S389 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CBOW_UW119291_S389/ 
+Exonerate results of CBOW_UW119291_S389 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CBOW_UW119291_S389/ 
+Names of overlapped contigs of CBOW_UW119291_S389 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CBOW_UW119291_S389/ 
+Start filtering contigs in ECAU_UW119593_2_S394
+Contigs of ECAU_UW119593_2_S394 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/ECAU_UW119593_2_S394/ 
+Exonerate results of ECAU_UW119593_2_S394 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/ECAU_UW119593_2_S394/ 
+Names of overlapped contigs of ECAU_UW119593_2_S394 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/ECAU_UW119593_2_S394/ 
+Start filtering contigs in LCAL_UW157321_S432
+Contigs of LCAL_UW157321_S432 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LCAL_UW157321_S432/ 
+Exonerate results of LCAL_UW157321_S432 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LCAL_UW157321_S432/ 
+Names of overlapped contigs of LCAL_UW157321_S432 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LCAL_UW157321_S432/ 
+Start filtering contigs in PGRA_UW155715_S431
+Contigs of PGRA_UW155715_S431 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PGRA_UW155715_S431/ 
+Exonerate results of PGRA_UW155715_S431 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PGRA_UW155715_S431/ 
+Names of overlapped contigs of PGRA_UW155715_S431 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PGRA_UW155715_S431/ 
+Start filtering contigs in CCYC_UW150847_S408
+Contigs of CCYC_UW150847_S408 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCYC_UW150847_S408/ 
+Exonerate results of CCYC_UW150847_S408 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCYC_UW150847_S408/ 
+Names of overlapped contigs of CCYC_UW150847_S408 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCYC_UW150847_S408/ 
+Start filtering contigs in LFAB_UW153118_S462
+Contigs of LFAB_UW153118_S462 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LFAB_UW153118_S462/ 
+Exonerate results of LFAB_UW153118_S462 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LFAB_UW153118_S462/ 
+Names of overlapped contigs of LFAB_UW153118_S462 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LFAB_UW153118_S462/ 
+Start filtering contigs in CSPM_UW155719_S413
+Contigs of CSPM_UW155719_S413 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSPM_UW155719_S413/ 
+Exonerate results of CSPM_UW155719_S413 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSPM_UW155719_S413/ 
+Names of overlapped contigs of CSPM_UW155719_S413 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSPM_UW155719_S413/ 
+Start filtering contigs in CSPA_UW158306_S477
+Contigs of CSPA_UW158306_S477 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSPA_UW158306_S477/ 
+Exonerate results of CSPA_UW158306_S477 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSPA_UW158306_S477/ 
+Names of overlapped contigs of CSPA_UW158306_S477 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSPA_UW158306_S477/ 
+Start filtering contigs in AJOR_UW153152_S416
+Contigs of AJOR_UW153152_S416 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/AJOR_UW153152_S416/ 
+Exonerate results of AJOR_UW153152_S416 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/AJOR_UW153152_S416/ 
+Names of overlapped contigs of AJOR_UW153152_S416 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/AJOR_UW153152_S416/ 
+Start filtering contigs in CAMB_UW152101_S459
+Contigs of CAMB_UW152101_S459 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CAMB_UW152101_S459/ 
+Exonerate results of CAMB_UW152101_S459 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CAMB_UW152101_S459/ 
+Names of overlapped contigs of CAMB_UW152101_S459 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CAMB_UW152101_S459/ 
+Start filtering contigs in PPTY_UW116036_S442
+Contigs of PPTY_UW116036_S442 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PPTY_UW116036_S442/ 
+Exonerate results of PPTY_UW116036_S442 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PPTY_UW116036_S442/ 
+Names of overlapped contigs of PPTY_UW116036_S442 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PPTY_UW116036_S442/ 
+Start filtering contigs in LTUN_UW154464_S420
+Contigs of LTUN_UW154464_S420 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LTUN_UW154464_S420/ 
+Exonerate results of LTUN_UW154464_S420 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LTUN_UW154464_S420/ 
+Names of overlapped contigs of LTUN_UW154464_S420 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LTUN_UW154464_S420/ 
+Start filtering contigs in ECAU_UW119593_S393
+Contigs of ECAU_UW119593_S393 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/ECAU_UW119593_S393/ 
+Exonerate results of ECAU_UW119593_S393 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/ECAU_UW119593_S393/ 
+Names of overlapped contigs of ECAU_UW119593_S393 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/ECAU_UW119593_S393/ 
+Start filtering contigs in PGAR_UW118897_S446
+Contigs of PGAR_UW118897_S446 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PGAR_UW118897_S446/ 
+Exonerate results of PGAR_UW118897_S446 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PGAR_UW118897_S446/ 
+Names of overlapped contigs of PGAR_UW118897_S446 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PGAR_UW118897_S446/ 
+Start filtering contigs in AUNA_UW150804_S403
+Contigs of AUNA_UW150804_S403 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/AUNA_UW150804_S403/ 
+Exonerate results of AUNA_UW150804_S403 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/AUNA_UW150804_S403/ 
+Names of overlapped contigs of AUNA_UW150804_S403 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/AUNA_UW150804_S403/ 
+Start filtering contigs in NPEL_UW155470_S472
+Contigs of NPEL_UW155470_S472 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/NPEL_UW155470_S472/ 
+Exonerate results of NPEL_UW155470_S472 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/NPEL_UW155470_S472/ 
+Names of overlapped contigs of NPEL_UW155470_S472 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/NPEL_UW155470_S472/ 
+Start filtering contigs in LCYC_UW151759_S455
+Contigs of LCYC_UW151759_S455 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LCYC_UW151759_S455/ 
+Exonerate results of LCYC_UW151759_S455 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LCYC_UW151759_S455/ 
+Names of overlapped contigs of LCYC_UW151759_S455 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LCYC_UW151759_S455/ 
+Start filtering contigs in CSPA_UW155710_S430
+Contigs of CSPA_UW155710_S430 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSPA_UW155710_S430/ 
+Exonerate results of CSPA_UW155710_S430 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSPA_UW155710_S430/ 
+Names of overlapped contigs of CSPA_UW155710_S430 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSPA_UW155710_S430/ 
+Start filtering contigs in LPUL_UW115848_S482
+Contigs of LPUL_UW115848_S482 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LPUL_UW115848_S482/ 
+Exonerate results of LPUL_UW115848_S482 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LPUL_UW115848_S482/ 
+Names of overlapped contigs of LPUL_UW115848_S482 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LPUL_UW115848_S482/ 
+Start filtering contigs in RBAR_UW157184_S476
+Contigs of RBAR_UW157184_S476 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/RBAR_UW157184_S476/ 
+Exonerate results of RBAR_UW157184_S476 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/RBAR_UW157184_S476/ 
+Names of overlapped contigs of RBAR_UW157184_S476 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/RBAR_UW157184_S476/ 
+Start filtering contigs in AJOR_UW155714_S474
+Contigs of AJOR_UW155714_S474 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/AJOR_UW155714_S474/ 
+Exonerate results of AJOR_UW155714_S474 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/AJOR_UW155714_S474/ 
+Names of overlapped contigs of AJOR_UW155714_S474 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/AJOR_UW155714_S474/ 
+Start filtering contigs in PMEN_UW150606_S400
+Contigs of PMEN_UW150606_S400 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PMEN_UW150606_S400/ 
+Exonerate results of PMEN_UW150606_S400 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PMEN_UW150606_S400/ 
+Names of overlapped contigs of PMEN_UW150606_S400 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PMEN_UW150606_S400/ 
+Start filtering contigs in LFUC_UW155026_S428
+Contigs of LFUC_UW155026_S428 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LFUC_UW155026_S428/ 
+Exonerate results of LFUC_UW155026_S428 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LFUC_UW155026_S428/ 
+Names of overlapped contigs of LFUC_UW155026_S428 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LFUC_UW155026_S428/ 
+Start filtering contigs in CGIL_UW154885_S425
+Contigs of CGIL_UW154885_S425 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CGIL_UW154885_S425/ 
+Exonerate results of CGIL_UW154885_S425 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CGIL_UW154885_S425/ 
+Names of overlapped contigs of CGIL_UW154885_S425 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CGIL_UW154885_S425/ 
+Start filtering contigs in LDEN_UW155676_5_S429
+Contigs of LDEN_UW155676_5_S429 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LDEN_UW155676_5_S429/ 
+Exonerate results of LDEN_UW155676_5_S429 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LDEN_UW155676_5_S429/ 
+Names of overlapped contigs of LDEN_UW155676_5_S429 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LDEN_UW155676_5_S429/ 
+Start filtering contigs in LDEN_UW155676_4_S473
+Contigs of LDEN_UW155676_4_S473 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LDEN_UW155676_4_S473/ 
+Exonerate results of LDEN_UW155676_4_S473 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LDEN_UW155676_4_S473/ 
+Names of overlapped contigs of LDEN_UW155676_4_S473 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LDEN_UW155676_4_S473/ 
+Start filtering contigs in LGIB_UW153834_2_S466
+Contigs of LGIB_UW153834_2_S466 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LGIB_UW153834_2_S466/ 
+Exonerate results of LGIB_UW153834_2_S466 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LGIB_UW153834_2_S466/ 
+Names of overlapped contigs of LGIB_UW153834_2_S466 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LGIB_UW153834_2_S466/ 
+Start filtering contigs in LFLO_UW151666_S454
+Contigs of LFLO_UW151666_S454 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LFLO_UW151666_S454/ 
+Exonerate results of LFLO_UW151666_S454 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LFLO_UW151666_S454/ 
+Names of overlapped contigs of LFLO_UW151666_S454 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LFLO_UW151666_S454/ 
+Start filtering contigs in LCAL_UW158059_S447
+Contigs of LCAL_UW158059_S447 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LCAL_UW158059_S447/ 
+Exonerate results of LCAL_UW158059_S447 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LCAL_UW158059_S447/ 
+Names of overlapped contigs of LCAL_UW158059_S447 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LCAL_UW158059_S447/ 
+Start filtering contigs in CSIM_UW154482_3_S422
+Contigs of CSIM_UW154482_3_S422 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSIM_UW154482_3_S422/ 
+Exonerate results of CSIM_UW154482_3_S422 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSIM_UW154482_3_S422/ 
+Names of overlapped contigs of CSIM_UW154482_3_S422 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSIM_UW154482_3_S422/ 
+Start filtering contigs in EORB_UW119821_S397
+Contigs of EORB_UW119821_S397 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/EORB_UW119821_S397/ 
+Exonerate results of EORB_UW119821_S397 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/EORB_UW119821_S397/ 
+Names of overlapped contigs of EORB_UW119821_S397 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/EORB_UW119821_S397/ 
+Start filtering contigs in ATAN_UW150813_S404
+Contigs of ATAN_UW150813_S404 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/ATAN_UW150813_S404/ 
+Exonerate results of ATAN_UW150813_S404 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/ATAN_UW150813_S404/ 
+Names of overlapped contigs of ATAN_UW150813_S404 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/ATAN_UW150813_S404/ 
+Start filtering contigs in PGRA_UW119304_S390
+Contigs of PGRA_UW119304_S390 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PGRA_UW119304_S390/ 
+Exonerate results of PGRA_UW119304_S390 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PGRA_UW119304_S390/ 
+Names of overlapped contigs of PGRA_UW119304_S390 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PGRA_UW119304_S390/ 
+Start filtering contigs in CSCO_UW151304_S412
+Contigs of CSCO_UW151304_S412 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSCO_UW151304_S412/ 
+Exonerate results of CSCO_UW151304_S412 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSCO_UW151304_S412/ 
+Names of overlapped contigs of CSCO_UW151304_S412 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSCO_UW151304_S412/ 
+Start filtering contigs in CFAU_UW117078_S443
+Contigs of CFAU_UW117078_S443 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CFAU_UW117078_S443/ 
+Exonerate results of CFAU_UW117078_S443 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CFAU_UW117078_S443/ 
+Names of overlapped contigs of CFAU_UW117078_S443 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CFAU_UW117078_S443/ 
+Start filtering contigs in CLER_UW117918_S444
+Contigs of CLER_UW117918_S444 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CLER_UW117918_S444/ 
+Exonerate results of CLER_UW117918_S444 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CLER_UW117918_S444/ 
+Names of overlapped contigs of CLER_UW117918_S444 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CLER_UW117918_S444/ 
+Start filtering contigs in CGIL_UW154932_S427
+Contigs of CGIL_UW154932_S427 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CGIL_UW154932_S427/ 
+Exonerate results of CGIL_UW154932_S427 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CGIL_UW154932_S427/ 
+Names of overlapped contigs of CGIL_UW154932_S427 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CGIL_UW154932_S427/ 
+Start filtering contigs in CMEL_UW154677_S424
+Contigs of CMEL_UW154677_S424 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CMEL_UW154677_S424/ 
+Exonerate results of CMEL_UW154677_S424 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CMEL_UW154677_S424/ 
+Names of overlapped contigs of CMEL_UW154677_S424 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CMEL_UW154677_S424/ 
+Start filtering contigs in LMAR_UW153127_S415
+Contigs of LMAR_UW153127_S415 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LMAR_UW153127_S415/ 
+Exonerate results of LMAR_UW153127_S415 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LMAR_UW153127_S415/ 
+Names of overlapped contigs of LMAR_UW153127_S415 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LMAR_UW153127_S415/ 
+Start filtering contigs in CLYC_UW159763_S468
+Contigs of CLYC_UW159763_S468 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CLYC_UW159763_S468/ 
+Exonerate results of CLYC_UW159763_S468 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CLYC_UW159763_S468/ 
+Names of overlapped contigs of CLYC_UW159763_S468 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CLYC_UW159763_S468/ 
+Start filtering contigs in LCUR_UW44504_S439
+Contigs of LCUR_UW44504_S439 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LCUR_UW44504_S439/ 
+Exonerate results of LCUR_UW44504_S439 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LCUR_UW44504_S439/ 
+Names of overlapped contigs of LCUR_UW44504_S439 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LCUR_UW44504_S439/ 
+Start filtering contigs in PHOL_UW153155_S417
+Contigs of PHOL_UW153155_S417 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PHOL_UW153155_S417/ 
+Exonerate results of PHOL_UW153155_S417 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PHOL_UW153155_S417/ 
+Names of overlapped contigs of PHOL_UW153155_S417 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PHOL_UW153155_S417/ 
+Start filtering contigs in ETRE_UW150845_2_S406
+Contigs of ETRE_UW150845_2_S406 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/ETRE_UW150845_2_S406/ 
+Exonerate results of ETRE_UW150845_2_S406 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/ETRE_UW150845_2_S406/ 
+Names of overlapped contigs of ETRE_UW150845_2_S406 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/ETRE_UW150845_2_S406/ 
+Start filtering contigs in CAMB_UW158238_S448
+Contigs of CAMB_UW158238_S448 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CAMB_UW158238_S448/ 
+Exonerate results of CAMB_UW158238_S448 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CAMB_UW158238_S448/ 
+Names of overlapped contigs of CAMB_UW158238_S448 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CAMB_UW158238_S448/ 
+Start filtering contigs in PMEN_UW115470_S481
+Contigs of PMEN_UW115470_S481 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PMEN_UW115470_S481/ 
+Exonerate results of PMEN_UW115470_S481 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PMEN_UW115470_S481/ 
+Names of overlapped contigs of PMEN_UW115470_S481 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PMEN_UW115470_S481/ 
+Start filtering contigs in CSTA_UW155711_S387
+Contigs of CSTA_UW155711_S387 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSTA_UW155711_S387/ 
+Exonerate results of CSTA_UW155711_S387 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSTA_UW155711_S387/ 
+Names of overlapped contigs of CSTA_UW155711_S387 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSTA_UW155711_S387/ 
+Start filtering contigs in LFLE_UW159752_S433
+Contigs of LFLE_UW159752_S433 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LFLE_UW159752_S433/ 
+Exonerate results of LFLE_UW159752_S433 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LFLE_UW159752_S433/ 
+Names of overlapped contigs of LFLE_UW159752_S433 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LFLE_UW159752_S433/ 
+Start filtering contigs in CFAU_UW156084_S475
+Contigs of CFAU_UW156084_S475 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CFAU_UW156084_S475/ 
+Exonerate results of CFAU_UW156084_S475 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CFAU_UW156084_S475/ 
+Names of overlapped contigs of CFAU_UW156084_S475 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CFAU_UW156084_S475/ 
+Start filtering contigs in LOCH_UW49438_S434
+Contigs of LOCH_UW49438_S434 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LOCH_UW49438_S434/ 
+Exonerate results of LOCH_UW49438_S434 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LOCH_UW49438_S434/ 
+Names of overlapped contigs of LOCH_UW49438_S434 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LOCH_UW49438_S434/ 
+Start filtering contigs in CFUR_UW119389_2_S391
+Contigs of CFUR_UW119389_2_S391 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CFUR_UW119389_2_S391/ 
+Exonerate results of CFUR_UW119389_2_S391 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CFUR_UW119389_2_S391/ 
+Names of overlapped contigs of CFUR_UW119389_2_S391 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CFUR_UW119389_2_S391/ 
+Start filtering contigs in ETRE_UW150845_3_S407
+Contigs of ETRE_UW150845_3_S407 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/ETRE_UW150845_3_S407/ 
+Exonerate results of ETRE_UW150845_3_S407 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/ETRE_UW150845_3_S407/ 
+Names of overlapped contigs of ETRE_UW150845_3_S407 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/ETRE_UW150845_3_S407/ 
+Start filtering contigs in CCOM_UW113669_S480
+Contigs of CCOM_UW113669_S480 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCOM_UW113669_S480/ 
+Exonerate results of CCOM_UW113669_S480 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCOM_UW113669_S480/ 
+Names of overlapped contigs of CCOM_UW113669_S480 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCOM_UW113669_S480/ 
+Start filtering contigs in CSPA_UW154503_S471
+Contigs of CSPA_UW154503_S471 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSPA_UW154503_S471/ 
+Exonerate results of CSPA_UW154503_S471 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSPA_UW154503_S471/ 
+Names of overlapped contigs of CSPA_UW154503_S471 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSPA_UW154503_S471/ 
+Start filtering contigs in CCOL_UW119446_3_S392
+Contigs of CCOL_UW119446_3_S392 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCOL_UW119446_3_S392/ 
+Exonerate results of CCOL_UW119446_3_S392 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCOL_UW119446_3_S392/ 
+Names of overlapped contigs of CCOL_UW119446_3_S392 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCOL_UW119446_3_S392/ 
+Start filtering contigs in LNAN_UW119179_3_S453
+Contigs of LNAN_UW119179_3_S453 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LNAN_UW119179_3_S453/ 
+Exonerate results of LNAN_UW119179_3_S453 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LNAN_UW119179_3_S453/ 
+Names of overlapped contigs of LNAN_UW119179_3_S453 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LNAN_UW119179_3_S453/ 
+Start filtering contigs in CCUR_UW153150_S469
+Contigs of CCUR_UW153150_S469 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCUR_UW153150_S469/ 
+Exonerate results of CCUR_UW153150_S469 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCUR_UW153150_S469/ 
+Names of overlapped contigs of CCUR_UW153150_S469 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCUR_UW153150_S469/ 
+Start filtering contigs in LGRE_UW112669_S441
+Contigs of LGRE_UW112669_S441 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LGRE_UW112669_S441/ 
+Exonerate results of LGRE_UW112669_S441 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LGRE_UW112669_S441/ 
+Names of overlapped contigs of LGRE_UW112669_S441 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LGRE_UW112669_S441/ 
+Start filtering contigs in PULO_UW119777_S396
+Contigs of PULO_UW119777_S396 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PULO_UW119777_S396/ 
+Exonerate results of PULO_UW119777_S396 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PULO_UW119777_S396/ 
+Names of overlapped contigs of PULO_UW119777_S396 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PULO_UW119777_S396/ 
+Start filtering contigs in PALB_UW151419_S414
+Contigs of PALB_UW151419_S414 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PALB_UW151419_S414/ 
+Exonerate results of PALB_UW151419_S414 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PALB_UW151419_S414/ 
+Names of overlapped contigs of PALB_UW151419_S414 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PALB_UW151419_S414/ 
+Start filtering contigs in CMEL_UW153307_2_S418
+Contigs of CMEL_UW153307_2_S418 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CMEL_UW153307_2_S418/ 
+Exonerate results of CMEL_UW153307_2_S418 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CMEL_UW153307_2_S418/ 
+Names of overlapped contigs of CMEL_UW153307_2_S418 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CMEL_UW153307_2_S418/ 
+Start filtering contigs in CFUR_UW150838_S405
+Contigs of CFUR_UW150838_S405 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CFUR_UW150838_S405/ 
+Exonerate results of CFUR_UW150838_S405 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CFUR_UW150838_S405/ 
+Names of overlapped contigs of CFUR_UW150838_S405 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CFUR_UW150838_S405/ 
+Start filtering contigs in CECT_UW150772_S401
+Contigs of CECT_UW150772_S401 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CECT_UW150772_S401/ 
+Exonerate results of CECT_UW150772_S401 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CECT_UW150772_S401/ 
+Names of overlapped contigs of CECT_UW150772_S401 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CECT_UW150772_S401/ 
+Start filtering contigs in CIAC_FAKU145603_S449
+Contigs of CIAC_FAKU145603_S449 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CIAC_FAKU145603_S449/ 
+Exonerate results of CIAC_FAKU145603_S449 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CIAC_FAKU145603_S449/ 
+Names of overlapped contigs of CIAC_FAKU145603_S449 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CIAC_FAKU145603_S449/ 
+Start filtering contigs in AOPE_UW159762_S478
+Contigs of AOPE_UW159762_S478 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/AOPE_UW159762_S478/ 
+Exonerate results of AOPE_UW159762_S478 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/AOPE_UW159762_S478/ 
+Names of overlapped contigs of AOPE_UW159762_S478 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/AOPE_UW159762_S478/ 
+Start filtering contigs in CCYP_UW117988_S445
+Contigs of CCYP_UW117988_S445 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCYP_UW117988_S445/ 
+Exonerate results of CCYP_UW117988_S445 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCYP_UW117988_S445/ 
+Names of overlapped contigs of CCYP_UW117988_S445 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCYP_UW117988_S445/ 
+Start filtering contigs in RATT_UW116039_S450
+Contigs of RATT_UW116039_S450 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/RATT_UW116039_S450/ 
+Exonerate results of RATT_UW116039_S450 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/RATT_UW116039_S450/ 
+Names of overlapped contigs of RATT_UW116039_S450 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/RATT_UW116039_S450/ 
+Start filtering contigs in CPHA_UW151261_S457
+Contigs of CPHA_UW151261_S457 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CPHA_UW151261_S457/ 
+Exonerate results of CPHA_UW151261_S457 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CPHA_UW151261_S457/ 
+Names of overlapped contigs of CPHA_UW151261_S457 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CPHA_UW151261_S457/ 
+Start filtering contigs in CSIM_UW154482_2_S421
+Contigs of CSIM_UW154482_2_S421 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSIM_UW154482_2_S421/ 
+Exonerate results of CSIM_UW154482_2_S421 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSIM_UW154482_2_S421/ 
+Names of overlapped contigs of CSIM_UW154482_2_S421 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSIM_UW154482_2_S421/ 
+Start filtering contigs in PCOP_UW118898_S451
+Contigs of PCOP_UW118898_S451 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PCOP_UW118898_S451/ 
+Exonerate results of PCOP_UW118898_S451 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PCOP_UW118898_S451/ 
+Names of overlapped contigs of PCOP_UW118898_S451 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PCOP_UW118898_S451/ 
+Start filtering contigs in EORB_UW151223_S410
+Contigs of EORB_UW151223_S410 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/EORB_UW151223_S410/ 
+Exonerate results of EORB_UW151223_S410 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/EORB_UW151223_S410/ 
+Names of overlapped contigs of EORB_UW151223_S410 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/EORB_UW151223_S410/ 
+Start filtering contigs in PCEP_UW153529_S470
+Contigs of PCEP_UW153529_S470 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PCEP_UW153529_S470/ 
+Exonerate results of PCEP_UW153529_S470 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PCEP_UW153529_S470/ 
+Names of overlapped contigs of PCEP_UW153529_S470 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PCEP_UW153529_S470/ 
+Start filtering contigs in PPEN_UW119192_S385
+Contigs of PPEN_UW119192_S385 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PPEN_UW119192_S385/ 
+Exonerate results of PPEN_UW119192_S385 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PPEN_UW119192_S385/ 
+Names of overlapped contigs of PPEN_UW119192_S385 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PPEN_UW119192_S385/ 
+Start filtering contigs in LTUN_UW153126_S456
+Contigs of LTUN_UW153126_S456 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LTUN_UW153126_S456/ 
+Exonerate results of LTUN_UW153126_S456 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LTUN_UW153126_S456/ 
+Names of overlapped contigs of LTUN_UW153126_S456 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LTUN_UW153126_S456/ 
+Start filtering contigs in PDAC_UW153045_S460
+Contigs of PDAC_UW153045_S460 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PDAC_UW153045_S460/ 
+Exonerate results of PDAC_UW153045_S460 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PDAC_UW153045_S460/ 
+Names of overlapped contigs of PDAC_UW153045_S460 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PDAC_UW153045_S460/ 
+Start filtering contigs in PPEC_UW153526_2_S423
+Contigs of PPEC_UW153526_2_S423 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/PPEC_UW153526_2_S423/ 
+Exonerate results of PPEC_UW153526_2_S423 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/PPEC_UW153526_2_S423/ 
+Names of overlapped contigs of PPEC_UW153526_2_S423 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/PPEC_UW153526_2_S423/ 
+Start filtering contigs in CCYC_UW151026_S409
+Contigs of CCYC_UW151026_S409 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCYC_UW151026_S409/ 
+Exonerate results of CCYC_UW151026_S409 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCYC_UW151026_S409/ 
+Names of overlapped contigs of CCYC_UW151026_S409 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCYC_UW151026_S409/ 
+Start filtering contigs in LMAR_UW153108_S461
+Contigs of LMAR_UW153108_S461 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/LMAR_UW153108_S461/ 
+Exonerate results of LMAR_UW153108_S461 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/LMAR_UW153108_S461/ 
+Names of overlapped contigs of LMAR_UW153108_S461 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/LMAR_UW153108_S461/ 
+Start filtering contigs in CAMB_UW154478_S467
+Contigs of CAMB_UW154478_S467 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CAMB_UW154478_S467/ 
+Exonerate results of CAMB_UW154478_S467 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CAMB_UW154478_S467/ 
+Names of overlapped contigs of CAMB_UW154478_S467 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CAMB_UW154478_S467/ 
+Start filtering contigs in AUNG_UW111933_S440
+Contigs of AUNG_UW111933_S440 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/AUNG_UW111933_S440/ 
+Exonerate results of AUNG_UW111933_S440 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/AUNG_UW111933_S440/ 
+Names of overlapped contigs of AUNG_UW111933_S440 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/AUNG_UW111933_S440/ 
+Start filtering contigs in CCYP_UW119289_S388
+Contigs of CCYP_UW119289_S388 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CCYP_UW119289_S388/ 
+Exonerate results of CCYP_UW119289_S388 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CCYP_UW119289_S388/ 
+Names of overlapped contigs of CCYP_UW119289_S388 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CCYP_UW119289_S388/ 
+Start filtering contigs in CSCO_UW151302_S411
+Contigs of CSCO_UW151302_S411 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSCO_UW151302_S411/ 
+Exonerate results of CSCO_UW151302_S411 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSCO_UW151302_S411/ 
+Names of overlapped contigs of CSCO_UW151302_S411 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSCO_UW151302_S411/ 
+Start filtering contigs in AUNA_UW150790_S402
+Contigs of AUNA_UW150790_S402 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/AUNA_UW150790_S402/ 
+Exonerate results of AUNA_UW150790_S402 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/AUNA_UW150790_S402/ 
+Names of overlapped contigs of AUNA_UW150790_S402 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/AUNA_UW150790_S402/ 
+Start filtering contigs in CSTA_UW119196_S386
+Contigs of CSTA_UW119196_S386 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/CSTA_UW119196_S386/ 
+Exonerate results of CSTA_UW119196_S386 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/CSTA_UW119196_S386/ 
+Names of overlapped contigs of CSTA_UW119196_S386 has been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/CSTA_UW119196_S386/ 
+All contigs have been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/filtered/ 
+All exonerate results have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/exonerate/ 
+All names of overlapped contigs have been filtered and written to /home/users/cli/ocean/Calder/jenny1/run_dir/filtered/overlap/ 
+########### exonerate_best.pl Finished ###########
+exonerate_best ran for 3h 9m 2s
+
+########### Start Running merge.pl ###########
+Command:  merge.pl --queryn /home/users/cli/ocean/reference_and_genome/Oreochromis_niloticus_17675/Oreochromis_niloticus_4434.dna.fas --queryp /home/users/cli/ocean/reference_and_genome/Oreochromis_niloticus_17675/Oreochromis_niloticus_4434.aa.fas --filtered /home/users/cli/ocean/Calder/jenny1/run_dir/filtered --merged /home/users/cli/ocean/Calder/jenny1/run_dir/merged --similarity 60 --len_percentage 80 --nonflank_len 0 --stop_codons 0 --samplelist /home/users/cli/ocean/Calder/jenny1/samplelist.txt --cpu 24
+
+Start assembling contigs further and retrieving best contigs of each gene in parallel
+All coding sequences has been written to /home/users/cli/ocean/Calder/jenny1/run_dir/merged/nf/ 
+All flanking sequences has been written to /home/users/cli/ocean/Calder/jenny1/run_dir/merged/f/ 
+All amino acid sequences has been written to /home/users/cli/ocean/Calder/jenny1/run_dir/merged/p/ 
+########### merge.pl Finished ###########
+merge ran for 5h 11m 20s
+
+########### Start Running reblast.pl ###########
+Command:  reblast.pl --merged /home/users/cli/ocean/Calder/jenny1/run_dir/merged --dbtype nucleo --db "/home/users/cli/ocean/reference_and_genome/Oreochromis_niloticus_17675/Oreochromis_niloticus.sm_genome.fa" --reblastout /home/users/cli/ocean/Calder/jenny1/run_dir/reblastout --ref_name Oreochromis_niloticus --E_value_reblast 1e-06 --failed_hit /home/users/cli/ocean/Calder/jenny1/failed_hit.txt --samplelist /home/users/cli/ocean/Calder/jenny1/samplelist.txt --cpu 24
+
+Start ublasting contigs against database in parallel
+Ublast search has been finished
+Start writing out ortholog contigs in parallel
+All ortholog coding sequences have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/reblastout/nf/ 
+All ortholog flanking sequences have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/reblastout/f/ 
+All ortholog amino acid sequences have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/reblastout/p/ 
+########### reblast.pl Finished ###########
+Assembled contigs have been written to /home/users/cli/ocean/Calder/jenny1/assemble_result
+
+reblast ran for 2h 42m 19s
+

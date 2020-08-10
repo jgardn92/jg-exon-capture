@@ -1,0 +1,1 @@
+raxmlHPC-HYBRID_8.2.12_centos7  -n result-test -s infile.txt -c 25 -m GTRCAT -p 12345     -f a -N 100 -x 12345 --asc-corr lewis  

@@ -1,0 +1,60 @@
+Number of avaliable CPU is 24
+
+Wrapper will be run in 24 threads
+
+You will use '/home/users/cli/bin/perl' to run the scripts under $PATH
+
+Samples including AUNA_UW150790_S402 AUNG_UW111933_S440 CAMB_UW154478_S467 CCYC_UW151026_S409 CCYP_UW119289_S388 CPHA_UW151261_S457 CSCO_UW151302_S411 CSTA_UW119196_S386 LMAR_UW153108_S461 LTUN_UW153126_S456 PDAC_UW153045_S460 PPEC_UW153526_2_S423 RATT_UW116039_S450 will be assembled
+
+########### Start Running sga_assemble.pl ###########
+Command:  sga_assemble.pl --parsed /home/users/cli/ocean/Calder/jenny1/run_dir/parsed --assembled /home/users/cli/ocean/Calder/jenny1/run_dir/assembled --samplelist /home/users/cli/ocean/Calder/jenny1/samplelist_subset.txt --cpu 24
+
+Start assembling reads by sga in parallel
+Start assembling reads of RATT_UW116039_S450
+Reads of RATT_UW116039_S450 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/RATT_UW116039_S450/ 
+String graphs of RATT_UW116039_S450 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/RATT_UW116039_S450/ 
+Start assembling reads of CPHA_UW151261_S457
+Reads of CPHA_UW151261_S457 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/CPHA_UW151261_S457/ 
+String graphs of CPHA_UW151261_S457 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/CPHA_UW151261_S457/ 
+Start assembling reads of LTUN_UW153126_S456
+Reads of LTUN_UW153126_S456 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/LTUN_UW153126_S456/ 
+String graphs of LTUN_UW153126_S456 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/LTUN_UW153126_S456/ 
+Start assembling reads of PDAC_UW153045_S460
+Reads of PDAC_UW153045_S460 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/PDAC_UW153045_S460/ 
+String graphs of PDAC_UW153045_S460 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/PDAC_UW153045_S460/ 
+Start assembling reads of PPEC_UW153526_2_S423
+Reads of PPEC_UW153526_2_S423 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/PPEC_UW153526_2_S423/ 
+String graphs of PPEC_UW153526_2_S423 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/PPEC_UW153526_2_S423/ 
+Start assembling reads of CCYC_UW151026_S409
+Reads of CCYC_UW151026_S409 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/CCYC_UW151026_S409/ 
+String graphs of CCYC_UW151026_S409 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/CCYC_UW151026_S409/ 
+Start assembling reads of LMAR_UW153108_S461
+Reads of LMAR_UW153108_S461 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/LMAR_UW153108_S461/ 
+String graphs of LMAR_UW153108_S461 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/LMAR_UW153108_S461/ 
+Start assembling reads of CAMB_UW154478_S467
+Reads of CAMB_UW154478_S467 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/CAMB_UW154478_S467/ 
+String graphs of CAMB_UW154478_S467 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/CAMB_UW154478_S467/ 
+Start assembling reads of AUNG_UW111933_S440
+Reads of AUNG_UW111933_S440 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/AUNG_UW111933_S440/ 
+String graphs of AUNG_UW111933_S440 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/AUNG_UW111933_S440/ 
+Start assembling reads of CCYP_UW119289_S388
+Reads of CCYP_UW119289_S388 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/CCYP_UW119289_S388/ 
+String graphs of CCYP_UW119289_S388 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/CCYP_UW119289_S388/ 
+Start assembling reads of CSCO_UW151302_S411
+Reads of CSCO_UW151302_S411 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/CSCO_UW151302_S411/ 
+String graphs of CSCO_UW151302_S411 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/CSCO_UW151302_S411/ 
+Start assembling reads of AUNA_UW150790_S402
+Reads of AUNA_UW150790_S402 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/AUNA_UW150790_S402/ 
+String graphs of AUNA_UW150790_S402 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/AUNA_UW150790_S402/ 
+Start assembling reads of CSTA_UW119196_S386
+sga run of /home/users/cli/ocean/Calder/jenny1/run_dir/parsed/CSTA_UW119196_S386/Tetraodon_nigroviridis.16.7828682.7828136 did not respond in 1800s, and was safely killed
+sga run of /home/users/cli/ocean/Calder/jenny1/run_dir/parsed/CSTA_UW119196_S386/Tetraodon_nigroviridis.16.7828682.7828136 did not respond in 1800s, and was safely killed
+sga run of /home/users/cli/ocean/Calder/jenny1/run_dir/parsed/CSTA_UW119196_S386/Tetraodon_nigroviridis.16.7828682.7828136 did not respond in 1800s, and was safely killed
+sga run of /home/users/cli/ocean/Calder/jenny1/run_dir/parsed/CSTA_UW119196_S386/Tetraodon_nigroviridis.16.7828682.7828136 did not respond in 1800s, and was safely killed
+Reads of CSTA_UW119196_S386 have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/CSTA_UW119196_S386/ 
+String graphs of CSTA_UW119196_S386 have been written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/CSTA_UW119196_S386/ 
+All reads have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/contig/ 
+All string graphs have been assembled and written to /home/users/cli/ocean/Calder/jenny1/run_dir/assembled/asqg/ 
+########### sga_assemble.pl Finished ###########
+sga_assemble ran for 21h 17m 40s
+
