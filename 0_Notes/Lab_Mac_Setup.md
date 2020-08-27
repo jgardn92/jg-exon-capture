@@ -18,5 +18,5 @@
 ***
 ## Installing RAxML and ASTRAL  
 * both installed
-* RAxML has been added to path and can be called with `raxmlHPC-PTHREADS-AVX` *note: tab complete works after rax`
+* RAxML has been added to path and can be called with `raxmlHPC-PTHREADS-AVX` *note: tab complete works after rax*
 * Astral could not be added to path and instead can be run by `java -jar /Users/luketornabene/Astral/astral.5.7.3.jar`
