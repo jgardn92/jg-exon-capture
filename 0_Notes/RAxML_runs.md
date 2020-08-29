@@ -120,7 +120,7 @@ Overall execution time for full ML analysis: 26175.386703 secs or 7.270941 hours
 
 # Run 2
 ### Oreochromis removed before alignment
-raxmlHPC-PTHREADS-AVX -T 4 -n 9_orn -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 8_concat_orn.phy
+`raxmlHPC-PTHREADS-AVX -T 4 -n 9_orn -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 8_concat_orn.phy`
 
 
 Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
