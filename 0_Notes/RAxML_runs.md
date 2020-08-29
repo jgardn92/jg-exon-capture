@@ -117,3 +117,109 @@ Best-scoring ML tree with support values written to: /Users/luketornabene/github
 Best-scoring ML tree with support values as branch labels written to: /Users/luketornabene/github/jg-exon-capture/RAxML_bipartitionsBranchLabels.5_raxml_orm
 
 Overall execution time for full ML analysis: 26175.386703 secs or 7.270941 hours or 0.302956 days
+
+# Run 2
+### Oreochromis removed before alignment
+raxmlHPC-PTHREADS-AVX -T 4 -n 9_orn -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 8_concat_orn.phy
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs"
+
+
+This is the RAxML Master Pthread
+
+This is RAxML Worker Pthread Number: 1
+
+This is RAxML Worker Pthread Number: 2
+
+This is RAxML Worker Pthread Number: 3
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 183546 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 19.01%
+
+RAxML rapid bootstrapping and subsequent ML search
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+
+Executing 100 rapid bootstrap inferences and thereafter a thorough ML search
+
+All free model parameters will be estimated by RAxML
+ML estimate of 25 per site rate categories
+
+Likelihood of final tree will be evaluated and optimized under GAMMA
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 183546
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-AVX -T 4 -n 9_orn -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 8_concat_orn.phy
+
+
+
+Time for BS model parameter optimization 33.455080
+
+Overall Time for 100 Rapid Bootstraps 13080.321896 seconds
+Average Time per Rapid Bootstrap 130.803219 seconds
+
+Starting ML Search ...
+
+Fast ML optimization finished
+
+Fast ML search Time: 7143.790702 seconds
+
+Slow ML search Time: 8357.142029 seconds
+Thorough ML search Time: 1721.502587 seconds
+
+Final ML Optimization Likelihood: -4158424.268684
+
+Model Information:
+
+Model Parameters of Partition 0, Name: No Name Provided, Type of Data: DNA
+alpha: 0.162642
+Tree-Length: 3.769670
+rate A <-> C: 1.170090
+rate A <-> G: 2.373026
+rate A <-> T: 0.451135
+rate C <-> G: 0.969291
+rate C <-> T: 3.196682
+rate G <-> T: 1.000000
+
+freq pi(A): 0.242182
+freq pi(C): 0.281774
+freq pi(G): 0.284290
+freq pi(T): 0.191754
+
+
+ML search took 17222.438295 secs or 4.784011 hours
+
+Combined Bootstrap and ML search took 30302.760418 secs or 8.417433 hours
+
+Overall execution time for full ML analysis: 30302.787692 secs or 8.417441 hours or 0.350727 days
