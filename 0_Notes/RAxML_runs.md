@@ -1,5 +1,7 @@
 # RAxML Runs on Mac
 
+## Run 1:
+### Oreochromis removed after alignment, filtering, and concatenation
 `raxmlHPC-PTHREADS-AVX -T 4 -n5_raxml_orm -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 4_concat_update.phy`
 
 IMPORTANT WARNING
