@@ -1,0 +1,5 @@
+Just copy the file taxnameconvert.pl to any directory in your
+executable search path.
+
+You have to have PERL installed (http://www.cpan.org).
+

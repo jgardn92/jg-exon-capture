@@ -1,0 +1,40 @@
+# README 
+#
+# part of taxnameconvert
+#
+# (c) 2004-2005 by Heiko A. Schmidt
+# (c) 2000-2003 by Heiko A. Schmidt (old name: abbr2name)
+#
+# ($Id: README,v 1.4 2005/01/10 05:59:35 hschmidt Exp $)
+#
+
+INFORMATION:
+------------
+Taxnameconvert is a tool to convert taxon names within PHYLIP 
+format tree files.
+
+
+INSTALLATION:
+-------------
+To use taxnameconvert, just copy the file taxnameconvert.pl to 
+any directory in your executable search path. If you cannot
+execute taxnameconvert.pl, it might be necessary to change the 
+script's first line from
+
+#! /usr/bin/env perl
+
+to
+
+#! /path/to/perl
+
+Where the path to the perl executable has to be adopted appropriately
+(often /usr/bin or /usr/local/bin on UNIX systems).
+Usually /usr/bin/env tries to find the right path on UNIX systems.
+
+Of course, you have to have PERL installed (http://www.cpan.org).
+
+
+MORE INFOS:
+-----------
+Call 'taxnameconvert.pl -h' for more instructions!!
+

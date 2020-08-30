@@ -1,0 +1,35 @@
+taxnameconvert
+
+ChangeLog
+
+($Id: ChangeLog,v 1.5 2005/01/10 05:59:35 hschmidt Exp $)
+
+Version   date           what has been changed
+
+2.4       10.01.2004    - fixed for remark ([...]) after the 'from name'.
+
+2.3       24.05.2004    - '-b' flag added for alignments
+			- '-h' help flag added
+
+2.2       22.03.2004    - more infos to README
+			- global flag added to the name substitution command.
+
+2.1       12.03.2004    - usage moved to subroutine printusage()
+			- parameter output moved to subroutine printparams()
+			- check for unknown cmdline switches added
+			  (had been used as file name before)
+			- obsolete debug messages and code removed
+			TODO:	error checking (tab numbers)
+
+2.0       10.03.2004    - many small perl changes
+			- command line interface changed
+			- command line scanning
+			- variable conversion table size
+
+1.1       08.03.2004    - outputfile name from cmdline
+			- several tiny perl fixes
+
+1.0       12.01.2004    - first version to convert between 2/4 table colmns
+
+0.1       xx.xx.2000    - old unflexible version
+
