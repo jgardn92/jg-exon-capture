@@ -32,9 +32,12 @@ Results of alignment filtering check against alignment to Oreochromis
 
 ## Run 3
 Retry aligning without Oreochromis and with min seq 69 instead of 49
-####10_nf_v2
+#### 10_nf_v2
 Results from pick taxa run removing Oreochromis and selected genes present in 69 samples minimum
 `pick_taxa.pl --indir 2_assemble_result/nf --outdir 10_nf_v2 --min_seq 69 --deselected_tax "Oreochromis_niloticus"`
-####11_nf_v2_aligned
+#### 11_nf_v2_aligned
 Resutls from alignment of 10_nf_v2
 `mafft_aln.pl --dna_unaligned 10_nf_v2 --dna_aligned 11_nf_v2_aligned --cpu 2`
+
+#### 14_RAxML_nf_v2_nogap
+raxml run on 12_concat_filtered.fas, which is full concatinated alignment from run 3 but with sites with >50% missing data removed using delete_gaps.R

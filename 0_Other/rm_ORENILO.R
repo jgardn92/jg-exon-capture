@@ -15,6 +15,6 @@ for (file in data){
   write.dna(x = rm_ORENILO,file = paste(seqs.in.here,"_rmORENILO/",file,sep=""),format = "fasta")
 }
 
-concat <- read.dna("../11_concat/11_concat.fas",format = "fasta")
+concat <- read.dna("../jg-exon-capture/12_concatinate_v2/12_concat_nf_v2.fas",format = "fasta")
 unique(concat)
 unique(as.vector(concat[1,]))
