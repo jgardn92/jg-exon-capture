@@ -1,0 +1,5 @@
+Step	Run_1	Run_2	Run_3	Run_4
+minseq	49	49	69	69
+remove	none	oreo	oreo	oreo
+align	 oreo	 no_oreo	no_oreo	no_oreo
+filter	oreo	none	none	delgaps50
