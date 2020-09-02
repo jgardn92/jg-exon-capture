@@ -23,12 +23,8 @@ Results of alignment filtering check against alignment to Oreochromis
 ***
 ## Run 2
 50% filter (49 samples), Oreochromis removed before alignment. Aligned samples not filtered.
-***
 
-## To Do
-* work on using renaming script
-* work on redoing alignment with stricter first filtering
-* work on script to remove aligned sites that have too few represented...
+***
 
 ## Run 3
 Retry aligning without Oreochromis and with min seq 69 instead of 49
