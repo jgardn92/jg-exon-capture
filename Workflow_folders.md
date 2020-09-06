@@ -109,3 +109,5 @@ Runs of detect_contamination.pl to determine if samples are contaminated and sho
 *detect_contam.txt* only samples from same species listed on same Aligned
 
 *detect_contam2.txt* samples with more relatedness listed on same lines
+
+*detect_contam3.txt* samples grouped based on clades in Clades.csv file
