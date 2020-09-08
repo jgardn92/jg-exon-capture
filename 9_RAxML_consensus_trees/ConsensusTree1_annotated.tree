@@ -1,0 +1,201 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=97;
+	taxlabels
+	Acantholiparis_opercularis_159762
+	Allocareproctus_jordani_153152
+	Allocareproctus_jordani_155714
+	Allocareproctus_tanix_150813
+	Allocareproctus_unangas_150790
+	Allocareproctus_unangas_150804
+	Allocareproctus_ungak_111933
+	Careproctus_ambustus_152101
+	Careproctus_ambustus_154478
+	Careproctus_ambustus_158328
+	Careproctus_bowersianus_116034
+	Careproctus_bowersianus_119446
+	Careproctus_colletti_119446_3
+	Careproctus_comus_113669
+	Careproctus_curilanus_153150
+	Careproctus_cypselurus_117988
+	Careproctus_cypselurus_119289
+	Careproctus_ectenes_150772
+	Careproctus_ectenes_153151
+	Careproctus_faunus_117078
+	Careproctus_faunus_156084
+	Careproctus_furcellus_119389_2
+	Careproctus_furcellus_150838
+	Careproctus_gilberti_154885
+	Careproctus_gilberti_154932
+	Careproctus_iacchus_145603
+	Careproctus_lerikimae_117918
+	Careproctus_lycopersicus_159763
+	Careproctus_melanurus_150588
+	Careproctus_melanurus_153307_2
+	Careproctus_melanurus_154677
+	Careproctus_ostentum_049435
+	Careproctus_phasma_151261
+	Careproctus_scottae_151302
+	Careproctus_scottae_151304
+	Careproctus_simus_154482_2
+	Careproctus_simus_154482_3
+	Careproctus_spA_154503
+	Careproctus_spA_155710
+	Careproctus_spA_158306
+	Careproctus_spM_155719
+	Careproctus_staufferi_119196
+	Careproctus_staufferi_152005
+	Careproctus_staufferi_155711
+	Crystallichthys_cyclospilus_150847
+	Crystallichthys_cyclospilus_151026
+	Elassodiscus_caudatus_119593
+	Elassodiscus_caudatus_119593_2
+	Elassodiscus_tremebundus_150845_2
+	Elassodiscus_tremebundus_150845_3
+	Eumicrotremus_orbis_119821
+	Eumicrotremus_orbis_151223
+	Liparis_callyodon_157321
+	Liparis_callyodon_158059
+	Liparis_curilensis_044503_3
+	Liparis_curilensis_044504
+	Liparis_cyclopus_151759
+	Liparis_dennyi_155676_4
+	Liparis_dennyi_155676_5
+	Liparis_fabricii_153118
+	Liparis_fabricii_153122
+	Liparis_florae_151166
+	Liparis_fucensis_155026
+	Liparis_gibbus_153834
+	Liparis_gibbus_153834_2
+	Liparis_greeni_112669
+	Liparis_marmoratus_153108
+	Liparis_marmoratus_153127
+	Liparis_ochotensis_049438
+	Liparis_pulchellus_115848
+	Liparis_simushirae_044502
+	Liparis_tunicatus_153126
+	Liparis_tunicatus_154464
+	Lipariscus_nanus_119179_2
+	Lipariscus_nanus_119179_3
+	Lopholiparis_flerxi_119829
+	Lopholiparis_flerxi_159752
+	Nectoliparis_pelagicus_155470
+	Paraliparis_albeolus_151419
+	Paraliparis_cephalus_153529
+	Paraliparis_copei_118898
+	Paraliparis_dactylosus_153045
+	Paraliparis_dactylosus_154897
+	Paraliparis_garmani_118897
+	Paraliparis_grandis_119304
+	Paraliparis_grandis_155715
+	Paraliparis_holomelas_153155
+	Paraliparis_mento_115470
+	Paraliparis_mento_150606
+	Paraliparis_pectoralis_1533526_2
+	Paraliparis_penicillus_119192
+	Paraliparis_rosaceus_153323
+	Paraliparis_ulochir_119776
+	Paraliparis_ulochir_119777
+	Prognatholiparis_ptychomandibularis_116036
+	Rhinoliparis_attenuatus_116039
+	Rhinoliparis_barbulifer_157184
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Lopholiparis_flerxi_159752:1.0,Careproctus_staufferi_119196:1.0,(Careproctus_gilberti_154932:1.0,Careproctus_staufferi_155711:1.0,Liparis_callyodon_157321:1.0,Lopholiparis_flerxi_119829:1.0,Careproctus_spM_155719:1.0,Paraliparis_pectoralis_1533526_2:1.0,Paraliparis_rosaceus_153323:1.0,Careproctus_lycopersicus_159763:1.0,(((Lipariscus_nanus_119179_2[&Contamination="Maybe"]:1.0,(Liparis_dennyi_155676_4:1.0,((Liparis_pulchellus_115848:1.0,(Liparis_cyclopus_151759:1.0,((((Liparis_marmoratus_153127:1.0,(Liparis_tunicatus_153126:1.0,Liparis_marmoratus_153108:1.0)[&bootstrap=79]:1.0)[&bootstrap=92]:1.0,(Liparis_gibbus_153834:1.0,Liparis_gibbus_153834_2:1.0)[&bootstrap=100]:1.0)[&bootstrap=92]:1.0,(Liparis_ochotensis_049438:1.0,(Liparis_tunicatus_154464:1.0,(Liparis_fucensis_155026:1.0,Liparis_dennyi_155676_5:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=92]:1.0)[&bootstrap=78]:1.0,(Liparis_fabricii_153118:1.0,Liparis_fabricii_153122:1.0)[&bootstrap=61]:1.0)[&bootstrap=100]:1.0)[&bootstrap=99]:1.0)[&bootstrap=100]:1.0,(Liparis_florae_151166:1.0,(Liparis_curilensis_044503_3:1.0,(Liparis_simushirae_044502:1.0,Liparis_greeni_112669:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=66]:1.0,((Careproctus_cypselurus_117988:1.0,(Allocareproctus_ungak_111933:1.0,((Careproctus_ambustus_158328:1.0,Careproctus_iacchus_145603:1.0)[&bootstrap=100]:1.0,(Careproctus_faunus_117078:1.0,Liparis_curilensis_044504:1.0)[&bootstrap=100]:1.0)[&bootstrap=95]:1.0)[&bootstrap=60]:1.0,(Rhinoliparis_attenuatus_116039:1.0,Careproctus_staufferi_152005:1.0)[&bootstrap=95]:1.0)[&bootstrap=90]:1.0,(Liparis_callyodon_158059:1.0,Careproctus_lerikimae_117918:1.0)[&bootstrap=94]:1.0)[&bootstrap=88,Contamination="Yes",!hilight={10,5.0,#eb1c20}]:1.0)[&bootstrap=76]:1.0,(((Paraliparis_copei_118898:1.0,Lipariscus_nanus_119179_3:1.0)[&bootstrap=92]:1.0,(Paraliparis_garmani_118897:1.0,Paraliparis_cephalus_153529:1.0)[&bootstrap=100]:1.0)[&bootstrap=88]:1.0,(Paraliparis_mento_115470:1.0,Nectoliparis_pelagicus_155470:1.0)[&bootstrap=99]:1.0)[&bootstrap=92]:1.0)[&bootstrap=69]:1.0,(Careproctus_scottae_151304:1.0,Careproctus_melanurus_153307_2:1.0,(Careproctus_simus_154482_2:1.0,Careproctus_colletti_119446_3:1.0,(Careproctus_cypselurus_119289:1.0,(Careproctus_furcellus_119389_2:1.0,Careproctus_furcellus_150838:1.0)[&bootstrap=100]:1.0)[&bootstrap=88]:1.0,(Careproctus_scottae_151302:1.0,Careproctus_simus_154482_3:1.0)[&bootstrap=84]:1.0)[&bootstrap=53]:1.0,(Careproctus_melanurus_154677:1.0,Careproctus_melanurus_150588:1.0)[&bootstrap=100]:1.0)[&bootstrap=51]:1.0,((((Elassodiscus_tremebundus_150845_3:1.0,Elassodiscus_tremebundus_150845_2:1.0)[&bootstrap=100]:1.0,(Elassodiscus_caudatus_119593_2:1.0,Elassodiscus_caudatus_119593:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0,(Careproctus_bowersianus_116034:1.0,Careproctus_bowersianus_119446:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0,(Paraliparis_penicillus_119192[&Contamination="Yes"]:1.0,Careproctus_spA_155710:1.0)[&bootstrap=53]:1.0)[&bootstrap=53]:1.0,((Paraliparis_dactylosus_153045:1.0,(Paraliparis_grandis_155715:1.0,Paraliparis_grandis_119304:1.0)[&bootstrap=66]:1.0)[&bootstrap=100]:1.0,(Careproctus_ostentum_049435:1.0,Careproctus_phasma_151261:1.0)[&bootstrap=100]:1.0,(Careproctus_ambustus_154478:1.0,Careproctus_ambustus_152101:1.0)[&bootstrap=100]:1.0)[&bootstrap=52]:1.0,(Allocareproctus_jordani_153152:1.0,(Careproctus_ectenes_150772[&Contamination="Yes"]:1.0,(Allocareproctus_tanix_150813:1.0,(Allocareproctus_unangas_150804:1.0,Allocareproctus_unangas_150790:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=89]:1.0)[&bootstrap=90]:1.0,(Crystallichthys_cyclospilus_151026:1.0,(Paraliparis_mento_150606[&Contamination="Yes"]:1.0,(Crystallichthys_cyclospilus_150847:1.0,(Eumicrotremus_orbis_151223:1.0,Eumicrotremus_orbis_119821:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0)[&bootstrap=80]:1.0)[&bootstrap=72]:1.0,((Paraliparis_albeolus_151419:1.0,Paraliparis_holomelas_153155:1.0)[&bootstrap=100]:1.0,(Paraliparis_ulochir_119777:1.0,Paraliparis_ulochir_119776:1.0)[&bootstrap=100]:1.0)[&bootstrap=78]:1.0,(Careproctus_comus_113669:1.0,(Rhinoliparis_barbulifer_157184[&Contamination="Yes"]:1.0,Careproctus_faunus_156084:1.0)[&bootstrap=100]:1.0)[&bootstrap=100]:1.0,(Allocareproctus_jordani_155714[&Contamination="Yes"]:1.0,(Careproctus_ectenes_153151:1.0,Careproctus_spA_158306:1.0)[&bootstrap=90]:1.0)[&bootstrap=90]:1.0,(Paraliparis_dactylosus_154897:1.0,Careproctus_gilberti_154885:1.0)[&bootstrap=75]:1.0,(Acantholiparis_opercularis_159762:1.0,Prognatholiparis_ptychomandibularis_116036:1.0)[&bootstrap=96]:1.0,(Careproctus_spA_154503:1.0,Careproctus_curilanus_153150:1.0)[&bootstrap=100]:1.0)[&bootstrap=59]:1.0);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="Contamination";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Contamination";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set colour.order.contamination="Contamination:Yes,yes,Maybe";
+	set colour.scheme.contamination="Contamination:HSBDiscrete{hue,1,0.0,1.0,0.5,0.6,0.4,0.8}";
+	set layout.expansion=62;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=53;
+	set legend.attribute="bootstrap";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="bootstrap";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=0;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=false;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=2.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=8;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

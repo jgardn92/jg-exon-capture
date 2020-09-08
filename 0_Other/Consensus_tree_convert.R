@@ -21,5 +21,10 @@ consensus_tree_convert <- function(in_tree){
   return(final_tree)
 }
 
-consensus_tree_convert("RAxML_MajorityRuleExtendedConsensusTree.consensus_test2")
-write_file(consensus_tree_convert("RAxML_MajorityRuleExtendedConsensusTree.consensus_test2"), "Consensus_tree2.tree")
+
+write_file(consensus_tree_convert("9_RAxML_consensus_trees/RAxML_MajorityRuleConsensusTree.consensus_test"), 
+           "Consensus_tree1.tree")
+write_file(consensus_tree_convert("9_RAxML_consensus_trees/RAxML_MajorityRuleExtendedConsensusTree.consensus_test2"), 
+           "Consensus_tree2.tree")
+write_file(consensus_tree_convert("9_RAxML_consensus_trees/RAxML_MajorityRuleExtendedConsensusTree.consensus_test3"), 
+           "Consensus_tree3.tree")
