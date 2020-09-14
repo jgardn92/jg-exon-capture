@@ -130,3 +130,7 @@ Concatination files and num of genes captured file from run 4.
 #### 19_RAxML_nf_r4
 RAxML results from concatinated file in 18_concatinate_r4
 `raxmlHPC-PTHREADS-AVX -T 4 -n 19_r4 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 18_concatinate_r4/18_concat.phy `
+
+#### 20_RAxML_nf_r4k
+RAxML results from concatinated file in 18_concatinate_r4 with `-k` to print bootstrap trees with branch lengths to preserve branch lengths on consensus tree (I think...)
+`raxmlHPC-PTHREADS-AVX -T 4 -n run4k -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 18_concatinate_r4/18_concat.phy `
