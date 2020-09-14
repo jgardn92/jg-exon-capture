@@ -122,3 +122,11 @@ Results from pick taxa run removing Oreochromis and contaminated samples determi
 #### 17_nf_r4_aligned
 Resutls from alignment of 16_nf_r4
 `mafft_aln.pl --dna_unaligned 16_nf_r4 --dna_aligned 17_nf_r4_aligned --cpu 2`
+
+#### 18_concatinate_r4
+Concatination files and num of genes captured file from run 4.
+`concat_loci.pl --indir 17_nf_r4_aligned --outfile 18_concat`
+
+#### 19_RAxML_nf_r4
+RAxML results from concatinated file in 18_concatinate_r4
+`raxmlHPC-PTHREADS-AVX -T 4 -n 19_r4 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 18_concatinate_r4/18_concat.phy `
