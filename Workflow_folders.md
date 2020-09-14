@@ -111,3 +111,9 @@ Runs of detect_contamination.pl to determine if samples are contaminated and sho
 *detect_contam2.txt* samples with more relatedness listed on same lines
 
 *detect_contam3.txt* samples grouped based on clades in Clades.csv file
+***
+
+## Run 4
+#### 16_nf_r4
+Results from pick taxa run removing Oreochromis and contaminated samples determined from running detect_contamination.pl with detect_contam3. Selected genes present in 49 samples minimum
+`pick_taxa.pl --indir 2_assemble_result/nf --outdir 16_nf_r4 --min_seq 49 --deselected_tax "Oreochromis_niloticus ATAN_UW150813_S404 AUNA_UW150790_S402 AUNA_UW150804_S403 CSIM_UW154482_2_S421 CSTA_UW155711_S387"`
