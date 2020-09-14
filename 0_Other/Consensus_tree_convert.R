@@ -28,3 +28,4 @@ write_file(consensus_tree_convert("9_RAxML_consensus_trees/RAxML_MajorityRuleExt
            "Consensus_tree2.tree")
 write_file(consensus_tree_convert("9_RAxML_consensus_trees/RAxML_MajorityRuleExtendedConsensusTree.consensus_test3"), 
            "Consensus_tree3.tree")
+write_file(consensus_tree_convert("RAxML_MajorityRuleConsensusTree.contest"), "Run4_consensus.tree")
