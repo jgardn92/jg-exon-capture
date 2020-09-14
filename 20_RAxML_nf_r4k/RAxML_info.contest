@@ -1,0 +1,34 @@
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+RAxML consensus tree computation
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-AVX -J MR -z RAxML_bootstrap.run4k -m GTRCAT -n contest 
+
+
+
+
+Found 100 trees in File RAxML_bootstrap.run4k
+
+RAxML Majority Rule consensus tree written to file: /Users/luketornabene/github/jg-exon-capture/20_RAxML_nf_r4k/RAxML_MajorityRuleConsensusTree.contest
