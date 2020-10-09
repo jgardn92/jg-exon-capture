@@ -31,3 +31,5 @@ write_file(consensus_tree_convert("9_RAxML_consensus_trees/RAxML_MajorityRuleExt
 write_file(consensus_tree_convert("RAxML_MajorityRuleConsensusTree.contest"), "Run4_consensus.tree")
 write_file(consensus_tree_convert("20_RAxML_nf_r4k/RAxML_MajorityRuleConsensusTree.contest"),
            "20_RAxML_nf_r4k/Run4k_consensus.tree")
+write_file(consensus_tree_convert("24_RAxML_nf_r5/r5_consensus.tree"), "24_RAxML_nf_r5/r5_consensus_tree.tree")
+write_file(consensus_tree_convert("28_RAxML_nf_r6/r6_consensus.tree"), "28_RAxML_nf_r6/r6_consensus_tree.tree")
