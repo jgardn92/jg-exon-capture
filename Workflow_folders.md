@@ -150,6 +150,24 @@ Resutls from alignment of 21_nf_r5
 Concatination files and num of genes captured file from run 5.
 `concat_loci.pl --indir 22_nf_r5_aligned --outfile 23_concat`
 
-#### 24_RAxML_nf_r4
+#### 24_RAxML_nf_r5
+RAxML results from concatinated file in 18_concatinate_r4
+`raxmlHPC-PTHREADS-AVX -T 4 -n 24_r5 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 23_concatinate_r5/23_concat.phy `
+
+## Run 6
+
+#### 25_nf_r6
+Results from pick axa run removing Oreochromis and contaminated samples determined from detect contamination **and** samples contaminated based on Run 4 tree **and** samples contaminated based on Run 5 tree
+`pick_taxa.pl --indir 2_assemble_result/nf --outdir 25_nf_r6 --min_seq 49 --deselected_tax "Oreochromis_niloticus ATAN_UW150813_S404 AUNA_UW150790_S402 AUNA_UW150804_S403 CSIM_UW154482_2_S421 CSTA_UW155711_S387 CCYC_UW151026_S409 PMEN_UW150606_S400 PROS_UW153323_S419 AJOR_UW153152_S416 RBAR_UW157184_S476 LNAN_UW119179_2_S452 CCYC_UW150847_S408 LCUR_UW44504_S439"`
+
+#### 26_nf_r6_aligned
+Resutls from alignment of 21_nf_r5
+`mafft_aln.pl --dna_unaligned 21_nf_r5 --dna_aligned 22_nf_r5_aligned --cpu 2`
+
+#### 27_concatinate_r6
+Concatination files and num of genes captured file from run 5.
+`concat_loci.pl --indir 22_nf_r5_aligned --outfile 23_concat`
+
+#### 28_RAxML_nf_r6
 RAxML results from concatinated file in 18_concatinate_r4
 `raxmlHPC-PTHREADS-AVX -T 4 -n 24_r5 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 23_concatinate_r5/23_concat.phy `
