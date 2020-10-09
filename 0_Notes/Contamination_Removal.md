@@ -11,7 +11,16 @@
 * For each screening, write down taxa that get pulled out
 
 ## Contamination Removal 1
-Run 4
+Removed based on detect contamination = Run 4
+Samples Removed
+* ATAN_UW150813_S404
+* AUNA_UW150790_S402
+* AUNA_UW150804_S403
+* CSIM_UW154482_2_S421
+* CSTA_UW155711_S387
 
 ## Contamination Removal 2
-Remove based on Run 4 Tree
+Remove based on Run 4 Tree = Run 5
+* Crystallichthys 151026 = CCYC_UW151026_S409
+* Paraliparis mento 150606 = PMEN_UW150606_S400
+* Paraliparis rosaceus 153323 = PROS_UW153323_S419
