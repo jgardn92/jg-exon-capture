@@ -30,7 +30,7 @@ unzip results from assembly run by Calder in spring 2020 on Shanghai cluster
 Supplemental information about assembly run
 ***
 
-## Run 1
+## 3_Run_1
 50% filter (49 samples), aligned and filtered to Oreochromis
 * Filtering notes in 0_Notes/filter-step.Rmd
 
@@ -52,13 +52,13 @@ Concatinated samples from run 1
 #### 5_RAxMLonCipres
 Results from RAxML runs done on concatinations from run 1, run on Cipres portal
 
-## Run 1.5
+## Run 1.5 (located in 3_Run_1)
 
 #### 6_RAxML_concate_onr
 Concatinated file and results from RAxML run on file where Oreochromis was  removed from concatination after alignment and filtering.
 ***
 
-## Run 2
+## 4_Run_2
 50% filter (49 samples), Oreochromis removed before alignment. Aligned samples not filtered.
 
 #### 7_nf_aligned_orn
@@ -77,7 +77,7 @@ RAxML runs on concatinated files in 8_concatinate_orn_rm
 Concsensus tree runs from bootstrap trees produced in 9_RAxML_orn_rm to collapse nodes with low support and get a better idea about potential contamination.
 ***
 
-## Run 3
+## 5_Run_3
 Retry aligning without Oreochromis and with min seq 69 instead of 49
 
 #### 10_nf_v2
@@ -94,13 +94,13 @@ Concatination files from run 3.
 #### 13_RAxML_nf_v2
 RAxML results from concatinated file in 12_concatinate_v2
 
-## Run 3.5
+## Run 3.5 (located in 5_Run_3)
 
 #### 14_RAxML_nf_v2_nogap
 raxml run on 12_concat_filtered.fas, which is full concatinated alignment from run 3 but with sites with >50% missing data removed using delete_gaps.R (in 0_Other -> Filter2_attempts)
 ***
 
-## Detect Contamination
+## 6_Detect_Contamination
 Runs of detect_contamination.pl to determine if samples are contaminated and should be removed
 
 #### 15_Detect_Contam
@@ -113,7 +113,7 @@ Runs of detect_contamination.pl to determine if samples are contaminated and sho
 *detect_contam3.txt* samples grouped based on clades in Clades.csv file
 ***
 
-## Run 4
+## 7_Run_4
 
 #### 16_nf_r4
 Results from pick taxa run removing Oreochromis and contaminated samples determined from running detect_contamination.pl with detect_contam3. Selected genes present in 49 samples minimum
@@ -136,7 +136,7 @@ RAxML results from concatinated file in 18_concatinate_r4 with `-k` to print boo
 `raxmlHPC-PTHREADS-AVX -T 4 -n run4k -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 18_concatinate_r4/18_concat.phy `
 
 
-## Run 5
+## 8_Run_5
 
 #### 21_nf_r5
 Results from pick axa run removing Oreochromis and contaminated samples determined from detect contamination **and** samples contaminated based on Run 4 tree
@@ -154,7 +154,7 @@ Concatination files and num of genes captured file from run 5.
 RAxML results from concatinated file in 18_concatinate_r4
 `raxmlHPC-PTHREADS-AVX -T 4 -n 24_r5 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 23_concatinate_r5/23_concat.phy `
 
-## Run 6
+## 9_Run_6
 
 #### 25_nf_r6
 Results from pick axa run removing Oreochromis and contaminated samples determined from detect contamination **and** samples contaminated based on Run 4 tree **and** samples contaminated based on Run 5 tree
