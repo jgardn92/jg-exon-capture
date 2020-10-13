@@ -2,18 +2,18 @@
 ***
 ##Filter Data
 * See R-markdown file for notes and work on this step
-* Use 
+* Use
     `pick_taxa2.pl --indir 2_assemble_result/nf --outdir 3_nf_rm_orn --min_seq 49 --deselected_taxa 'Oreochromis_niloticus'`
 ***
 ## Aligning
 * mafft_align.pl
-* install mafft 
+* install mafft
 	* NEED TO REMMEBER HOW I DID THIS  
 * Change shebang on pipeline
 * make sure Moo is installed properly
 	* Error was Generate::Method::Constructor.pm module missing
 	* download Moo-2.004000 from Cpan -> cp the Method folder to the same location as other perl modules
-* ran with code from [Calder's GitHub](https://github.com/calderatta/ca-exon-capture/blob/master/Exon_Capture_Pipeline.md#vi-aligning) 
+* ran with code from [Calder's GitHub](https://github.com/calderatta/ca-exon-capture/blob/master/Exon_Capture_Pipeline.md#vi-aligning)
 	* used `--cpu 2`
 	* `mafft_aln2.pl --dna_unaligned 3_nf_rm_orn --dna_aligned 4_nf_aligned_onr --cpu 2`
 
@@ -25,3 +25,6 @@
 
 ## Summary Statistics
 * statistics.pl
+
+## Constructing Gene trees
+Need to edit construct_tree.pl to call my version of RAxML. Currently calling raxmlHPC-SSE3. Need to call raxmlHPC-PTHREADS-AVX.

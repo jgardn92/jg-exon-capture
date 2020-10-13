@@ -171,3 +171,17 @@ Concatination files and num of genes captured file from run 5.
 #### 28_RAxML_nf_r6
 RAxML results from concatinated file in 18_concatinate_r4
 `raxmlHPC-PTHREADS-AVX -T 4 -n 28_r6 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 27_concatinate_r6/27_concat.phy `
+
+## 10_Gene_Trees
+
+#### 29_full_taxa_nf
+Results from pick taxa for genes with all taxa (97) present, and removing Oreochromis
+`pick_taxa.pl --indir 2_assemble_result/nf --outdir 29_full_taxa_nf --min_seq 97 --deselected_tax "Oreochromis_niloticus"`
+
+#### 30_full_taxa_aligned
+Results from alignment of 29_full_taxa_nf
+`mafft_aln.pl --dna_unaligned 29_full_taxa_nf --dna_aligned 30_full_taxa_aligned --cpu 4`
+
+#### 31_full_taxa_GT
+Gene trees for each gene with full taxa sampling
+`contruct_trees.pl --indir 30_full_taxa_aligned --cpu 4`
