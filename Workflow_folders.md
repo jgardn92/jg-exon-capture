@@ -182,6 +182,14 @@ Results from pick taxa for genes with all taxa (97) present, and removing Oreoch
 Results from alignment of 29_full_taxa_nf
 `mafft_aln.pl --dna_unaligned 29_full_taxa_nf --dna_aligned 30_full_taxa_aligned --cpu 4`
 
-#### 31_full_taxa_GT
-Gene trees for each gene with full taxa sampling
-`contruct_trees.pl --indir 30_full_taxa_aligned --cpu 4`
+#### 30_full_taxa_aligned_ml
+Gene trees for each gene with full taxon sampling
+`construct_tree2.pl --indir 30_full_taxa_aligned --cpu 4`
+
+#### 31_full_taxa_concats
+Concatination file for all genes with full taxon sampling
+`concat_loci.pl --indir 30_full_taxa_aligned --outfile 31_concat`
+
+#### 32_RAxML_full_taxa
+RAxML results from concatinated file in 31_full_taxa_concats
+`raxmlHPC-PTHREADS-AVX -T 4 -n 32_full -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 31_concat.phy `
