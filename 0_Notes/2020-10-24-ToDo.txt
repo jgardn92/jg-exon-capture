@@ -1,0 +1,17 @@
+Make list of Samples
+	- Species
+	- Identifying number
+	- Tissue remaining
+	- DNA Extract Remaining
+	- Note who extracted
+	- Note which samples went through PCR more
+	- Only look at Everything that made it through the DNA step
+	
+COI blast against preassembly sequences. Use melanurus COI as test to start and see if anything pops out. 
+Contamination 
+	- R or Bash 
+	- second table with list of loci and counts of number of identical sequences
+	- write script that looks at each gene aligned file and flags taxa that are identical - p distance of 0
+	- from there return those that are identical but are different species.
+	- table with taxa by taxa comparison with counts of all genes where they are identical. 
+		- also lists of genes where the identical taxa exist
