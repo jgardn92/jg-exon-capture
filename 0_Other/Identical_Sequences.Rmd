@@ -1,0 +1,44 @@
+---
+title: "List of Identical Sequences"
+author: "Jennifer Gardner"
+date: "10/28/2020"
+output: pdf_document
+---
+load dependencies
+```{r, message=FALSE}
+library(tidyverse)
+library(phangorn)
+library(ape)
+```
+
+
+
+### Goals:
+* Look at each alignment file for each gene and flag taxa that have identical sequences
+  * p-distance = 0
+* Return list of taxa with identical sequences
+  * Flag those that are different species (not concerned if same species have identical sequences)
+* Make a taxa-by-taxa table with sums of number of genes where two taxa have identical sequences
+*Make a second table with list of genes and number of identical sequences within each gene
+  * This will help identify contamination vs. highly conserved loci
+
+#### Step 1: Figure out how to do it for one locus
+
+Use files from 4_Run_2/7_nf_aligned_orn/. Run 2 removed Oreochromis at the pick_taxa step and aligned sequences without it. Run 2 included all taxa and all genes with at least 49 taxa (50%) present. 
+```{r}
+gene1 <- read.FASTA("../4_Run_2/7_nf_aligned_orn/Danio_rerio.1.10132455.10132285.fas")
+gene1.dist <- as.data.frame(dist.dna(gene1, as.matrix = TRUE))
+pzeros <- which(gene1.dist==0)
+for (i in 1:length(pzeros)){
+  index <- pzeros[i]
+  column <- index/69
+}
+```
+
+#### Step 2: Figure out how to loop over directory
+
+```{r}
+filenames <- list.files(path = "../4_Run_2/7_nf_aligned_orn/")
+head(filenames)
+```
+
