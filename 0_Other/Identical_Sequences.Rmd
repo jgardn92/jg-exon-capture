@@ -50,23 +50,25 @@ for (i in 1:length(filenames)){ #loop over filename list to do action for each g
   gene_matches <- length(pzeros[,1]) #get number of identical sequence pairs for this gene
   taxa_matches <- matrix(data = NA, nrow = 0, ncol = 2) #make empty data frame to save taxa matches
   colnames(taxa_matches) <- c("row","column") # name columns in dataframe
-  for (i in 1:length(pzeros[,1])){ #for each row in the list of cells where p-dist =0
-    index_row <- as.integer(pzeros[i,1]) # get the row number
-    index_col <- as.integer(pzeros[i,2]) #get the column number
-    rowdata <- c(rows[index_row], columns[index_col]) #convert those to taxa names based on the row and column names above
-    taxa_matches <- rbind(taxa_matches,rowdata) #save it to the matrix created before for loop
-  }
-  for (j in 1:length(taxa_matches[,1])){
-    test_row <- taxa_matches[j,1]
-    test_col <- taxa_matches[j,2]
-    identical_sequences[test_row,test_col] <- identical_sequences[test_row,test_col] +1
+  if(length(pzeros[,1])>0){
+    for (j in 1:length(pzeros[,1])){ #for each row in the list of cells where p-dist =0
+      index_row <- as.integer(pzeros[j,1]) # get the row number
+      index_col <- as.integer(pzeros[j,2]) #get the column number
+      rowdata <- c(rows[index_row], columns[index_col]) #convert those to taxa names based on row/column names above
+      taxa_matches <- rbind(taxa_matches,rowdata) #save it to the matrix created before for loop
+    }
+    for (k in 1:length(taxa_matches[,1])){
+      test_row <- taxa_matches[k,1]
+      test_col <- taxa_matches[k,2]
+      identical_sequences[test_row,test_col] <- identical_sequences[test_row,test_col] +1
+    }
   }
   gene_row <- c(gene_name, taxa, gene_matches) #make row for current gene
-  gene_data <- rbind(gene_data, gene) #attach to gene data matrix
+  gene_data <- rbind(gene_data, gene_row) #attach to gene data matrix
 }
 ```
 
-Need to figure out how to take data from taxa_matches to fill in full 97x97 matrix
+
 
 
 
