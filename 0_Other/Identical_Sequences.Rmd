@@ -57,15 +57,18 @@ for (i in 1:length(filenames)){ #loop over filename list to do action for each g
       rowdata <- c(rows[index_row], columns[index_col]) #convert those to taxa names based on row/column names above
       taxa_matches <- rbind(taxa_matches,rowdata) #save it to the matrix created before for loop
     }
-    for (k in 1:length(taxa_matches[,1])){
-      test_row <- taxa_matches[k,1]
-      test_col <- taxa_matches[k,2]
+    for (k in 1:length(taxa_matches[,1])){#populate identical sequences matrix
+      test_row <- taxa_matches[k,1] #get taxa name for the row
+      test_col <- taxa_matches[k,2] #get taxa name for the column
       identical_sequences[test_row,test_col] <- identical_sequences[test_row,test_col] +1
+      #replace given cell with that cell+1 to add another identical sequence to it.
     }
   }
   gene_row <- c(gene_name, taxa, gene_matches) #make row for current gene
   gene_data <- rbind(gene_data, gene_row) #attach to gene data matrix
 }
+write.csv(identical_sequences, "Identical_Sequences.csv")
+write.csv(gene_data, "Gene_Data.csv", row.names = FALSE)
 ```
 
 
