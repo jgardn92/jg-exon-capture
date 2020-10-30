@@ -72,6 +72,30 @@ write.csv(gene_data, "Gene_Data.csv", row.names = FALSE)
 ```
 
 
+```{r}
+filenames <- list.files(path = "../4_Run_2/7_nf_aligned_orn/") #make list of filenames of gene alignment fastas
+gene_data <- matrix(data = NA, nrow = 0, ncol = 2) #second matrix with gene info
+colnames(gene_data) <- c("gene_name", "avg_pdist") #naming columns for gene info matrix
+for (i in 1:length(filenames)){ #loop over filename list to do action for each gene in folder
+  gene_name <- filenames[i] #get gene for each run
+  gene <- read.FASTA(paste("../4_Run_2/7_nf_aligned_orn/",gene_name, sep = "")) #read in gene alignment
+  gene.dist <- dist.dna(gene)#get distance matrix as data frame for names
+  avg_pdist <-mean(gene.dist)
+  rowdata <- c(gene_name, avg_pdist)
+  gene_data <- rbind(gene_data,rowdata)
+}
+gene_ps<- as.data.frame(gene_data)
+hist(as.numeric(gene_ps$avg_pdist))
+#scatterplot avg p-distance locus length (x)v avg p-dist   (y)for locus
+gene_ps$avg_pdist <- as.numeric(gene_ps$avg_pdist)
+sum(gene_ps$avg_pdist>0.05)
+```
+
+```{r}
+radseq <- read.FASTA("COI_radseq_fastas/RAD_Tree/Liparidae_Final_RAD.fas")
+radseq_p <- dist.dna(radseq)
+mean(radseq_p)
+```
 
 
 
