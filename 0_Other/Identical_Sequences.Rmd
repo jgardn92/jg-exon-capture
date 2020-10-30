@@ -7,8 +7,8 @@ output: pdf_document
 load dependencies
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
-library(phangorn)
 library(ape)
+library(rstatix)
 ```
 
 
@@ -22,30 +22,51 @@ library(ape)
 *Make a second table with list of genes and number of identical sequences within each gene
   * This will help identify contamination vs. highly conserved loci
 
-#### Step 1: Figure out how to do it for one locus
 
 Use files from 4_Run_2/7_nf_aligned_orn/. Run 2 removed Oreochromis at the pick_taxa step and aligned sequences without it. Run 2 included all taxa and all genes with at least 49 taxa (50%) present. 
+
+Get a matrix with taxa pairs that have p-distance = 0
+
 ```{r}
-gene <- read.FASTA("../4_Run_2/7_nf_aligned_orn/Danio_rerio.1.10132455.10132285.fas")
-gene.dist <- as.data.frame(dist.dna(gene, as.matrix = TRUE))
-columns <- colnames(gene.dist)
-rows <- rownames(gene.dist)
-gene.dist1 <- as.matrix(gene.dist)
-colnames(gene.dist1) <- NULL
-rownames(gene.dist1) <- NULL
-taxa <- length(gene.dist)
-pzeros <- which(gene.dist1==0, arr.ind = TRUE)
-pzeros1 <- pzeros[which(pzeros[,1]!=pzeros[,2]),]
-for (i in 1:length(pzeros)){
-  index <- pzeros[i]
-  column <- ifelse(round(index/taxa)>index/taxa,round(index/taxa),round(index/taxa)+1)
+filenames <- list.files(path = "../4_Run_2/7_nf_aligned_orn/") #make list of filenames of gene alignment fastas
+gene_data <- matrix(data = NA, nrow = 0, ncol = 3) #second matrix with gene info
+colnames(gene_data) <- c("gene_name", "taxa_included", "identical_sequences") #naming columns for gene info matrix
+identical_sequences <- matrix(data=0, nrow = 97, ncol = 97) #make matrix for tallying identical sequences
+fullnames <- as.vector(read.csv("full_names.csv")) #read in full names
+colnames(identical_sequences) <- fullnames[,1] #name columns for full matrix
+rownames(identical_sequences) <- fullnames[,1] #name rows for full matrix
+for (i in 1:length(filenames)){ #loop over filename list to do action for each gene in folder
+  gene_name <- filenames[i] #get gene for each run
+  gene <- read.FASTA(paste("../4_Run_2/7_nf_aligned_orn/",gene_name, sep = "")) #read in gene alignment
+  gene.dist <- as.data.frame(dist.dna(gene, as.matrix = TRUE)) #get distance matrix as data frame for names
+  columns <- colnames(gene.dist) #save column names from alignment
+  rows <- rownames(gene.dist) #save row names from alignment
+  taxa <- length(gene.dist) #get number of taxa with sequences for that gene
+  gene.dist1 <- dist.dna(gene, as.matrix = TRUE) #distance matrix for analysis
+  gene.dist2 <- replace_upper_triangle(gene.dist1, by = NA, diagonal = FALSE) #replace upper triangle and diagonal with
+  #NAs, this ensures all zeros are only from identical sequences without duplicates or self matches
+  gene.dist2 <- gene.dist2[,-1] # remove rownames column that replace_upper_triangle generates
+  pzeros <- which(gene.dist2==0, arr.ind = TRUE) #get a list of row and column numbers where p-dist = 0
+  gene_matches <- length(pzeros[,1]) #get number of identical sequence pairs for this gene
+  taxa_matches <- matrix(data = NA, nrow = 0, ncol = 2) #make empty data frame to save taxa matches
+  colnames(taxa_matches) <- c("row","column") # name columns in dataframe
+  for (i in 1:length(pzeros[,1])){ #for each row in the list of cells where p-dist =0
+    index_row <- as.integer(pzeros[i,1]) # get the row number
+    index_col <- as.integer(pzeros[i,2]) #get the column number
+    rowdata <- c(rows[index_row], columns[index_col]) #convert those to taxa names based on the row and column names above
+    taxa_matches <- rbind(taxa_matches,rowdata) #save it to the matrix created before for loop
+  }
+  for (j in 1:length(taxa_matches[,1])){
+    test_row <- taxa_matches[j,1]
+    test_col <- taxa_matches[j,2]
+    identical_sequences[test_row,test_col] <- identical_sequences[test_row,test_col] +1
+  }
+  gene_row <- c(gene_name, taxa, gene_matches) #make row for current gene
+  gene_data <- rbind(gene_data, gene) #attach to gene data matrix
 }
 ```
 
-#### Step 2: Figure out how to loop over directory
+Need to figure out how to take data from taxa_matches to fill in full 97x97 matrix
 
-```{r}
-filenames <- list.files(path = "../4_Run_2/7_nf_aligned_orn/")
-head(filenames)
-```
+
 
