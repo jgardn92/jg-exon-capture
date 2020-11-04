@@ -72,6 +72,107 @@ write.csv(gene_data, "Gene_Data.csv", row.names = FALSE)
 ```
 
 
+Generate data for scatterplot of pdistance vs locus length
+```{r}
+filenames <- list.files(path = "../4_Run_2/7_nf_aligned_orn/") #make list of filenames of gene alignment fastas
+gene_data <- matrix(data = NA, nrow = 0, ncol = 3) #second matrix with gene info
+colnames(gene_data) <- c("gene_name", "avg_pdist", "locus_length") #naming columns for gene info matrix
+for (i in 1:length(filenames)){ #loop over filename list to do action for each gene in folder
+  gene_name <- filenames[i] #get gene for each run
+  gene <- read.FASTA(paste("../4_Run_2/7_nf_aligned_orn/",gene_name, sep = "")) #read in gene alignment
+  gene.dist <- dist.dna(gene)#get distance matrix as data frame for names
+  avg_pdist <-mean(gene.dist)
+  locus_length <- length(gene[[1]])
+  rowdata <- c(gene_name, avg_pdist, locus_length)
+  gene_data <- rbind(gene_data,rowdata)
+}
+gene_ps<- as.data.frame(gene_data)
+
+```
+
+Make scatter plot with locus length on x axis and avg p-dist on y
+```{r}
+plot(gene_ps$locus_length, gene_ps$avg_pdist, pch = 20, col = "grey80", ylab = "Average P-Distance",
+     xlab = "Locus Length (bp)", main = "Distance for Aligned Exons")
+```
+
+Make scatterplot for flanking regions
+```{r}
+filenames.f <- list.files(path = "../11_flanking_regions/aligned/") #make list of filenames of gene alignment fastas
+flank_data <- matrix(data = NA, nrow = 0, ncol = 3) #second matrix with gene info
+colnames(flank_data) <- c("gene_name", "avg_pdist", "alignment_length") #naming columns for gene info matrix
+for (i in 1:length(filenames.f)){ #loop over filename list to do action for each gene in folder
+  flank_name <- filenames.f[i] #get gene for each run
+  flank <- read.FASTA(paste("../11_flanking_regions/aligned/",flank_name, sep = "")) #read in gene alignment
+  flank.dist <- dist.dna(flank)#get distance matrix as data frame for names
+  flank_pdist <-mean(flank.dist)
+  flank_length <- length(flank[[1]])
+  rowdataf <- c(flank_name, flank_pdist, flank_length)
+  flank_data <- rbind(flank_data,rowdataf)
+}
+flank_ps<- as.data.frame(flank_data)
+
+```
+
+Make scatter plot with locus length on x axis and avg p-dist on y
+```{r}
+plot(flank_ps$alignment_length, flank_ps$avg_pdist, pch = 20, col = "grey80", ylab = "Average P-Distance",
+     xlab = "Alignment Length (bp)", main = "Distance for Aligned Flanking Regions")
+```
+
+Get full taxa name list for flanking regions (oreochromis not removed before aligning)
+```{r}
+full_flank <- read.FASTA("../11_flanking_regions/aligned/Tetraodon_nigroviridis.9.948265.948133.aln.fas")
+full_flank.dist <- as.data.frame(dist.dna(full_flank, as.matrix = TRUE))
+full_flank_names <- colnames(full_flank.dist)
+write.csv(full_flank_names, "full_flank_names.csv", row.names = FALSE)
+```
+
+
+```{r}
+filenames.f <- list.files(path = "../11_flanking_regions/aligned/") #make list of filenames of gene alignment fastas
+identical_flanks <- matrix(data=0, nrow = 98, ncol = 98) #make matrix for tallying identical sequences
+fullflanknames <- as.vector(read.csv("full_flank_names.csv")) #read in full names
+colnames(identical_flanks) <- fullflanknames[,1] #name columns for full matrix
+rownames(identical_flanks) <- fullflanknames[,1] #name rows for full matrix
+for (i in 1:length(filenames.f)){ #loop over filename list to do action for each gene in folder
+  flank_name <- filenames.f[i] #get gene for each run
+  flank <- read.FASTA(paste("../11_flanking_regions/aligned/",flank_name, sep = "")) #read in gene alignment
+  flank.dist <- as.data.frame(dist.dna(flank, as.matrix = TRUE)) #get distance matrix as data frame for names
+  columns.f <- colnames(flank.dist) #save column names from alignment
+  rows.f <- rownames(flank.dist) #save row names from alignment
+  flank.dist1 <- dist.dna(flank, as.matrix = TRUE) #distance matrix for analysis
+  flank.dist2 <- replace_upper_triangle(flank.dist1, by = NA, diagonal = FALSE) #replace upper triangle and diagonal with
+  #NAs, this ensures all zeros are only from identical sequences without duplicates or self matches
+  flank.dist2 <- flank.dist2[,-1] # remove rownames column that replace_upper_triangle generates
+  pzeros.f <- which(flank.dist2==0, arr.ind = TRUE) #get a list of row and column numbers where p-dist = 0
+  taxa_matches.f <- matrix(data = NA, nrow = 0, ncol = 2) #make empty data frame to save taxa matches
+  colnames(taxa_matches.f) <- c("row","column") # name columns in dataframe
+  if(length(pzeros.f[,1])>0){
+    for (j in 1:length(pzeros.f[,1])){ #for each row in the list of cells where p-dist =0
+      index_row.f <- as.integer(pzeros.f[j,1]) # get the row number
+      index_col.f <- as.integer(pzeros.f[j,2]) #get the column number
+      rowdata.f <- c(rows.f[index_row.f], columns.f[index_col.f]) #convert those to taxa names based on row/column names above
+      taxa_matches.f <- rbind(taxa_matches.f,rowdata.f) #save it to the matrix created before for loop
+    }
+    for (k in 1:length(taxa_matches.f[,1])){#populate identical sequences matrix
+      test_row.f <- taxa_matches.f[k,1] #get taxa name for the row
+      test_col.f <- taxa_matches.f[k,2] #get taxa name for the column
+      identical_flanks[test_row.f,test_col.f] <- identical_flanks[test_row.f,test_col.f] +1
+      #replace given cell with that cell+1 to add another identical sequence to it.
+    }
+  }
+}
+write.csv(identical_flanks, "Identical_Flanks.csv")
+```
+
+
+Avg p-dist for radseq fasta
+```{r}
+radseq <- read.FASTA("COI_radseq_fastas/RAD_Tree/Liparidae_Final_RAD.fas")
+radseq_p <- dist.dna(radseq)
+mean(radseq_p)
+```
 
 
 

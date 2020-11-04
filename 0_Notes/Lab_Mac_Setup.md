@@ -3,7 +3,7 @@
 ##  Perl Modules and Scripts
 * use `which perl` to determine what the shebang should be and where to put modules
 * put Perl Modules in /luketornabene/miniconda3/lib/5.26.2/
-* change shebang on perl scripts to `#!/Users/luketornabene/miniconda3/bin/perl/`
+* change shebang on perl scripts to `#!/Users/luketornabene/miniconda3/bin/perl`
 * create a folder called biotools in `/usr/local/bin/` and add to path following [Calder’s instructions](https://github.com/calderatta/ca-exon-capture/blob/master/Installation_Guide.md)
 * move scripts with updated shebangs here using `sudo mv ~/pipeline_scripts/postprocess/*.pl /usr/local/bin/biotools/``
 * **NOTE** Only the post processing scripts have been loaded on the Mac, since the assembly scripts need to be run on a cluster
@@ -24,5 +24,5 @@
 ***
 ## Git in Command line
 Use when moving folders with lots of files (atom doesn't like to do this itself)
-`git -status` to make sure your changes are staged
+`git status` to make sure your changes are staged
 `git commit -m "Commit message here"` to commit with in line commit message. Otherwise opens a text editor when moving a lot of files it's a mess. Use -m for in line.
