@@ -23,6 +23,8 @@ library(rstatix)
   * This will help identify contamination vs. highly conserved loci
 
 
+## Part 1: Coding Regions
+
 Use files from 4_Run_2/7_nf_aligned_orn/. Run 2 removed Oreochromis at the pick_taxa step and aligned sequences without it. Run 2 included all taxa and all genes with at least 49 taxa (50%) present. 
 
 Get a matrix with taxa pairs that have p-distance = 0
@@ -90,12 +92,25 @@ gene_ps<- as.data.frame(gene_data)
 
 ```
 
-Make scatter plot with locus length on x axis and avg p-dist on y
+Get general summary stats about flanking regions
 ```{r}
-plot(gene_ps$locus_length, gene_ps$avg_pdist, pch = 20, col = "grey80", ylab = "Average P-Distance",
-     xlab = "Locus Length (bp)", main = "Distance for Aligned Exons")
+gene_ps$avg_pdist <- as.numeric(gene_ps$avg_pdist)
+gene_ps$locus_length <- as.numeric(gene_ps$locus_length)
+mean(gene_ps$avg_pdist)
+length(gene_ps$gene_name)
 ```
 
+Make scatter plot with locus length on x axis and avg p-dist on y
+```{r}
+plot(gene_ps$locus_length, gene_ps$avg_pdist, pch = 21, col = "black", bg = "grey60", ylab = "Average P-Distance",
+     xlab = "Locus Length (bp)", main = "Distance for Aligned Exons", cex = 1.25, bty = "l", cex.axis = 1.5, cex.lab = 1.5, cex.main = 1.5)
+plot(gene_ps$locus_length, gene_ps$avg_pdist, pch = 21, col = "black", bg = "grey60", ylab = "Average P-Distance",
+     xlab = "Locus Length (bp)", main = "Distance for Aligned Exons", cex = 1.25, xlim = c(90,600), ylim = c(0,0.05),
+      bty = "l", cex.axis = 1.5, cex.lab = 1.5, cex.main = 1.5)
+```
+
+
+## Part 2: Flanking Regions
 Make scatterplot for flanking regions
 ```{r}
 filenames.f <- list.files(path = "../11_flanking_regions/aligned/") #make list of filenames of gene alignment fastas
@@ -111,13 +126,25 @@ for (i in 1:length(filenames.f)){ #loop over filename list to do action for each
   flank_data <- rbind(flank_data,rowdataf)
 }
 flank_ps<- as.data.frame(flank_data)
-
 ```
+
+Get general summary stats about flanking regions
+```{r}
+flank_ps$avg_pdist <- as.numeric(flank_ps$avg_pdist)
+flank_ps$alignment_length <- as.numeric(flank_ps$alignment_length)
+flank_ps[which(is.na(flank_ps$avg_pdist)),]
+mean(flank_ps$avg_pdist, na.rm = TRUE)
+length(flank_ps$gene_name)
+```
+
 
 Make scatter plot with locus length on x axis and avg p-dist on y
 ```{r}
-plot(flank_ps$alignment_length, flank_ps$avg_pdist, pch = 20, col = "grey80", ylab = "Average P-Distance",
-     xlab = "Alignment Length (bp)", main = "Distance for Aligned Flanking Regions")
+plot(flank_ps$alignment_length, flank_ps$avg_pdist, pch = 21, col = "black", bg = "grey60", ylab = "Average P-Distance",
+     xlab = "Alignment Length (bp)", main = "Distance for Aligned Flanking Regions", cex = 1.25, bty = "l", cex.axis = 1.5, cex.lab = 1.5, cex.main = 1.5)
+plot(flank_ps$alignment_length, flank_ps$avg_pdist, pch = 21, col = "black", bg = "grey60", ylab = "Average P-Distance",
+      xlab = "Alignment Length (bp)", main = "Distance for Aligned Flanking Regions", cex = 1.25, xlim = c(500,1500), ylim = c(0,0.05),
+      bty = "l", cex.axis = 1.5, cex.lab = 1.5, cex.main = 1.5)
 ```
 
 Get full taxa name list for flanking regions (oreochromis not removed before aligning)
@@ -128,7 +155,7 @@ full_flank_names <- colnames(full_flank.dist)
 write.csv(full_flank_names, "full_flank_names.csv", row.names = FALSE)
 ```
 
-
+Make identical sequences matrix for flanking regions
 ```{r}
 filenames.f <- list.files(path = "../11_flanking_regions/aligned/") #make list of filenames of gene alignment fastas
 identical_flanks <- matrix(data=0, nrow = 98, ncol = 98) #make matrix for tallying identical sequences
