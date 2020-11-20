@@ -1,0 +1,10 @@
+Look at heterozyogotes
+	look at avg level of individual heterozygosity
+
+Screen for microsatellites
+
+pick the loci with the highest variability
+	a. to identify heterozygosites for idea for contamination
+	b. build tree with highly variable loci
+
+Update meeting end of winter quarter
