@@ -15,6 +15,19 @@ Then cat all to one persdb.fasta_file
 `cd 0_Other/blast`
 `cat my* > persdb.fas`
 
+Now make into a database
+`makeblastdb -in persdb.fas -dbtype nucl -out mydb`
+
 ### Step 3: `blastn` for C melanurus COI
 
-`blastn -db 2_assemble_result/nf -query 0_Other/C_mel_coi.fas -out results.out`
+`blastn -db mydb -query C_mel_coi.fas -out results.out`
+
+**Results no hits found**
+
+### Step 4: `blastn` for contaminated sequences
+
+`blastn -db mydb -query contam_goby_seq.fas -out results.out`
+
+**Results: No hits found**
+
+*Note: test sequence blast worked so both results above correct, no COI or contaminated sequence in the assembed data*

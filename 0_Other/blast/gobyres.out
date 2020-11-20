@@ -1,0 +1,42 @@
+BLASTN 2.11.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: persdb.fas
+           273,516 sequences; 56,908,005 total letters
+
+
+
+Query= Contaminated_sequence
+
+Length=579
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 27738838170
+
+
+  Database: persdb.fas
+    Posted date:  Nov 20, 2020  1:59 PM
+  Number of letters in database: 56,908,005
+  Number of sequences in database:  273,516
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
