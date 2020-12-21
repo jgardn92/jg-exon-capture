@@ -31,3 +31,11 @@ Now make into a database
 **Results: No hits found**
 
 *Note: test sequence blast worked so both results above correct, no COI or contaminated sequence in the assembed data*
+
+## Blast Raw Data Update
+- need to make a script that:
+  - loops over each file in directory to search within each spp
+  - converts fastq to fasta
+  - makes the fasta into a blast db
+  - blasts a COI sequence against that blast db
+  - saves successful blast sequences somewhere listed by spp found in and sequence found
