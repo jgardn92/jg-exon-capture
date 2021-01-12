@@ -35,7 +35,12 @@ Now make into a database
 ## Blast Raw Data Update
 - need to make a script that:
   - loops over each file in directory to search within each spp
+  - unzips each file `gunzip file`
   - converts fastq to fasta
+  original code from Robert's lab: `zcat input_file.fastq.gz | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > output_file.fa`
+   `cat 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa`
+   `cat test.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > test.fa`
+   -code from Robert's lab github but using zcat and .gz file but zcat was throwing an error for me but it works with cat on already unzipped file and keeps the fastq and .fa
   - makes the fasta into a blast db
   - blasts a COI sequence against that blast db
   - saves successful blast sequences somewhere listed by spp found in and sequence found
