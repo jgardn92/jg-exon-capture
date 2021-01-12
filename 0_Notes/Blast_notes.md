@@ -40,6 +40,8 @@ Now make into a database
     - original code from Robert's lab: `zcat input_file.fastq.gz | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > output_file.fa`
     - my code on test data: `cat test.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > test.fa`
     - code from Robert's lab github but using zcat and .gz file but zcat was throwing an error for me but it works with cat on already unzipped file and keeps the fastq and .fa
+    - won't work on second test file so trying other option which is less memory
+    `sed -n '1~4s/^@/>/p;2~4p' file.fastq > file.fa`
   3. makes the fasta into a blast db
     - `makeblastdb -in persdb.fas -dbtype nucl -out mydb`
   4. blasts a COI sequence against that blast db
@@ -51,9 +53,16 @@ Now make into a database
 1. `gunzip 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq`
 2. `cat 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa`
   - needed to run this twice, stopped working halway through the file the first time
+
 3. `makeblastdb -in 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa -dbtype nucl -out testdb`
   - this step is what let me know the fasta to fastq didn't work the first time
 4. `blastn -db testdb -query C_mel_coi.fas -out testblast.out`
   - results checked manually: no hits so checked against P_pen COI to be sure
 4. `blastn -db testdb -query P_pen_coi.fas -out test2blast.out`  
   - results checked manually: not hits so think I'm good to go forward with just using C_mel_coi
+
+## Other useful scripts
+1. Print specific line in file `sed -n LINE_NUMBERp file.txt`
+2. Find if @ or + exist in file `grep -Fc '@' file.txt` `grep -Fc '+' file.txt`
+
+sed -n '8129533,8129549p;8129550q' file_name
