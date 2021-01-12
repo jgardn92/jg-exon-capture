@@ -35,13 +35,25 @@ Now make into a database
 ## Blast Raw Data Update
 - need to make a script that:
   - loops over each file in directory to search within each spp
-  - unzips each file `gunzip file`
-  - converts fastq to fasta
-  original code from Robert's lab: `zcat input_file.fastq.gz | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > output_file.fa`
-   `cat 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa`
-   `cat test.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > test.fa`
-   -code from Robert's lab github but using zcat and .gz file but zcat was throwing an error for me but it works with cat on already unzipped file and keeps the fastq and .fa
-  - makes the fasta into a blast db
-  - blasts a COI sequence against that blast db
-  - saves successful blast sequences somewhere listed by spp found in and sequence found
+  1. unzips each file `gunzip file`
+  2.  converts fastq to fasta
+    - original code from Robert's lab: `zcat input_file.fastq.gz | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > output_file.fa`
+    - my code on test data: `cat test.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > test.fa`
+    - code from Robert's lab github but using zcat and .gz file but zcat was throwing an error for me but it works with cat on already unzipped file and keeps the fastq and .fa
+  3. makes the fasta into a blast db
+    - `makeblastdb -in persdb.fas -dbtype nucl -out mydb`
+  4. blasts a COI sequence against that blast db
+    - `blastn -db mydb -query C_mel_coi.fas -out results.out`
+  5. saves successful blast sequences somewhere listed by spp found in and sequence found
+
+### Test run
 - test run mostly worked *but* two of the db files are corrupt and won't commit .nhr and .nsq. No idea why so added to gitignore instead
+1. `gunzip 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq`
+2. `cat 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa`
+  - needed to run this twice, stopped working halway through the file the first time
+3. `makeblastdb -in 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa -dbtype nucl -out testdb`
+  - this step is what let me know the fasta to fastq didn't work the first time
+4. `blastn -db testdb -query C_mel_coi.fas -out testblast.out`
+  - results checked manually: no hits so checked against P_pen COI to be sure
+4. `blastn -db testdb -query P_pen_coi.fas -out test2blast.out`  
+  - results checked manually: not hits so think I'm good to go forward with just using C_mel_coi
