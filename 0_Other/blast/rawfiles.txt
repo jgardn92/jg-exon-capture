@@ -2,7 +2,6 @@ Undetermined_S0_L007_R1_001.fastq.gz
 Undetermined_S0_L007_R2_001.fastq.gz
 Undetermined_S0_L008_R1_001.fastq.gz
 Undetermined_S0_L008_R2_001.fastq.gz
-lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fastq.gz
 lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R2_001.fastq.gz
 lane7-s386-index-GGCTTGAA-CSTA_UW119196_S386_L007_R1_001.fastq.gz
 lane7-s386-index-GGCTTGAA-CSTA_UW119196_S386_L007_R2_001.fastq.gz

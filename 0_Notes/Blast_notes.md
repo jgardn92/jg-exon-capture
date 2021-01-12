@@ -44,4 +44,4 @@ Now make into a database
   - makes the fasta into a blast db
   - blasts a COI sequence against that blast db
   - saves successful blast sequences somewhere listed by spp found in and sequence found
-- test run mostly worked *but* two of the db files are corrupt and won't commit .nhr and .nsq. No idea why
+- test run mostly worked *but* two of the db files are corrupt and won't commit .nhr and .nsq. No idea why so added to gitignore instead
