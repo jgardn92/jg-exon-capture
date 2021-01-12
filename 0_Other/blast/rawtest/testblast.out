@@ -1,0 +1,42 @@
+BLASTN 2.11.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa
+           3,446,430 sequences; 520,410,930 total letters
+
+
+
+Query= Cmelanurus118920
+
+Length=492
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 198721153800
+
+
+  Database: 0_raw/lane7-s385-index-TCTATTCG-PPEN_UW119192_S385_L007_R1_001.fa
+    Posted date:  Jan 12, 2021  12:47 PM
+  Number of letters in database: 520,410,930
+  Number of sequences in database:  3,446,430
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
