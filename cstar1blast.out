@@ -1,0 +1,95 @@
+BLASTN 2.11.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: fastas/lane7-s386-index-GGCTTGAA-
+CSTA_UW119196_S386_L007_R1_001.fasta
+           8,899,555 sequences; 1,343,832,787 total letters
+
+
+
+Query= Cmelanurus118920
+
+Length=492
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+J00107:227:HFY5TBBXY:7:2110:23815:11284 1:N:0:GGCTTGAA                141     1e-31
+J00107:227:HFY5TBBXY:7:1105:28726:11284 1:N:0:GGCTTGAA                141     1e-31
+J00107:227:HFY5TBBXY:7:2124:10206:28006 1:N:0:GGCTTGAA                139     5e-31
+
+
+>J00107:227:HFY5TBBXY:7:2110:23815:11284 1:N:0:GGCTTGAA
+Length=151
+
+ Score = 141 bits (76),  Expect = 1e-31
+ Identities = 86/91 (95%), Gaps = 0/91 (0%)
+ Strand=Plus/Minus
+
+Query  402  CAATATCAAACCCCCCTTTTCGTGTGGTCTATACTTATTACCGCCGTACTTCTCCTTCTT  461
+            |||||||| |||||||| || ||||||||| |||||||||||||||||||||||||||||
+Sbjct  151  CAATATCAGACCCCCCTCTTAGTGTGGTCTGTACTTATTACCGCCGTACTTCTCCTTCTT  92
+
+Query  462  TCTCTCCCCGTCCTTGCTGCCGGCATCACTA  492
+            |||||||||||||||||||||||||| ||||
+Sbjct  91   TCTCTCCCCGTCCTTGCTGCCGGCATTACTA  61
+
+
+>J00107:227:HFY5TBBXY:7:1105:28726:11284 1:N:0:GGCTTGAA
+Length=151
+
+ Score = 141 bits (76),  Expect = 1e-31
+ Identities = 86/91 (95%), Gaps = 0/91 (0%)
+ Strand=Plus/Minus
+
+Query  402  CAATATCAAACCCCCCTTTTCGTGTGGTCTATACTTATTACCGCCGTACTTCTCCTTCTT  461
+            |||||||| |||||||| || ||||||||| |||||||||||||||||||||||||||||
+Sbjct  151  CAATATCAGACCCCCCTCTTAGTGTGGTCTGTACTTATTACCGCCGTACTTCTCCTTCTT  92
+
+Query  462  TCTCTCCCCGTCCTTGCTGCCGGCATCACTA  492
+            |||||||||||||||||||||||||| ||||
+Sbjct  91   TCTCTCCCCGTCCTTGCTGCCGGCATTACTA  61
+
+
+>J00107:227:HFY5TBBXY:7:2124:10206:28006 1:N:0:GGCTTGAA
+Length=151
+
+ Score = 139 bits (75),  Expect = 5e-31
+ Identities = 83/87 (95%), Gaps = 0/87 (0%)
+ Strand=Plus/Plus
+
+Query  406  ATCAAACCCCCCTTTTCGTGTGGTCTATACTTATTACCGCCGTACTTCTCCTTCTTTCTC  465
+            |||| |||||||| |||||||||||| |||||||||||||||||||||||||||||||||
+Sbjct  1    ATCAGACCCCCCTCTTCGTGTGGTCTGTACTTATTACCGCCGTACTTCTCCTTCTTTCTC  60
+
+Query  466  TCCCCGTCCTTGCTGCCGGCATCACTA  492
+            |||||||||||||||||||||| ||||
+Sbjct  61   TCCCCGTCCTTGCTGCCGGCATTACTA  87
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 507915394608
+
+
+  Database: fastas/lane7-s386-index-GGCTTGAA-
+CSTA_UW119196_S386_L007_R1_001.fasta
+    Posted date:  Jan 12, 2021  4:32 PM
+  Number of letters in database: 1,343,832,787
+  Number of sequences in database:  8,899,555
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
