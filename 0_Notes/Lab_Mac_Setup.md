@@ -26,3 +26,12 @@
 Use when moving folders with lots of files (atom doesn't like to do this itself)
 `git status` to make sure your changes are staged
 `git commit -m "Commit message here"` to commit with in line commit message. Otherwise opens a text editor when moving a lot of files it's a mess. Use -m for in line.
+
+## Homebrew
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+### Samtools with Homebrew
+`brew install samtools`
+### BWA with Homebrew
+`brew install bwa`
+### bowtie2 with Homebrew
+`brew install bowtie2`
