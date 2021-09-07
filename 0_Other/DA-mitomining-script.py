@@ -1,4 +1,4 @@
-Script to extract mitochondrial markers from raw data
+# Script to extract mitochondrial markers from raw data
 
 module load BWA/0.7.17-foss-2018b
 
