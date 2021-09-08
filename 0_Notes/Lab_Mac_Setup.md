@@ -8,18 +8,23 @@
 * move scripts with updated shebangs here using `sudo mv ~/pipeline_scripts/postprocess/*.pl /usr/local/bin/biotools/``
 * **NOTE** Only the post processing scripts have been loaded on the Mac, since the assembly scripts need to be run on a cluster
 
-### Scripts List
-* *italicized* scripts have updated shebangs
-assemble.pl		            flank_filter.pl		   *predict_frames.pl*
-clocklikeness_test.pl	    gatk.sh			          reblast.pl
-concat_loci.pl		        get_orthologues.pl	  rmdup.pl
-consensus.pl		         *gunzip_Files.pl*	    sga_assemble.pl
-construct_tree.pl	        mafft_aln.pl		      statistics.pl
-count_reads_bases.pl	    map_statistics.pl	   *trim_adaptor.pl*
-*demultiplex_inline.pl*	  merge.pl		          ubxandp.pl
-detect_contamination.pl	  merge_loci.pl		      unixlb_unwarp.pl
-exonerate_best.pl	        monophyly_test.pl	    vcftosnps.pl
-filter.pl		              pick_taxa.pl
+### Scripts List and Notes
+* *italicized* scripts have updated shebangs and work using `script_name.pl -h`
+* downloaded [taxnameconvert.pl](http://www.cibiv.at/software/taxnameconvert/)
+	* copied script into biotools folder as well
+
+*assemble.pl*	             *flank_filter.pl*	   *predict_frames.pl*
+*clocklikeness_test.pl*	    gatk.sh			         *reblast.pl*
+*concat_loci.pl*	         *get_orthologues.pl*  *rmdup.pl*
+*consensus.pl*	           *gunzip_Files.pl*	   *sga_assemble.pl*
+*construct_tree.pl*        *mafft_aln.pl* 	     *statistics.pl*
+*count_reads_bases.pl*     *map_statistics.pl*   *taxnameconvert.pl*
+*demultiplex_inline.pl*	   *merge.pl* 	         *trim_adaptor.pl*
+*detect_contamination.pl*  *merge_loci.pl*	     *ubxandp.pl*
+*exonerate_best.pl*        *monophyly_test.pl*   *unixlb_unwarp.pl*
+*filter.pl* 	             *pick_taxa.pl*        *vcftosnps.pl*
+
+*  `gatk.sh` - need to install Java runtime (I think)
 
 
 ## Perl Modules
@@ -31,11 +36,7 @@ filter.pl		              pick_taxa.pl
 	* Generated warning to add `/Users/luketornabene/Library/Python/3.9/bin` to PATH
 	* Generated warning to update cutadapt using `python3 -m pip install --user --upgrade cutadapt`
 
-## Note on Scripts
-* based on running scriptname.pl -h all scripts are working *except*
-	*  `clocklikeness_test.pl` - need to install the Statistics::Distributions module
-	*  `gatk.sh` - need to install Java runtime (I think)
-* downloaded [taxnameconvert.pl](http://www.cibiv.at/software/taxnameconvert/)
+
 
 ***
 ## Installing RAxML and ASTRAL  
