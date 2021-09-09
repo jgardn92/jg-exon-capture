@@ -1,0 +1,3 @@
+Sample	Reads num. of raw reads	Bases num. of raw reads (bp)	Reads num. of cleaned reads	Bases num. of cleaned reads (bp)
+lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008	0	0	22950596	3379609689
+lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007	0	0	6487818	805129445

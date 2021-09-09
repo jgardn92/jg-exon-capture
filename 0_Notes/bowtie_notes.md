@@ -17,7 +17,7 @@ Run `rm *fastq.gz` to keep only unzipped files
 ### 1. Rename merged files as .fq
 The input files for `trim_adaptor.pl` must be .fq, NOT .fastq and must have the _001 preceding the .fastq removed (`merge` step does this but if no merge step use the script below), so in `merge` (or `raw` if there was no merge step) run:
 
-    `(for file in *_001.fq; do mv "$file" "$(basename "$file" _001.fq).fq"; done)`
+    `(for file in *_001.fastq; do mv "$file" "$(basename "$file" _001.fastq).fq"; done)`
 
 Output:
 `sample_name_R1.fq`
@@ -66,9 +66,9 @@ Eleni did this using the program *FastQC*. Explanation of *FastQC* arguments use
 In home directory make new file for fastqc results:
   `mkdir 2_trimmed_fastqc`
 In 1_trimmed rename files to .fastq instead of .fq
-  ``
+  `(for file in *.fq; do mv "$file" "$(basename "$file" .fq).fastq"; done)`
 Then run fastqc for every file in directory
-  `for FILE in 1_trimmed_fastq/*.fastq # for any file ending in .fastq in this directory
+  `for FILE in 1_trimmed/*.fastq # for any file ending in .fastq in this directory
   do
   fastqc -f fastq --extract -o 2_trimmed_fastqc $FILE
   done`

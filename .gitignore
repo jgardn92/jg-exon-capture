@@ -32522,4 +32522,5 @@
 0_Other/blast/rawtest/testdb.nhr
 0_Other/blast/rawtest/testdb.nsq
 0_da_test/*
-12_bowtie/test/*
+12_bowtie/test/0_raw/*
+12_bowtie/test/1_trimmed/*
