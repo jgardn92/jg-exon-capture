@@ -2,11 +2,11 @@
 Code and notes adapted from [Calder's repo](https://github.com/calderatta/ca-exon-capture) and [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea)
 
 ## Step 0: Set up
-Test samples in `12_bowtie/test/0_raw`:
-lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007_R2_001.fastq.gz (largest single raw sample)
-lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007_R1_001.fastq.gz
-lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2_001.fastq.gz
-lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1_001.fastq.gz
+Test samples in `12_bowtie/test/0_raw`:  
+lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007_R2_001.fastq.gz (largest single raw sample)  
+lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007_R1_001.fastq.gz  
+lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2_001.fastq.gz  
+lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1_001.fastq.gz  
 
 Run `gunzip -k *.fastq.gz`
 Run `rm *fastq.gz` to keep only unzipped files
