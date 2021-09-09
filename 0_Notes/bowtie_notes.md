@@ -63,10 +63,15 @@ Eleni did this using the program *FastQC*. Explanation of *FastQC* arguments use
                   sequence file which was processed.
 
 In home directory make new file for fastqc results:  
+
     `mkdir 2_trimmed_fastqc`
+
 In 1_trimmed rename files to .fastq instead of .fq
+
     `(for file in *.fq; do mv "$file" "$(basename "$file" .fq).fastq"; done)`
+
 Then run fastqc for every file in directory
+
     `for FILE in 1_trimmed/*.fastq # for any file ending in .fastq in this directory
     do
     fastqc -f fastq --extract -o 2_trimmed_fastqc $FILE
