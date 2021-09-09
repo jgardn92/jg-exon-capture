@@ -1,6 +1,5 @@
 # Bowtie2 For Heterozygosity
 Code and notes adapted from [Calder's repo](https://github.com/calderatta/ca-exon-capture) and [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea)
-- Use assembled genes as reference genome for each individual
 
 ## Step 0: Set up
 Test samples in `12_bowtie/test/0_raw`:
@@ -75,9 +74,15 @@ Then run fastqc for every file in directory
 
 Verify that sequencing qulaity is good and adapaters are not present. For an example see [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea/blob/main/scripts/step1_process_ancient_raw_data.md)
 
+CCYC_UW151026_S409_L007_R1_001 quality ok but not great
+CCYC_UW151026_S409_L007_R2_001 quality poor
+CAMB_UW152101_S459_L008_R1_001 quality good
+CAMB_UW152101_S459_L008_R2_001 quality ok but not great
 
+### Use CAMB for test going forward
 
 ## Step 2: Align samples to the genome
+- Use assembled genes as reference genome for each individual
 
 ### Explanation of terms:
 
