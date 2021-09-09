@@ -41,7 +41,7 @@ Example:
 
 The output will be in the directory `trimmed`. This will also produce report files `trimmed_reads_bases_count.txt` and `trimming_report/sample_name_trimming_report.txt`. To clean these file up into a new directory `trimmed_supp` run:
 
-  ` mkdir 2_trimmed_supp
+    `mkdir 2_trimmed_supp
     mv trimmed_reads_bases_count.txt 2_trimmed_supp/
     mv trimming_report 2_trimmed_supp/`
 
