@@ -8,7 +8,7 @@ lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007_R1_001.fastq.gz
 lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2_001.fastq.gz  
 lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1_001.fastq.gz  
 
-Run `gunzip -k *.fastq.gz`
+Run `gunzip -k *.fastq.gz`  
 Run `rm *fastq.gz` to keep only unzipped files
 
 ## Step 1: Trim Adapters
@@ -62,22 +62,22 @@ Eleni did this using the program *FastQC*. Explanation of *FastQC* arguments use
                   for  each  sequence file is created in the same directory as the
                   sequence file which was processed.
 
-In home directory make new file for fastqc results:
-  `mkdir 2_trimmed_fastqc`
+In home directory make new file for fastqc results:  
+    `mkdir 2_trimmed_fastqc`
 In 1_trimmed rename files to .fastq instead of .fq
-  `(for file in *.fq; do mv "$file" "$(basename "$file" .fq).fastq"; done)`
+    `(for file in *.fq; do mv "$file" "$(basename "$file" .fq).fastq"; done)`
 Then run fastqc for every file in directory
-  `for FILE in 1_trimmed/*.fastq # for any file ending in .fastq in this directory
-  do
-  fastqc -f fastq --extract -o 2_trimmed_fastqc $FILE
-  done`
+    `for FILE in 1_trimmed/*.fastq # for any file ending in .fastq in this directory
+    do
+    fastqc -f fastq --extract -o 2_trimmed_fastqc $FILE
+    done`
 
 Verify that sequencing qulaity is good and adapaters are not present. For an example see [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea/blob/main/scripts/step1_process_ancient_raw_data.md)
 
-CCYC_UW151026_S409_L007_R1_001 quality ok but not great
-CCYC_UW151026_S409_L007_R2_001 quality poor
-CAMB_UW152101_S459_L008_R1_001 quality good
-CAMB_UW152101_S459_L008_R2_001 quality ok but not great
+CCYC_UW151026_S409_L007_R1_001 quality ok but not great  
+CCYC_UW151026_S409_L007_R2_001 quality poor  
+CAMB_UW152101_S459_L008_R1_001 quality good  
+CAMB_UW152101_S459_L008_R2_001 quality ok but not great  
 
 ### Use CAMB for test going forward
 
