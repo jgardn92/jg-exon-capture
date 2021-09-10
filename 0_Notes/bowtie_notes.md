@@ -87,9 +87,24 @@ CAMB_UW152101_S459_L008_R2_001 quality ok but not great
 ### Use CAMB for test going forward
 
 ## Step 2: Align samples to the genome
-- Use assembled genes as reference genome for each individual
 
-### Explanation of terms:
+
+### 1. Assemble and index "genome"
+
+* Use assembled genes as reference genome for each individual
+
+Make a file with the name of all genes in 2_assemble_result/nf/ in the main folder (cd to main folder)
+    `ls 2_assemble_result/nf > assembled.loci.txt`
+
+Run pseudo_genome.sh script to get data for CAMB_UW152101_S459 out of each file
+
+    `bash pseudo_genome.sh`
+
+Index "genome" file using bowtie?
+
+    `bowtie2-build ref_genomes/CAMB_UW152101_S459.fasta ref_genomes/CAMB_UW152101_S459`
+
+### 2. Align to genome:
 
    *bowtie2 -q -x <bt2-idx> -U <r> -S <sam>*
 
@@ -102,34 +117,21 @@ CAMB_UW152101_S459_L008_R2_001 quality ok but not great
    -S <sam> File for SAM output (default: stdout)
    you can use 2> to redirect stdout to a file (bowtie writes the summary log files to stdout)
 
+##### Loop over each sample fastq file and align it to genome, then output a sam file
 
+Make sample_lis: a text file with list of prefixes of the fastq files, separated by newline (so, the file name with no extension).
 
-   ``` bash
-
-   #Directories and files
-
-   BASEDIR=/media/ubuntu/Herring_aDNA/hybridization_capture/ancient_samples
-   SAMPLELIST=$BASEDIR/sample_lists/sample_list.txt # Path to a text file with list of prefixes of the fastq files, separated by newline (so, the file name with no extension).
-   FASTQDIR=$BASEDIR'/'trimmed_fastq # Path to folder containing fastq files.
-   GENOMEDIR=/media/ubuntu/Herring_aDNA/atlantic_herring_genome # Path to folder with genome.
-   GENOME=GCA_900700415 #genome prefix
-   OUTPUTDIR=$BASEDIR'/'sam # path to folder with sam files (output)
-
-
-   # Command
-
-   # Loop over each sample fastq file and align it to genome, then output a sam file
-
-   for SAMPLEFILE in `cat $SAMPLELIST`
+   for SAMPLEFILE in `cat test/sample_lists/sample_list.txt`
    do
-     bowtie2 -q -x $GENOMEDIR'/'$GENOME -U $FASTQDIR'/'$SAMPLEFILE.fastq -S $OUTPUTDIR'/'$SAMPLEFILE.sam
+     bowtie2 -q -x ref_genomes/CAMB_UW152101_S459 -U test/1_trimmed/"${SAMPLEFILE}.fastq" -S test/3_sam/"${SAMPLEFILE}.sam"
    done
 
-   ```
-
-
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
-   Next, I filtered the bam files. I removed any sequences that were shorter than 30 nucleotides long, removed sequences that had a mapping quality below 30, converted the files into bam format, and then sorted and indexed the bam files. All this was done using using *samtools*
+Filter the bam files based on Eleni's settings using *samtools*:
+  * remove any sequences shorter than 30 nucleotides long
+  * remove sequences that have a mapping quality below 30
+  * convert the files into bam format
+  * sort and index the bam files.
 
    - samtools view: prints all alignments in the specified input alignment file (in SAM, BAM,  or  CRAM format) to standard output. Can use the samtools *view* command to convert a sam file to bam file
 
@@ -149,28 +151,18 @@ CAMB_UW152101_S459_L008_R2_001 quality ok but not great
 
      -s : Remove duplicates for single-end reads. By default, the command works for paired-end reads only.
 
-   - samtools index : Index a coordinate-sorted BAM or CRAM file for fast random access. Index the bam files to quickly extract alignments overlapping particular genomic regions.This index is needed when region arguments are used to limit samtools view and similar commands to particular regions of interest.
+   - samtools index : Index a coordinate-sorted BAM or CRAM file for fast random access. Index the bam files to quickly extract alignments overlapping particular genomic regions. This index is needed when region arguments are used to limit samtools view and similar commands to particular regions of interest.
 
-
-   ``` bash
-   # Directories and files
-   BASEDIR=/media/ubuntu/Herring_aDNA/hybridization_capture/ancient_samples
-   SAMPLELIST=$BASEDIR/sample_lists/sample_list.txt # Path to a text file with list of prefixes of the fastq files, separated by newline (so, the file name with no extension).
-   SAMDIR=$BASEDIR'/'sam # path to folder with sam files (input)
-   BAMDIR=$BASEDIR'/'bam # path to folder with bam files (output)
-
-   # Command
-   for SAMPLEFILE in `cat $SAMPLELIST`
+``` bash
+   for SAMPLEFILE in `cat test/sample_lists/sample_list.txt`
    do
-     samtools view -S -b -h -q 30 -m 30 $SAMDIR'/'$SAMPLEFILE.sam | \
-     # using a unix pipe (input file is taken from previous step and designated by '-')
+     samtools view -S -b -h -q 30 -m 30 test/3_sam/"${SAMPLEFILE}.sam" | \
      samtools sort - | \
-     samtools rmdup -s - $BAMDIR'/'${SAMPLEFILE}'_sorted_rd.bam'
-     samtools index $BAMDIR'/'${SAMPLEFILE}'_sorted_rd.bam'
-     samtools view $BAMDIR'/'${SAMPLEFILE}'_sorted_rd.bam' | wc -l # count the number of alignments
+     samtools rmdup -s - test/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
+     samtools index test/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
+     samtools view test/4_bam/"${SAMPLEFILE}_sorted_rd.bam" | wc -l
    done
-
-   ```
+```
 ## Step 4: Calculate individual observed Heterozygosity
 
 # Calculate individual observed heterozygosity

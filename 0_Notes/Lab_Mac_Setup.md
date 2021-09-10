@@ -60,3 +60,8 @@ Use when moving folders with lots of files (atom doesn't like to do this itself)
 `brew install bowtie2`
 ### vcftools with Homebrew
 `brew install vcftools`
+
+## FigTree
+Need to reinstall as of 9/10/21
+
+## Might need to reinstall usearch?
