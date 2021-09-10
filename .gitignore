@@ -10,3 +10,4 @@
 12_bowtie/test/0_raw/*
 12_bowtie/test/1_trimmed/*
 12_bowtie/test/3_sam/*
+12_bowtie/ref_genomes/*.fasta
