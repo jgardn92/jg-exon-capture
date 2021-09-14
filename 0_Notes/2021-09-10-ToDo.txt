@@ -1,0 +1,9 @@
+flag paired ends in bowtie aligning
+
+want a reference that shows percentage of genome that had reads mapped to it.
+
+figure out vcf tables
+
+see if table is forcing two alleles
+
+see if there's a way to export individual assemblies (show me all reads mapped to that gene)
