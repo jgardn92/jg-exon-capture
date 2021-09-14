@@ -88,26 +88,29 @@ CAMB_UW152101_S459_L008_R2_001 quality ok but not great
 
 ## Step 2: Align samples to the genome
 
-
 ### 1. Assemble and index "genome"
 
+#### Get reference genomes by taking locixspecies files and making them speciesxloci
 Make a file with the name of all genes in 2_assemble_result/nf/ in the main folder (cd to main folder)
     `ls 2_assemble_result/nf > assembled.loci.txt`
 
 Make a file with the name of all specimens sampled in 0_raw/0_raw
     `ls 0_raw/0_raw/*R1_001.fastq.gz > specimen_list_raw.txt`
 
-    for FILENAME in `cat specimen_list_raw.txt`
-    do
-      SPECIMEN=$(echo ${FILENAME} | cut -c 39-56)
-      echo ${SPECIMEN} >> specimen_list.txt
-    done
+Copied `specimen_list_raw.txt` to a [google sheet](https://docs.google.com/spreadsheets/d/1DpC9AwyNsHgAmCqXThUZfS1tRr-Z6TvmII9BVE15Uc0/edit?usp=sharing) and split text to columns then reassembled to account for different length names. Saved results to `specimen_list.txt`
 
 Run pseudo_genome_loop.sh script to get data for CAMB_UW152101_S459 out of each file
 
     `bash pseudo_genome_loop.sh`
 
-Index "genome" file using bowtie?
+Make sure it worked (should have 99 files with the largest being roughly the same as the largest raw files)
+    `ls 12_bowtie/ref_genomes/fastas/ | wc -l` #should be 99 and is
+
+Compare sizes by making txt files with sizes and then comparing in a [google sheet](https://docs.google.com/spreadsheets/d/1qvlXr-OaZlDfOPI9fQfhSmWmPACXwDxz9HZ__DgSMuw/edit?usp=sharing)
+    `ls -l 0_raw/0_raw/*.fastq.gz > 12_bowtie/ref_genomes/raw_size.txt`
+    `ls -l 12_bowtie/ref_genomes/fastas/*.fasta > 12_bowtie/ref_genomes/pseudo_size.txt`
+
+#### Index "genome" file using bowtie
 
     `bowtie2-build ref_genomes/CAMB_UW152101_S459.fasta ref_genomes/CAMB_UW152101_S459`
 
