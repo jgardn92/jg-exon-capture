@@ -91,14 +91,21 @@ CAMB_UW152101_S459_L008_R2_001 quality ok but not great
 
 ### 1. Assemble and index "genome"
 
-* Use assembled genes as reference genome for each individual
-
 Make a file with the name of all genes in 2_assemble_result/nf/ in the main folder (cd to main folder)
     `ls 2_assemble_result/nf > assembled.loci.txt`
 
-Run pseudo_genome.sh script to get data for CAMB_UW152101_S459 out of each file
+Make a file with the name of all specimens sampled in 0_raw/0_raw
+    `ls 0_raw/0_raw/*R1_001.fastq.gz > specimen_list_raw.txt`
 
-    `bash pseudo_genome.sh`
+    for FILENAME in `cat specimen_list_raw.txt`
+    do
+      SPECIMEN=$(echo ${FILENAME} | cut -c 39-56)
+      echo ${SPECIMEN} >> specimen_list.txt
+    done
+
+Run pseudo_genome_loop.sh script to get data for CAMB_UW152101_S459 out of each file
+
+    `bash pseudo_genome_loop.sh`
 
 Index "genome" file using bowtie?
 
