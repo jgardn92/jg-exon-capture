@@ -1,0 +1,61 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: 0_raw/0_raw/lane8-s468-index-TGGTTGAC-CLYC_UW159763_S468_L008_R1.fq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 3.4
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC' (user defined)
+Maximum trimming error rate: 0.1 (default)
+Optional adapter 2 sequence (only used for read 2 of paired-end files): 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+
+
+This is cutadapt 3.4 with Python 3.9.6
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC 0_raw/0_raw/lane8-s468-index-TGGTTGAC-CLYC_UW159763_S468_L008_R1.fq
+Processing reads on 1 core in single-end mode ...
+Finished in 0.17 s (12 µs/read; 5.04 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  14,103
+Reads with adapters:                     4,341 (30.8%)
+Reads written (passing filters):        14,103 (100.0%)
+
+Total basepairs processed:     2,129,553 bp
+Quality-trimmed:                  28,079 bp (1.3%)
+Total written (filtered):      2,095,053 bp (98.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC; Type: regular 3'; Length: 34; Trimmed: 4341 times
+
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 29.9%
+  C: 31.8%
+  G: 27.0%
+  T: 11.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	2847	3525.8	0	2847
+2	1172	881.4	0	1172
+3	283	220.4	0	283
+4	33	55.1	0	33
+5	3	13.8	0	3
+6	1	3.4	0	1
+100	1	0.0	3	1
+128	1	0.0	3	0 1
+
+RUN STATISTICS FOR INPUT FILE: 0_raw/0_raw/lane8-s468-index-TGGTTGAC-CLYC_UW159763_S468_L008_R1.fq
+=============================================
+14103 sequences processed in total
+

@@ -1,0 +1,203 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: 0_raw/0_raw/lane8-s445-index-TTCGTCGG-CCYP_UW117988_S445_L008_R2.fq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 3.4
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC' (user defined)
+Maximum trimming error rate: 0.1 (default)
+Optional adapter 2 sequence (only used for read 2 of paired-end files): 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+
+
+This is cutadapt 3.4 with Python 3.9.6
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT 0_raw/0_raw/lane8-s445-index-TTCGTCGG-CCYP_UW117988_S445_L008_R2.fq
+Processing reads on 1 core in single-end mode ...
+Finished in 62.11 s (9 µs/read; 6.73 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               6,967,878
+Reads with adapters:                 1,818,522 (26.1%)
+Reads written (passing filters):     6,967,878 (100.0%)
+
+Total basepairs processed: 1,052,149,578 bp
+Quality-trimmed:             112,323,077 bp (10.7%)
+Total written (filtered):    936,469,347 bp (89.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT; Type: regular 3'; Length: 33; Trimmed: 1818522 times
+
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 31.9%
+  C: 27.7%
+  G: 28.5%
+  T: 11.2%
+  none/other: 0.7%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	1184845	1741969.5	0	1184845
+2	482892	435492.4	0	482892
+3	96341	108873.1	0	96341
+4	37724	27218.3	0	37724
+5	3918	6804.6	0	3918
+6	235	1701.1	0	235
+7	144	425.3	0	144
+8	66	106.3	0	66
+9	97	26.6	0	40 57
+10	244	6.6	1	130 114
+11	106	1.7	1	39 67
+12	155	0.4	1	75 80
+13	105	0.1	1	55 50
+14	138	0.0	1	102 36
+15	26	0.0	1	13 13
+16	66	0.0	1	43 23
+17	58	0.0	1	40 18
+18	29	0.0	1	17 12
+19	59	0.0	1	40 18 1
+20	78	0.0	2	40 17 21
+21	31	0.0	2	18 6 7
+22	43	0.0	2	21 13 9
+23	65	0.0	2	25 23 17
+24	101	0.0	2	47 37 17
+25	72	0.0	2	32 21 19
+26	71	0.0	2	41 15 15
+27	51	0.0	2	28 16 7
+28	68	0.0	2	41 14 13
+29	73	0.0	2	33 24 15 1
+30	196	0.0	3	67 43 42 44
+31	48	0.0	3	26 10 2 10
+32	65	0.0	3	31 9 18 7
+33	58	0.0	3	18 15 9 16
+34	88	0.0	3	24 27 19 18
+35	82	0.0	3	23 24 15 20
+36	116	0.0	3	41 27 32 16
+37	106	0.0	3	44 25 21 16
+38	44	0.0	3	20 11 8 5
+39	43	0.0	3	20 8 11 4
+40	50	0.0	3	24 10 8 8
+41	69	0.0	3	24 18 11 16
+42	102	0.0	3	55 23 15 9
+43	157	0.0	3	95 40 12 10
+44	93	0.0	3	48 22 13 10
+45	124	0.0	3	45 25 29 25
+46	55	0.0	3	29 11 6 9
+47	64	0.0	3	21 24 8 11
+48	116	0.0	3	42 24 28 22
+49	62	0.0	3	29 15 10 8
+50	79	0.0	3	33 16 14 16
+51	152	0.0	3	89 28 23 12
+52	79	0.0	3	27 17 16 19
+53	94	0.0	3	34 21 29 10
+54	59	0.0	3	20 12 14 13
+55	125	0.0	3	63 28 23 11
+56	171	0.0	3	89 33 33 16
+57	97	0.0	3	41 24 18 14
+58	188	0.0	3	71 48 42 27
+59	194	0.0	3	79 42 44 29
+60	138	0.0	3	65 33 21 19
+61	129	0.0	3	54 37 22 16
+62	211	0.0	3	96 54 33 28
+63	156	0.0	3	55 51 28 22
+64	160	0.0	3	68 33 35 24
+65	353	0.0	3	150 89 62 52
+66	230	0.0	3	83 60 46 41
+67	437	0.0	3	155 167 60 55
+68	1565	0.0	3	969 347 154 95
+69	1017	0.0	3	658 227 82 50
+70	530	0.0	3	319 134 48 29
+71	310	0.0	3	203 66 27 14
+72	167	0.0	3	108 40 12 7
+73	136	0.0	3	91 27 8 10
+74	76	0.0	3	42 11 12 11
+75	85	0.0	3	41 20 12 12
+76	73	0.0	3	41 16 10 6
+77	73	0.0	3	30 23 14 6
+78	72	0.0	3	42 14 10 6
+79	34	0.0	3	15 5 6 8
+80	38	0.0	3	16 12 5 5
+81	41	0.0	3	18 13 5 5
+82	57	0.0	3	25 13 7 12
+83	32	0.0	3	15 8 3 6
+84	29	0.0	3	12 8 4 5
+85	32	0.0	3	13 8 4 7
+86	37	0.0	3	18 9 4 6
+87	39	0.0	3	18 10 6 5
+88	51	0.0	3	23 11 7 10
+89	35	0.0	3	17 9 7 2
+90	41	0.0	3	16 10 6 9
+91	103	0.0	3	43 28 19 13
+92	113	0.0	3	56 22 22 13
+93	49	0.0	3	16 13 8 12
+94	45	0.0	3	13 14 10 8
+95	36	0.0	3	13 13 5 5
+96	23	0.0	3	7 3 5 8
+97	26	0.0	3	14 2 4 6
+98	17	0.0	3	6 4 5 2
+99	31	0.0	3	8 13 5 5
+100	29	0.0	3	19 4 5 1
+101	23	0.0	3	9 2 4 8
+102	34	0.0	3	16 10 3 5
+103	34	0.0	3	12 6 8 8
+104	28	0.0	3	14 3 6 5
+105	24	0.0	3	12 4 7 1
+106	37	0.0	3	14 5 10 8
+107	34	0.0	3	23 5 3 3
+108	29	0.0	3	10 12 3 4
+109	27	0.0	3	10 6 7 4
+110	35	0.0	3	14 8 5 8
+111	32	0.0	3	11 11 3 7
+112	41	0.0	3	18 13 3 7
+113	25	0.0	3	9 8 4 4
+114	20	0.0	3	8 5 3 4
+115	26	0.0	3	11 7 3 5
+116	24	0.0	3	8 3 10 3
+117	22	0.0	3	13 5 2 2
+118	20	0.0	3	12 3 3 2
+119	27	0.0	3	11 5 8 3
+120	27	0.0	3	10 12 3 2
+121	33	0.0	3	19 7 3 4
+122	24	0.0	3	7 11 1 5
+123	35	0.0	3	10 6 12 7
+124	14	0.0	3	8 2 1 3
+125	10	0.0	3	6 1 2 1
+126	5	0.0	3	4 1
+127	9	0.0	3	2 2 4 1
+128	14	0.0	3	9 3 1 1
+129	12	0.0	3	4 2 2 4
+130	8	0.0	3	5 2 0 1
+131	7	0.0	3	2 2 3
+132	4	0.0	3	0 3 0 1
+133	4	0.0	3	1 2 1
+134	6	0.0	3	5 1
+135	3	0.0	3	0 1 2
+136	3	0.0	3	2 0 0 1
+137	4	0.0	3	1 1 1 1
+138	4	0.0	3	1 1 0 2
+139	7	0.0	3	1 2 0 4
+140	1	0.0	3	1
+141	2	0.0	3	0 0 0 2
+142	2	0.0	3	0 0 1 1
+145	2	0.0	3	0 0 1 1
+146	1	0.0	3	1
+148	1	0.0	3	0 1
+150	1	0.0	3	0 0 0 1
+151	4	0.0	3	1 0 0 3
+
+RUN STATISTICS FOR INPUT FILE: 0_raw/0_raw/lane8-s445-index-TTCGTCGG-CCYP_UW117988_S445_L008_R2.fq
+=============================================
+6967878 sequences processed in total
+
+Total number of sequences analysed for the sequence pair length validation: 6967878
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 486092 (6.98%)

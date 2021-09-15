@@ -1,0 +1,190 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: 0_raw/0_raw/lane7-s424-index-TCAATGCT-CMEL_UW154677_S424_L007_R1.fq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 3.4
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC' (user defined)
+Maximum trimming error rate: 0.1 (default)
+Optional adapter 2 sequence (only used for read 2 of paired-end files): 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+
+
+This is cutadapt 3.4 with Python 3.9.6
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC 0_raw/0_raw/lane7-s424-index-TCAATGCT-CMEL_UW154677_S424_L007_R1.fq
+Processing reads on 1 core in single-end mode ...
+Finished in 54.62 s (9 µs/read; 6.55 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               5,964,826
+Reads with adapters:                 1,767,440 (29.6%)
+Reads written (passing filters):     5,964,826 (100.0%)
+
+Total basepairs processed:   900,688,726 bp
+Quality-trimmed:               8,501,152 bp (0.9%)
+Total written (filtered):    889,374,863 bp (98.7%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC; Type: regular 3'; Length: 34; Trimmed: 1767440 times
+
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 32.4%
+  C: 31.8%
+  G: 24.4%
+  T: 11.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	1132312	1491206.5	0	1132312
+2	482520	372801.6	0	482520
+3	117033	93200.4	0	117033
+4	26479	23300.1	0	26479
+5	4073	5825.0	0	4073
+6	352	1456.3	0	352
+7	65	364.1	0	65
+8	29	91.0	0	29
+9	68	22.8	0	17 51
+10	921	5.7	1	12 909
+11	42	1.4	1	18 24
+12	30	0.4	1	15 15
+13	15	0.1	1	9 6
+14	39	0.0	1	25 14
+15	26	0.0	1	19 7
+16	16	0.0	1	12 4
+17	22	0.0	1	15 7
+18	23	0.0	1	13 10
+19	16	0.0	1	12 4
+20	20	0.0	2	11 7 2
+21	37	0.0	2	17 9 11
+22	30	0.0	2	17 7 6
+23	27	0.0	2	16 6 5
+24	25	0.0	2	15 5 5
+25	37	0.0	2	21 12 4
+26	25	0.0	2	10 9 6
+27	20	0.0	2	9 8 3
+28	41	0.0	2	23 8 10
+29	27	0.0	2	10 10 6 1
+30	22	0.0	3	14 5 3
+31	31	0.0	3	18 7 5 1
+32	60	0.0	3	36 14 6 4
+33	18	0.0	3	6 8 2 2
+34	34	0.0	3	22 3 5 4
+35	27	0.0	3	16 6 4 1
+36	32	0.0	3	12 7 7 6
+37	37	0.0	3	18 8 7 4
+38	27	0.0	3	12 6 7 2
+39	36	0.0	3	15 8 9 4
+40	43	0.0	3	19 12 7 5
+41	36	0.0	3	18 5 6 7
+42	45	0.0	3	23 9 9 4
+43	36	0.0	3	21 8 5 2
+44	22	0.0	3	8 8 5 1
+45	20	0.0	3	8 5 3 4
+46	24	0.0	3	15 3 3 3
+47	30	0.0	3	16 6 6 2
+48	16	0.0	3	6 3 4 3
+49	29	0.0	3	15 6 5 3
+50	27	0.0	3	14 5 3 5
+51	33	0.0	3	13 12 6 2
+52	18	0.0	3	8 5 2 3
+53	35	0.0	3	14 10 6 5
+54	35	0.0	3	15 10 6 4
+55	49	0.0	3	20 13 7 9
+56	26	0.0	3	15 2 4 5
+57	21	0.0	3	8 5 3 5
+58	22	0.0	3	11 6 4 1
+59	31	0.0	3	16 11 1 3
+60	27	0.0	3	13 6 5 3
+61	36	0.0	3	22 7 2 5
+62	39	0.0	3	14 13 9 3
+63	25	0.0	3	13 7 3 2
+64	36	0.0	3	16 9 6 5
+65	84	0.0	3	29 22 20 13
+66	81	0.0	3	28 32 8 13
+67	36	0.0	3	14 15 6 1
+68	38	0.0	3	20 9 6 3
+69	53	0.0	3	28 14 10 1
+70	38	0.0	3	20 5 6 7
+71	38	0.0	3	21 11 4 2
+72	57	0.0	3	24 21 7 5
+73	51	0.0	3	30 12 4 5
+74	55	0.0	3	29 11 6 9
+75	101	0.0	3	43 32 18 8
+76	247	0.0	3	135 73 27 12
+77	219	0.0	3	141 47 24 7
+78	134	0.0	3	77 38 15 4
+79	93	0.0	3	61 14 18
+80	50	0.0	3	27 12 7 4
+81	28	0.0	3	17 5 4 2
+82	18	0.0	3	8 5 4 1
+83	15	0.0	3	9 2 2 2
+84	9	0.0	3	5 2 0 2
+85	9	0.0	3	5 1 3
+86	15	0.0	3	4 4 4 3
+87	14	0.0	3	4 6 4
+88	21	0.0	3	13 2 4 2
+89	8	0.0	3	3 3 1 1
+90	19	0.0	3	6 3 7 3
+91	17	0.0	3	8 3 2 4
+92	8	0.0	3	4 1 2 1
+93	22	0.0	3	3 12 5 2
+94	15	0.0	3	8 5 0 2
+95	12	0.0	3	7 4 1
+96	16	0.0	3	11 3 1 1
+97	10	0.0	3	7 1 1 1
+98	14	0.0	3	5 4 3 2
+99	17	0.0	3	11 3 2 1
+100	14	0.0	3	4 6 2 2
+101	19	0.0	3	6 5 3 5
+102	11	0.0	3	6 2 3
+103	7	0.0	3	4 2 1
+104	8	0.0	3	3 3 2
+105	11	0.0	3	8 1 2
+106	11	0.0	3	2 3 1 5
+107	12	0.0	3	6 3 2 1
+108	11	0.0	3	5 2 3 1
+109	13	0.0	3	4 5 1 3
+110	11	0.0	3	4 4 2 1
+111	14	0.0	3	9 2 0 3
+112	11	0.0	3	5 4 1 1
+113	13	0.0	3	6 3 1 3
+114	16	0.0	3	6 5 4 1
+115	10	0.0	3	6 2 0 2
+116	10	0.0	3	7 1 1 1
+117	8	0.0	3	4 1 2 1
+118	5	0.0	3	2 1 2
+119	17	0.0	3	7 9 0 1
+120	8	0.0	3	5 1 2
+121	4	0.0	3	3 1
+122	9	0.0	3	3 1 5
+123	11	0.0	3	3 4 4
+124	8	0.0	3	2 3 2 1
+125	6	0.0	3	2 2 1 1
+126	10	0.0	3	8 1 1
+127	6	0.0	3	3 0 1 2
+128	4	0.0	3	1 3
+129	5	0.0	3	3 0 2
+130	5	0.0	3	3 0 1 1
+131	2	0.0	3	1 0 1
+132	4	0.0	3	2 1 1
+133	2	0.0	3	1 0 0 1
+134	2	0.0	3	1 1
+135	2	0.0	3	1 0 1
+138	2	0.0	3	1 1
+142	1	0.0	3	1
+
+RUN STATISTICS FOR INPUT FILE: 0_raw/0_raw/lane7-s424-index-TCAATGCT-CMEL_UW154677_S424_L007_R1.fq
+=============================================
+5964826 sequences processed in total
+
