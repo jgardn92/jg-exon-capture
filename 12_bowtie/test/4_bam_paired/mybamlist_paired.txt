@@ -1,0 +1,1 @@
+test/4_bam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_sorted_rd.bam

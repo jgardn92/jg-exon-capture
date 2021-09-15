@@ -1,0 +1,12 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf call_results_paired.qual30.miss25.recode.vcf
+	--missing-site
+
+After filtering, kept 1 out of 1 Individuals
+Outputting Site Missingness
+After filtering, kept 1478 out of a possible 1478 Sites
+Run Time = 1.00 seconds

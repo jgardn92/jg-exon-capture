@@ -187,6 +187,16 @@ Filter the bam files based on Eleni's settings using *samtools*:
 
    - samtools index : Index a coordinate-sorted BAM or CRAM file for fast random access. Index the bam files to quickly extract alignments overlapping particular genomic regions. This index is needed when region arguments are used to limit samtools view and similar commands to particular regions of interest.
 
+#### For Single Test file
+
+samtools view -S -b -h -q 30 -m 30 test/3_sam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008.sam | \
+samtools sort - | \
+samtools rmdup -s - test/4_bam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_sorted_rd.bam
+samtools index test/4_bam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_sorted_rd.bam
+samtools view test/4_bam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_sorted_rd.bam | wc -l
+
+
+#### Loop for multiple
 ``` bash
    for SAMPLEFILE in `cat test/sample_lists/sample_list.txt`
    do
@@ -234,15 +244,14 @@ INFO/AD  .. Total allelic depth (Number=R,Type=Integer)
 
 #1. Create list of bam files and save to a txt file:
 ```bash
-    cd /test/4_bam
-    ls *.bam > mybamlist.txt #had to add test/4_bam/ before each file name to make it work
+    ls test/4_bam_paired/*.bam > test/4_bam_paired/mybamlist_paired.txt #had to add test/4_bam/ before each file name to make it work
 ```
 #2. Create multi-way pileup
 ```
-    bcftools mpileup --fasta-ref ref_genomes/CAMB_UW152101_S459.fasta \
-    --bam-list test/4_bam/mybamlist.txt \
+    bcftools mpileup --fasta-ref ref_genomes/tests/CAMB_UW152101_S459.fasta \
+    --bam-list test/4_bam_paired/mybamlist_paired.txt \
     --skip-indels \
-    --output test/4_bam/mpileup_results.bcf \
+    --output test/4_bam/mpileup_paired_results.bcf \
     --output-type b \
     --annotate FORMAT/AD,FORMAT/DP,INFO/AD
 
@@ -293,7 +302,8 @@ I did this iteratively, starting with very permissive thresholds (MINQ== 30; mis
 
 --max-missing 0.8: filter out genotypes called in less than 80% of all samples (this syntax is kind of counter-intuitive, so be careful)
 
-After filtering using these minQ 30 and max-missing 0.75, kept 2996 out of a possible 4638 Sites
+After filtering using these minQ 30 and max-missing 0.75, kept 2996 out of a possible 4638 Sites (unpaired)
+After filtering using these minQ 30 and max-missing 0.75, kept 1478 out of a possible 2049 Sites (paired)
 
 ``` bash
 DIR=test/5_variants # name of directory with bcf file containing genotype data
