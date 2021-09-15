@@ -135,14 +135,30 @@ Some are a little different but generally seems ok
    -S <sam> File for SAM output (default: stdout)
    you can use 2> to redirect stdout to a file (bowtie writes the summary log files to stdout)
 
-##### Loop over each sample fastq file and align it to genome, then output a sam file
+#### For Single Test file
 
-Make sample_lis: a text file with list of prefixes of the fastq files, separated by newline (so, the file name with no extension).
+    bowtie2 -q -x ref_genomes/CAMB_UW152101_S459 \
+            -1 test/1_trimmed/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1.fastq \
+            -2 -1 test/1_trimmed/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2.fastq \
+            -S test/3_sam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008.sam
 
-   for SAMPLEFILE in `cat test/sample_lists/sample_list.txt`
-   do
-     bowtie2 -q -x ref_genomes/CAMB_UW152101_S459 -1 test/1_trimmed/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1.fastq -2 -1 test/1_trimmed/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2.fastq -S test/3_sam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008.sam
-   done
+#### For all files need to Loop over each sample fastq file and align it to genome, then output a sam file
+
+Make sample_list: a text file with list of prefixes (without _R1.fastq or _R2.fastq) of the fastq files, separated by newline (so, the file name with no extension).
+
+Below script saved as `bowtie_align.sh`
+
+``` bash
+    for GENOME in `cat specimen_list.txt`
+      for SAMPLEFILE in `cat sample_list.txt`
+      do
+        bowtie2 -q -x ref_genomes/indexed/$GENOME \
+              -1 1_trimmed/"${SAMPLEFILE}_R1.fastq" \
+              -2 1_trimmed/"${SAMPLEFILE}_R2.fastq" \
+              -S 12_bowtie/sam_paired/"${SAMPLEFILE}.sam"
+      done
+    done
+```
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
 Filter the bam files based on Eleni's settings using *samtools*:
