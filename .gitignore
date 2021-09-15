@@ -12,3 +12,4 @@
 12_bowtie/test/3_sam/*
 12_bowtie/ref_genomes/tests/*.fasta
 12_bowtie/ref_genomes/fastas/*
+12_bowtie/test/3_sam_paired/*

@@ -8,8 +8,10 @@ lane7-s409-index-ACGAACTT-CCYC_UW151026_S409_L007_R1_001.fastq.gz
 lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2_001.fastq.gz  
 lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1_001.fastq.gz  
 
+Moved anything that wasn't raw samples to be unzipped to 0_raw/0_raw/extras including 4 fastq.gz files of 2 samples that didn't get assembled.
+
 Run `gunzip -k *.fastq.gz`  
-Run `rm *fastq.gz` to keep only unzipped files
+Run `mv *fastq.gz zipped` to keep only unzipped files in raw folder and save another folder with zipped files (plan is to delete unzipped files after trimming to save space)
 
 ## Step 1: Trim Adapters
 
@@ -37,7 +39,7 @@ In your home directory run the following:
 
 Example:
 
-    `trim_adaptor.pl --raw_reads 0_raw --trimmed 1_trimmed`
+    `trim_adaptor.pl --raw_reads 0_raw/0_raw --trimmed 1_trimmed`
 
 The output will be in the directory `trimmed`. This will also produce report files `trimmed_reads_bases_count.txt` and `trimming_report/sample_name_trimming_report.txt`. To clean these file up into a new directory `trimmed_supp` run:
 
@@ -119,13 +121,16 @@ Some are a little different but generally seems ok
 
 ### 2. Align to genome:
 
-   *bowtie2 -q -x <bt2-idx> -U <r> -S <sam>*
-
+   *bowtie2 -q -x <bt2-idx> -1 <m1> -2 <m2> -S <sam>*
+    bowtie2 -x lambda_virus -1 $BT2_HOME/example/reads/reads_1.fq -2 $BT2_HOME/example/reads/reads_2.fq -S eg2.sam
    -q query input files are in fastq format
 
    -x <bt2-idx> Indexed "reference genome" filename prefix (minus trailing .X.bt2)
 
-   -U <r> Files with unpaired reads.
+   -1 <m1> Files with 1 mates, paired with files in <m2>.
+           Could be gzip'ed (extension: .gz) or bzip2'ed (extension: .bz2).
+   -2 <m2> Files with 2 mates, paired with files in <m1>.
+           Could be gzip'ed (extension: .gz) or bzip2'ed (extension: .bz2).
 
    -S <sam> File for SAM output (default: stdout)
    you can use 2> to redirect stdout to a file (bowtie writes the summary log files to stdout)
@@ -136,7 +141,7 @@ Make sample_lis: a text file with list of prefixes of the fastq files, separated
 
    for SAMPLEFILE in `cat test/sample_lists/sample_list.txt`
    do
-     bowtie2 -q -x ref_genomes/CAMB_UW152101_S459 -U test/1_trimmed/"${SAMPLEFILE}.fastq" -S test/3_sam/"${SAMPLEFILE}.sam"
+     bowtie2 -q -x ref_genomes/CAMB_UW152101_S459 -1 test/1_trimmed/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R1.fastq -2 -1 test/1_trimmed/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_R2.fastq -S test/3_sam_paired/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008.sam
    done
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
