@@ -109,9 +109,13 @@ Compare sizes by making txt files with sizes and then comparing in a [google she
     `ls -l 12_bowtie/ref_genomes/fastas/*.fasta > 12_bowtie/ref_genomes/pseudo_size.txt`
 Some are a little different but generally seems ok
 
-#### Index "genome" file using bowtie
+#### Index "genome" files using bowtie
 
-    `bowtie2-build ref_genomes/CAMB_UW152101_S459.fasta ref_genomes/CAMB_UW152101_S459`
+
+``` bash
+    (for SPECIMEN in `cat specimen_list.txt`; do bowtie2-build fastas/"${SPECIMEN}.fasta" indexed/${SPECIMEN}; done)
+```
+
 
 ### 2. Align to genome:
 
