@@ -1,0 +1,11 @@
+PASS	Basic Statistics	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+PASS	Per base sequence quality	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+PASS	Per tile sequence quality	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+PASS	Per sequence quality scores	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+WARN	Per base sequence content	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+WARN	Per sequence GC content	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+PASS	Per base N content	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+WARN	Sequence Length Distribution	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+FAIL	Sequence Duplication Levels	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+FAIL	Overrepresented sequences	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq
+PASS	Adapter Content	lane7-s433-index-TTGGCAGA-LFLE_UW159752_S433_L007_R2.fastq

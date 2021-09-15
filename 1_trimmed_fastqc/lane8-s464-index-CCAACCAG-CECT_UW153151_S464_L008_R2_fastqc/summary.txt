@@ -1,0 +1,11 @@
+PASS	Basic Statistics	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+PASS	Per base sequence quality	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+WARN	Per tile sequence quality	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+PASS	Per sequence quality scores	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+WARN	Per base sequence content	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+PASS	Per sequence GC content	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+PASS	Per base N content	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+WARN	Sequence Length Distribution	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+FAIL	Sequence Duplication Levels	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+WARN	Overrepresented sequences	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq
+PASS	Adapter Content	lane8-s464-index-CCAACCAG-CECT_UW153151_S464_L008_R2.fastq

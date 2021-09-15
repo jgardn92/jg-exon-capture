@@ -1,0 +1,11 @@
+PASS	Basic Statistics	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+PASS	Per base sequence quality	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+FAIL	Per tile sequence quality	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+PASS	Per sequence quality scores	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+WARN	Per base sequence content	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+WARN	Per sequence GC content	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+PASS	Per base N content	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+WARN	Sequence Length Distribution	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+PASS	Sequence Duplication Levels	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+WARN	Overrepresented sequences	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq
+PASS	Adapter Content	lane7-s413-index-CCGATCCT-CSPM_UW155719_S413_L007_R2.fastq

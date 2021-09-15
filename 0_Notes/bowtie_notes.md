@@ -47,6 +47,10 @@ The output will be in the directory `trimmed`. This will also produce report fil
     mv trimmed_reads_bases_count.txt 2_trimmed_supp/
     mv trimming_report 2_trimmed_supp/`
 
+Note: ran on everything and have 194 files in `1_trimmed` but generated the following error a bunch
+      Use of uninitialized value $R1_all_bases in addition (+) at /usr/local/bin/biotools/trim_adaptor.pl line 110.
+      Use of uninitialized value $R2_all_reads in addition (+) at /usr/local/bin/biotools/trim_adaptor.pl line 111.
+
 ### 3. Quality control of sequencing data using *FastQC*
 It is always a great idea to look at the demultiplexed fastq files and verify that:
   * data quality looks good
@@ -66,7 +70,7 @@ Eleni did this using the program *FastQC*. Explanation of *FastQC* arguments use
 
 In home directory make new file for fastqc results:  
 
-    `mkdir 2_trimmed_fastqc`
+    `mkdir 1_trimmed_fastqc`
 
 In 1_trimmed rename files to .fastq instead of .fq
 
@@ -74,9 +78,9 @@ In 1_trimmed rename files to .fastq instead of .fq
 
 Then run fastqc for every file in directory
 
-    `for FILE in 1_trimmed/*.fastq # for any file ending in .fastq in this directory
+    `for FILE in 1_trimmed/*.fastq
     do
-    fastqc -f fastq --extract -o 2_trimmed_fastqc $FILE
+    fastqc -f fastq --extract -o 1_trimmed_fastqc $FILE
     done`
 
 Verify that sequencing qulaity is good and adapaters are not present. For an example see [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea/blob/main/scripts/step1_process_ancient_raw_data.md)

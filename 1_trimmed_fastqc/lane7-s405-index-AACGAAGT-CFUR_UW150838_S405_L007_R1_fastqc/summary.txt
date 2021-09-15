@@ -1,0 +1,11 @@
+PASS	Basic Statistics	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Per base sequence quality	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Per tile sequence quality	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Per sequence quality scores	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+FAIL	Per base sequence content	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Per sequence GC content	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Per base N content	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+WARN	Sequence Length Distribution	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+FAIL	Sequence Duplication Levels	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Overrepresented sequences	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq
+PASS	Adapter Content	lane7-s405-index-AACGAAGT-CFUR_UW150838_S405_L007_R1.fastq

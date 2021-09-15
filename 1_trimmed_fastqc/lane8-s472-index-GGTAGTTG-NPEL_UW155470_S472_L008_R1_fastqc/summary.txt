@@ -1,0 +1,11 @@
+PASS	Basic Statistics	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+PASS	Per base sequence quality	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+PASS	Per tile sequence quality	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+PASS	Per sequence quality scores	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+FAIL	Per base sequence content	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+FAIL	Per sequence GC content	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+PASS	Per base N content	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+WARN	Sequence Length Distribution	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+FAIL	Sequence Duplication Levels	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+FAIL	Overrepresented sequences	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq
+PASS	Adapter Content	lane8-s472-index-GGTAGTTG-NPEL_UW155470_S472_L008_R1.fastq

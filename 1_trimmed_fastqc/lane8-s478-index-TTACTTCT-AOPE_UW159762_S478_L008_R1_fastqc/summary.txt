@@ -1,0 +1,11 @@
+PASS	Basic Statistics	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+PASS	Per base sequence quality	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+PASS	Per tile sequence quality	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+PASS	Per sequence quality scores	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+WARN	Per base sequence content	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+PASS	Per sequence GC content	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+PASS	Per base N content	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+WARN	Sequence Length Distribution	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+FAIL	Sequence Duplication Levels	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+WARN	Overrepresented sequences	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
+PASS	Adapter Content	lane8-s478-index-TTACTTCT-AOPE_UW159762_S478_L008_R1.fastq
