@@ -1,9 +1,19 @@
-flag paired ends in bowtie aligning
+IGV viewer - for viewing to show the reads mapped to the locus
+  - look into this
+  - look into loci with diff qual scores
+  - long genes vs short
+  - some with diff read depths
 
-want a reference that shows percentage of genome that had reads mapped to it.
+VCF - ready manual for
+VCF - find flag for triallelic
 
-figure out vcf tables
+Spot checking exon assembly. At one point we have spp with folders of genes and in those folders we have raw reads that we use blast to get to then run sga within individaul folders
+would be interesting to see is what is the read depths from bowties vs read depth from our assembler at a given locus
+granted blast may give 100 reads and then sga only gives 2-3 contigs then pick done
 
-see if table is forcing two alleles
+Look at hammer script to call and mitochondrial data and work on mining coi
+  - mine COI from candidus and spM
 
-see if there's a way to export individual assemblies (show me all reads mapped to that gene)
+Schedule early fall committee meeting
+  - check in with them individually about PhD plans
+  - get advice from them about what the actual project 
