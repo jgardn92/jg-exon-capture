@@ -6,6 +6,13 @@ IGV viewer - for viewing to show the reads mapped to the locus
 
 VCF - ready manual for
 VCF - find flag for triallelic
+--min-alleles <integer>
+--max-alleles <integer>
+
+Include only sites with a number of alleles greater than or equal to the "--min-alleles" value and less than or equal to the "--max-alleles" value. One of these options may be used without the other.
+For example, to include only bi-allelic sites, one could use:
+
+vcftools --vcf file1.vcf --min-alleles 2 --max-alleles 2
 
 Spot checking exon assembly. At one point we have spp with folders of genes and in those folders we have raw reads that we use blast to get to then run sga within individaul folders
 would be interesting to see is what is the read depths from bowties vs read depth from our assembler at a given locus
@@ -16,4 +23,6 @@ Look at hammer script to call and mitochondrial data and work on mining coi
 
 Schedule early fall committee meeting
   - check in with them individually about PhD plans
-  - get advice from them about what the actual project 
+  - get advice from them about what the actual project
+
+scp Jennys_raw_data.tar.gz lizmiller@schooner1.oscer.ou.edu:/condo/fishevolab/lizmiller/jenny
