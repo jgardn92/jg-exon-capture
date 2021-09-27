@@ -1,4 +1,4 @@
-#!/Users/luketornabene/miniconda3/bin/perl
+#!/usr/bin/perl
 
 use warnings;
 use strict;
