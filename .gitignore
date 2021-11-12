@@ -18,3 +18,4 @@
 0_Other/standard-RAxML-master
 12_bowtie/test2/0_raw/*
 12_bowtie/test2/1_trimmed/*
+12_bowtie/test2/3_sam_paired/*

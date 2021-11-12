@@ -83,7 +83,7 @@ Then run fastqc for every file in directory
     fastqc -f fastq --extract -o 1_trimmed_fastqc $FILE
     done`
 
-Verify that sequencing qulaity is good and adapaters are not present. For an example see [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea/blob/main/scripts/step1_process_ancient_raw_data.md)
+Verify that sequencing quality is good and adapters are not present. For an example see [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea/blob/main/scripts/step1_process_ancient_raw_data.md)
 
 CCYC_UW151026_S409_L007_R1_001 quality ok but not great  
 CCYC_UW151026_S409_L007_R2_001 quality poor  
@@ -148,7 +148,10 @@ Some are a little different but generally seems ok
 
 #### For all files need to Loop over each sample fastq file and align it to genome, then output a sam file
 
-Make sample_list: a text file with list of prefixes (without _R1.fastq or _R2.fastq) of the fastq files, separated by newline (so, the file name with no extension).
+Make sample_list: a text file with list of prefixes (without _R1.fastq or _R2.fastq) of the fastq files, separated by newline (so, the file name with no extension). (
+  `ls test2/1_trimmed/ > sample_list_suffix.txt `
+  `sed "s/.........$//" sample_list_suffix.txt > sample_list.txt`
+  `rm sample_list_suffix.txt`)
 
 Below script saved as `bowtie_align.sh`
 
@@ -454,3 +457,9 @@ ggsave(outfile,
 The distribution of observed heterozygosity is quite similar in the modern and ancient samples. Hurray!
 
 ![heterozygosity_plot](observed_heterozygosity.png)
+
+
+
+# Run again with 4 samples
+Two samples that are well behaved in tree (C. amb 152101 from first run, L. gibbus 153834)
+and two samples that are poorly behaved (Crystallichthyes 150847, C. faunus 117078)
