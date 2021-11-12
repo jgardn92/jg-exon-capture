@@ -153,19 +153,9 @@ Make sample_list: a text file with list of prefixes (without _R1.fastq or _R2.fa
   `sed "s/.........$//" sample_list_suffix.txt > sample_list.txt`
   `rm sample_list_suffix.txt`)
 
-Below script saved as `bowtie_align.sh`
+##### Need to find way to make sure sample list and specimen match and are in the same order.
 
-``` bash
-    for GENOME in `cat specimen_list.txt`
-      for SAMPLEFILE in `cat sample_list.txt`
-      do
-        bowtie2 -q -x ref_genomes/indexed/$GENOME \
-              -1 1_trimmed/"${SAMPLEFILE}_R1.fastq" \
-              -2 1_trimmed/"${SAMPLEFILE}_R2.fastq" \
-              -S 12_bowtie/sam_paired/"${SAMPLEFILE}.sam"
-      done
-    done
-```
+Use script saved as `bowtie_align.sh`
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
 Filter the bam files based on Eleni's settings using *samtools*:
