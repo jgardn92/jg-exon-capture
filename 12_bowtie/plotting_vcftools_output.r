@@ -14,7 +14,7 @@ library(dplyr)
 library(ggplot2)
 
 # Specify the directories:
-BASEDIR <- "~/Documents/GitHub/jg-exon-capture/12_bowtie/test/5_variants_paired"
+BASEDIR <- "~/Documents/GitHub/jg-exon-capture/12_bowtie/test1/5_variants_paired"
 #DATADIR <- "/ancient_call_results.header.tidy.snpid.RADloci.qual100.miss20_plots" unsure how to use this line right now
 
 # Set the working directory:
@@ -42,7 +42,7 @@ plot1 <- ggplot(miss_site, aes(F_MISS)) +
   ylab("Number of occurences") +
   theme_bw()
 plot1
-ggsave("site_missingdata.pdf", plot = plot1, path = mypath)
+#ggsave("site_missingdata.pdf", plot = plot1, path = mypath)
 
 plot2 <- ggplot(site_quality, aes(QUAL)) +
   geom_histogram(bins = 20, fill = "slateblue")+
@@ -50,24 +50,25 @@ plot2 <- ggplot(site_quality, aes(QUAL)) +
   ylab("Number of occurences") +
   theme_bw()
 plot2
-ggsave("site_qual.pdf", plot = plot2, path = mypath)
+#ggsave("site_qual.pdf", plot = plot2, path = mypath)
 
 
-plot2b <- ggplot(locus_stats, aes(MQ)) +
-  geom_histogram(bins = 20, fill = "slateblue")+
-  xlab("mapping quality")+
-  ylab("Number of occurences") +
-  theme_bw()
-plot2b
-ggsave("site_mappingqual.pdf", plot = plot2, path = mypath)
+# plot2b <- ggplot(locus_stats, aes(MQ)) +
+#   geom_histogram(bins = 20, fill = "slateblue")+
+#   xlab("mapping quality")+
+#   ylab("Number of occurences") +
+#   theme_bw()
+# plot2b
+# ggsave("site_mappingqual.pdf", plot = plot2, path = mypath)
 
 plot3 <- ggplot(site_mean_depth, aes(MEAN_DEPTH)) +
   geom_histogram(bins = 40, fill = "slateblue")+
+  geom_vline(xintercept=20, color = "red")+
   xlab("Mean depth")+
   ylab("Number of occurences") +
   theme_bw()
 plot3
-ggsave("site_depth.pdf", plot = plot3, path = mypath)
+ggsave("site_depth.pdf", plot = plot3, path = "~/Documents/GitHub/jg-exon-capture/12_bowtie/test1/")
 
 # What is the range of sequencing depth per site?
 min(site_mean_depth$MEAN_DEPTH)
@@ -93,7 +94,7 @@ plot4 <- ggplot(miss_indiv, aes(F_MISS)) +
   ylab("Number of occurences") +
   theme_bw()
 plot4
-ggsave("indiv_miss.pdf", plot = plot4, path = mypath)
+#ggsave("indiv_miss.pdf", plot = plot4, path = mypath)
 
 
 plot5 <- ggplot(indiv_mean_depth, aes(MEAN_DEPTH)) +
@@ -102,7 +103,7 @@ plot5 <- ggplot(indiv_mean_depth, aes(MEAN_DEPTH)) +
   ylab("Number of occurences") +
   theme_bw()
 plot5
-ggsave("indiv_depth.pdf", plot = plot5, path = mypath)
+#ggsave("indiv_depth.pdf", plot = plot5, path = mypath)
 
 
 

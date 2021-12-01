@@ -1,0 +1,22 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--bcf test2/5_variants/CFAU_UW117078_S443_call.bcf
+	--recode-INFO-all
+	--minQ 30
+	--max-missing 0.75
+	--out test2/5_variants/CFAU_UW117078_S443_call.q30.m20
+	--recode
+
+Using zlib version: 1.2.11
+Warning: Expected at least 2 parts in INFO entry: ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias",IDX=27>
+Warning: Expected at least 2 parts in INFO entry: ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias",IDX=27>
+Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases",IDX=30>
+Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases",IDX=30>
+After filtering, kept 1 out of 1 Individuals
+Outputting VCF file...
+BCF file contains IDX values in header. These are being removed for conversion to VCF.
+After filtering, kept 952 out of a possible 1805 Sites
+Run Time = 0.00 seconds
