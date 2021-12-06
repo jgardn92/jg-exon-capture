@@ -2,16 +2,40 @@
 ## Looping for multiple specimens after single specimen test
 Code and notes adapted from [Calder's repo](https://github.com/calderatta/ca-exon-capture) and [Eleni's repo](https://github.com/EleniLPetrou/ancient_DNA_salish_sea)
 
-## Step 1: Set up/Trim
-Pick samples to loop over from file `1_trimmed` because adaptor trimming previously run for all samples in `0_raw`
+## Test 2
+After running bowtie2 on single sample, ran again with 5 samples
+Two well behaved samples (C. amb 152101 from first run, L. gibbus 153834)
+Three poorly behaved samples (Crystallichthyes 150847, Crystallichthyes 151026 C. faunus 117078)
 
-Note: ran on everything and have 194 files in `1_trimmed` but generated the following error a bunch
-      Use of uninitialized value $R1_all_bases in addition (+) at /usr/local/bin/biotools/trim_adaptor.pl line 110.
-      Use of uninitialized value $R2_all_reads in addition (+) at /usr/local/bin/biotools/trim_adaptor.pl line 111.
+## Test 3
+Looped over 15 more samples to test the process
 
-### 1. Quality control of sequencing data using *FastQC*
-FastQC run for everything, results in folder 1_trimmed_fastqc
-Check FastQC for selected specimens on Github in browser
+NOTE: for each iteration will need to make new test folder and replace that test folder name in various places in codes and scripts
+
+## Step 1: Set up samples
+Select samples and make names lists
+
+1. Select samples and make txt file of Sxxx numbers save as `12_bowtie/test3/snum_list.txt`
+  - will have to edit samples_suffix.sh to change what file it is reading with each new iteration
+
+2. Run the following to get `sample_list.txt` to be used with SAMTOOLS later and to make specimen list.
+  `cd 12_bowtie`
+  `bash samples_suffix.sh`
+  `sed "s/.........$//" test3/sample_list_suffix.txt > test3/sample_list_dup.txt`
+  `sort -u test3/sample_list_dup.txt > test3/sample_list.txt`
+  `rm sample_list_*.txt`
+
+3. Make list of specimens and then make one tab delimited file named `specimen_list.txt` (genome and samplefile on same line). Genome in format: GSPP_UWCATNUM_SNUM, samplefile same as in sample_list. Do this by running:
+  `cut -c27- test3/sample_list.txt | sed "s/.....$//" > test3/specimen_list1.txt`
+  `paste -d "\t" test3/specimen_list1.txt test3/sample_list.txt > test3/specimen_list.txt`
+  `rm test3/specimen_list1.txt`
+
+4. Check that the each snum is only found on one line meaning the columns match. If all it outputs is "Checking file" then file is good, otherwise will list "SNUM lines don't match"
+  `bash specimen_list_check.sh`
+
+5. Copy selected samples using sample_list.txt to test3/1_trimmed:
+  `mkdir test3/1_trimmed`
+  `bash copy_trimmed.sh`
 
 ## Step 2: Align samples to the genome
 
@@ -35,16 +59,6 @@ All pseudo-genomes put together and indexed in folder `12_bowtie/ref_genomes`
    you can use 2> to redirect stdout to a file (bowtie writes the summary log files to stdout)
 
 #### For all files need to Loop over each sample fastq file and align it to genome, then output a sam file
-
-Make sample_list: a text file with list of prefixes (without _R1.fastq or _R2.fastq) of the fastq files, separated by newline (so, the file name with no extension). (
-  `ls test2/1_trimmed/ > sample_list_suffix.txt `
-  `sed "s/.........$//" sample_list_suffix.txt > sample_list.txt`
-  `rm sample_list_suffix.txt`)
-
-Combined sample_list and specimen_list into one tab delimited file named specimen_list.txt (genome and samplefile on same line). Keep sample_file.txt as made above because used in SAMTOOLS later
-*need to automate this*
-
-##### Need to find way to make sure sample list and specimen match and are in the same order.
 
 Use script saved as `bowtie_align.sh`
 
