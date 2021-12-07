@@ -4,6 +4,7 @@ library(vcfR)
 library(tidyverse)
 setwd("~/Documents/GitHub/jg-exon-capture/12_bowtie/")
 
+#### Practice 1 ####
 test1.vcf <- read.vcfR("test1/5_variants_paired/call_results_paired_filt.recode.vcf", verbose = FALSE)
 head(test1.vcf)
 
@@ -56,3 +57,18 @@ colnames(full.dat.cyc) <- c("Depth", "A1_Count", "A2_Count")
 full.dat.cyc$Tot_Alleles <- full.dat.cyc$A1_Count + full.dat.cyc$A2_Count
 more.than.1.allele.cyc<-full.dat.cyc[full.dat.cyc$Depth!=full.dat.cyc$Tot_Alleles,]
 length(more.than.1.allele$Depth.cyc)
+
+
+#### Practice 2 ####
+genome_list <- read.table("test3/specimen_list.txt")
+genomes <- genome_list$V1
+head(genomes)
+
+vcf.grp <- list()
+
+for(i in 1:length(genomes)){
+  genome.name <- genomes[i]
+  vcf.grp[[i]] <- read.vcfR(paste("test3/6_recoded_vcfs/",genome.name,"_results.vcf", sep = ""), verbose = FALSE)
+}
+
+head(vcf.grp)

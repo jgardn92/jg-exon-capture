@@ -198,6 +198,9 @@ When you use the --consensus-caller model in bcftools, the vcf header lacks the 
 Thus, you have to copy and paste these header lines to the top of your vcf file before other programs can read in the vcf.
 Use `vcf_filelines.sh` to do it
 
+  `mkdir test3/6_recoded_vcfs`
+  `bash vcf_filelines.sh`
+
 
 # Run again with 4 samples
 Two samples that are well behaved in tree (C. amb 152101 from first run, L. gibbus 153834)
