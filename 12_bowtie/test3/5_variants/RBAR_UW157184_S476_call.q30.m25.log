@@ -18,6 +18,5 @@ Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,D
 After filtering, kept 1 out of 1 Individuals
 Outputting VCF file...
 BCF file contains IDX values in header. These are being removed for conversion to VCF.
-After filtering, kept 0 out of a possible 0 Sites
-File does not contain any sites
+After filtering, kept 965 out of a possible 1618 Sites
 Run Time = 0.00 seconds

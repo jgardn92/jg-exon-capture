@@ -94,17 +94,10 @@ Filter the bam files based on Eleni's settings using *samtools*:
 
 #### Loop for multiple
 `mkdir test3/4_bam`
-``` bash
-   for SAMPLEFILE in `cat test3/sample_list.txt`
-   do
-     samtools view -S -b -h -q 100 -m 30 test3/3_sam_paired/"${SAMPLEFILE}.sam" | \
-     samtools sort - | \
-     samtools rmdup -s - test3/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
-     samtools index test3/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
-     samtools view test3/4_bam/"${SAMPLEFILE}_sorted_rd.bam" | wc -l
-   done
-```
-Run of 15 took ~3 minutes
+`bash samtools.sh`
+
+samtools.sh currently set with -q 30 -m 30; ran previously with -q 100 and that filtered out everything
+Run of 15 took from 13:33 - 13:40
 
 ## Step 4: Variant Calling and Filtering
 
@@ -153,6 +146,7 @@ INFO/ADR    .. Total allelic depths on the reverse strand (Number=R,Type=Integer
   `rm test3/4_bam/mybamlist1.txt`
 #2. Create multi-way pileup
 Use script `mpileup.sh`
+Run of 15 took about 1 minute
 
 ### Using *bcftools version 1.9*, use *call* command to do SNP variant calling from VCF/BCF file created in the previous step (mpileup)
 
@@ -174,7 +168,7 @@ run this using `bcftools_call.sh`
 `mkdir test3/5_variants`
 `bash bcftools_call.sh`
 
-runs quickly
+runs very quickly (<20 seconds for run of 15)
 ### Filter the genotypes for quality using *bcftools* and missing data using *vcftools*
 
 I did this iteratively, starting with very permissive thresholds (MINQ== 30; missing data = 75%) and visualizing the distribution of samples and genotypes. I observed that relatively few individuals and SNPs were characterized by large amounts of low-quality or missing data, so I happily proceeded to filter the genotypes using more stringent thresholds (minQ==900; missing data = 20%, minDP= 10, min-meanDP =10, maf = 0.05). For the sake of brevity, I show the final filtering criteria here:
@@ -184,7 +178,7 @@ I did this iteratively, starting with very permissive thresholds (MINQ== 30; mis
 --max-missing 0.8: filter out genotypes called in less than 80% of all samples (this syntax is kind of counter-intuitive, so be careful)
 
 `bash vcftools_recode.sh`
-
+runs very quickly (<10 seconds for run of 15)
 
 #### Use vcftools to output some useful summary statistics for plotting
 Don't have to run this because plotting in R from vcf file not summaries  but to run:
@@ -200,7 +194,7 @@ Use `vcf_filelines.sh` to do it
 
   `mkdir test3/6_recoded_vcfs`
   `bash vcf_filelines.sh`
-
+runs very quickly (<10 seconds for run of 15)
 
 # Run again with 4 samples
 Two samples that are well behaved in tree (C. amb 152101 from first run, L. gibbus 153834)
