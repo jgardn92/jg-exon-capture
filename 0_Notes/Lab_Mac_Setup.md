@@ -62,8 +62,9 @@ Use when moving folders with lots of files (atom doesn't like to do this itself)
 `brew install vcftools`
 ### bcftools with Homebrew
 `brew install bcftools`
+### gnu-sed with Homebrew so sed works as expected
+`brew install gnu-sed`
 
-## FigTree
-Need to reinstall as of 9/10/21
+
 
 ## Might need to reinstall usearch?

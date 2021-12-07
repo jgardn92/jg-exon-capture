@@ -170,27 +170,11 @@ Usage:   bcftools call [options] <in.vcf.gz>
 
 -f, --format-fields <list>      output format fields: GQ,GP
 
-``` bash
-BAMDIR=/test/4_bam/ #directory with sorted, indexed, filtered .bam files
-INFILE=mpileup_results.bcf #name of input file (created by previous step)
-OUTDIR=/test/5_variants #directory for output files
-OUTFILE=call_results.bcf #name for output file with ancient genotypes
-####
+run this using `bcftools_call.sh`
+`mkdir test3/5_variants`
+`bash bcftools_call.sh`
 
-cd test/5_variants
-touch call_results.bcf
-
-cd /test/4_bam/
-
-bcftools call --variants-only \
---consensus-caller \
---keep-alts \
---format-fields GQ \
---output-type b \
---output ../5_variants/call_results.bcf \
-mpileup_results.bcf
-```
-
+runs quickly
 ### Filter the genotypes for quality using *bcftools* and missing data using *vcftools*
 
 I did this iteratively, starting with very permissive thresholds (MINQ== 30; missing data = 75%) and visualizing the distribution of samples and genotypes. I observed that relatively few individuals and SNPs were characterized by large amounts of low-quality or missing data, so I happily proceeded to filter the genotypes using more stringent thresholds (minQ==900; missing data = 20%, minDP= 10, min-meanDP =10, maf = 0.05). For the sake of brevity, I show the final filtering criteria here:
@@ -199,158 +183,20 @@ I did this iteratively, starting with very permissive thresholds (MINQ== 30; mis
 
 --max-missing 0.8: filter out genotypes called in less than 80% of all samples (this syntax is kind of counter-intuitive, so be careful)
 
-After filtering using these minQ 30 and max-missing 0.75, kept 2996 out of a possible 4638 Sites (unpaired)
-After filtering using these minQ 30 and max-missing 0.75, kept 1478 out of a possible 2049 Sites (paired)
+`bash vcftools_recode.sh`
 
-``` bash
-DIR=test/5_variants # name of directory with bcf file containing genotype data
-INFILE=call_results.bcf # name of input bcf file
-BASEVCF=call_results.qual30.miss25 # 'basename' of filtered output vcf file (without extension)
-VCF=call_results.qual30.miss25.recode.vcf # filtered output vcf file (with extension)
-#####
-cd test/5_variants
 
-vcftools --bcf call_results.bcf \
---minQ 30 \
-#--min-meanDP 10 \
-#--minDP 10 \
---max-missing 0.75 \
-#--maf 0.05 \
---recode \
---recode-INFO-all \
---out call_results.qual30.miss25
+#### Use vcftools to output some useful summary statistics for plotting
+Don't have to run this because plotting in R from vcf file not summaries  but to run:
+`bash vcftools_files.sh`
+Note: not run yet for test3 as of 12/6/21
 
-vcftools --vcf call_results.recode.vcf --min-alleles 3 #output a file with sites with more than 3 alleles
-
-# Use vcftools to output some useful summary statistics for plotting
-
-vcftools --vcf call_results.qual30.miss25.recode.vcf --depth
-vcftools --vcf call_results.qual30.miss25.recode.vcf --site-mean-depth
-vcftools --vcf call_results.qual30.miss25.recode.vcf --site-quality
-vcftools --vcf call_results.qual30.miss25.recode.vcf --missing-indv
-vcftools --vcf call_results.qual30.miss25.recode.vcf --missing-site
-vcftools --vcf $GENOME --freq
-
-```
-### Couldn't get this to work/manually copy-paste for now
-
+### Add lines to vcf files so R can read them
 Fixed an irritating little issue with the first two lines of the vcf file
 When you use the --consensus-caller model in bcftools, the vcf header lacks the following two header lines:
 
-##fileformat=VCFv4.2
-
-##FILTER=<ID=PASS,Description="All filters passed">
-
-Thus, you have to copy and paste these header lines to the top of your vcf file before other programs can read in the vcf. This is how I did it:
-
-``` bash
-DIR=test/5_variants # name of directory with bcf file containing genotype data
-INVCF=call_results.qual30.miss25.recode.vcf # name of input file (from previous step)
-OUTVCF=call_results_filt.vcf
-####
-cd $DIR
-
-sed '1 i\##fileformat=VCFv4.2##FILTER=<ID=PASS,Description="All filters passed">' call_results.qual30.miss25.recode.vcf>call_results_filt.vcf
-
-less $OUTVCF #check the header, type q to quit less
-
-```
-
-## Step 5: Calculate individual observed Heterozygosity
-
-As an attempt to see contamination we wanted to see if heterozygosity is out of whack for certain loci, so we need to calculate individual observed heterozygosity for each locus for each individual. Did this following Eleni's code:
-
-### 1. Estimate individual observed heterozygosity using vcftools --het function
-
-``` bash
-
-# Specify the directory names and file names
-BASEDIR=/12_bowtie/test #base directory
-VCFDIR=test/5_variants #vcf directory
-OUTDIR=test/6_heterozygosity # directory where output files should be saved
-
-INFILE=call_results_filt.recode.vcf #name of input vcf
-OUTFILE=call_results_filt #"base name" of output vcf (without .recode.vcf file extension)
-
-######
-vcftools --vcf 5_variants/call_results_filt.recode.vcf \
---het \
---out 6_heterozygosity/call_results_filt
-
-```
-
-### 2. plot the distribution of individual heterozygosity using R
-
-``` r
-# The purpose of this script is to make plots of individual heterozygosity calculated by vcftools --het
-
-# Load libraries
-library(tidyverse)
-library(cowplot)
-
-# Specify the directory containing the data tables:
-DATADIR <- "G:/hybridization_capture/merged_analyses/heterozygosity"
-
-# Setwd
-setwd(DATADIR)
-
-# specify input and output file names:
-ancient_file <- "0002.filt.HWE.het"
-modern_file <- "0003.filt.HWE.het"
-
-outfile <- "observed_heterozygosity.pdf"
-
-# read in the data
-ancient_df <- read.delim(ancient_file)
-modern_df <- read.delim(modern_file)
-
-# calculate observed heterozygosity for each dataframe
-
-ancient_df <- ancient_df %>%
-  mutate(N_HET = (N_SITES-O.HOM.)) %>%
-  mutate(OBS_HET = N_HET/N_SITES)
-
-
-modern_df <- modern_df %>%
-  mutate(N_HET = (N_SITES-O.HOM.)) %>%
-  mutate(OBS_HET = N_HET/N_SITES)
-
-# Plot the observed heterozygosity for each collection
-
-
-
-(plot_anc <- ggplot(ancient_df, aes(x = OBS_HET)) +
-  geom_histogram(binwidth = 0.01, fill = "#fc8d59") +
-  theme_bw() +
-  xlab("Observed individual heterozygosity") +
-  xlim(0.20, 0.40) +
-  ggtitle("Ancient herring"))
-
-(plot_mod <- ggplot(modern_df, aes(x = OBS_HET)) +
-  geom_histogram(binwidth = 0.01, fill = "#91bfdb") +
-  theme_bw()+
-  xlab("Observed individual heterozygosity")+
-  xlim(0.20, 0.40)+
-  ggtitle("Modern herring"))
-
-
-# Merge the plots
-
-(multi_plot <- plot_grid(plot_anc, plot_mod, labels = c('A', 'B'), label_size = 12))
-
-
-# save plot to pdf file
-
-ggsave(outfile,
-  plot = multi_plot)
-```
-
-### 3. Take a look at the resulting plots
-
-The distribution of observed heterozygosity is quite similar in the modern and ancient samples. Hurray!
-
-![heterozygosity_plot](observed_heterozygosity.png)
-
+Thus, you have to copy and paste these header lines to the top of your vcf file before other programs can read in the vcf.
+Use `vcf_filelines.sh` to do it
 
 
 # Run again with 4 samples
