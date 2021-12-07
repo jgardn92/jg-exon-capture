@@ -9,7 +9,7 @@ while read -r GENOME SAMPLEFILE
   bcftools mpileup --fasta-ref ref_genomes/fastas/"${GENOME}.fasta" \
   $SAMPLEFILE \
   --skip-indels \
-  --output test2/4_bam/"${GENOME}_pileup.bcf" \
+  --output test3/4_bam/"${GENOME}_pileup.bcf" \
   --output-type b \
   --annotate FORMAT/AD,FORMAT/ADF,FORMAT/ADR,FORMAT/DP,INFO/AD,INFO/ADF,INFO/ADR
-done < test2/4_bam/mybamlist.txt
+done < test3/4_bam/mybamlist.txt

@@ -63,6 +63,7 @@ All pseudo-genomes put together and indexed in folder `12_bowtie/ref_genomes`
 Edit `bowtie_align.sh` and change all references to appropriate test folder (change test2 to test3)
   `mkdir test3/3_sam_paired/`
   `bash bowtie_align.sh`
+Test3 run of 15 started at 16:25 and ended at 18:00
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
 Filter the bam files based on Eleni's settings using *samtools*:
@@ -92,16 +93,18 @@ Filter the bam files based on Eleni's settings using *samtools*:
    - samtools index : Index a coordinate-sorted BAM or CRAM file for fast random access. Index the bam files to quickly extract alignments overlapping particular genomic regions. This index is needed when region arguments are used to limit samtools view and similar commands to particular regions of interest.
 
 #### Loop for multiple
+`mkdir test3/4_bam`
 ``` bash
-   for SAMPLEFILE in `cat sample_list.txt`
+   for SAMPLEFILE in `cat test3/sample_list.txt`
    do
-     samtools view -S -b -h -q 100 -m 30 test2/3_sam_paired/"${SAMPLEFILE}.sam" | \
+     samtools view -S -b -h -q 100 -m 30 test3/3_sam_paired/"${SAMPLEFILE}.sam" | \
      samtools sort - | \
-     samtools rmdup -s - test2/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
-     samtools index test2/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
-     samtools view test2/4_bam/"${SAMPLEFILE}_sorted_rd.bam" | wc -l
+     samtools rmdup -s - test3/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
+     samtools index test3/4_bam/"${SAMPLEFILE}_sorted_rd.bam"
+     samtools view test3/4_bam/"${SAMPLEFILE}_sorted_rd.bam" | wc -l
    done
 ```
+Run of 15 took ~3 minutes
 
 ## Step 4: Variant Calling and Filtering
 
@@ -143,10 +146,11 @@ INFO/ADR    .. Total allelic depths on the reverse strand (Number=R,Type=Integer
 
 
 
-#1. Create list of bam files and save to a txt file:
-```bash
-    ls test/4_bam_paired/*.bam > test/4_bam_paired/mybamlist_paired.txt #had to add test2/4_bam/ before each file name to make it work
-```
+#1. Create list of bam files then add genomes
+
+  `ls test3/4_bam/*.bam > test3/4_bam/mybamlist1.txt`
+  `paste test3/specimen_list.txt test3/4_bam/mybamlist1.txt | awk '{$2=""; print $0}' > test3/4_bam/mybamlist.txt`
+  `rm test3/4_bam/mybamlist1.txt`
 #2. Create multi-way pileup
 Use script `mpileup.sh`
 
