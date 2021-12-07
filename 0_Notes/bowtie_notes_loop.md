@@ -25,10 +25,11 @@ Select samples and make names lists
   `sort -u test3/sample_list_dup.txt > test3/sample_list.txt`
   `rm sample_list_*.txt`
 
-3. Make list of specimens and then make one tab delimited file named `specimen_list.txt` (genome and samplefile on same line). Genome in format: GSPP_UWCATNUM_SNUM, samplefile same as in sample_list. Do this by running:
-  `cut -c27- test3/sample_list.txt | sed "s/.....$//" > test3/specimen_list1.txt`
-  `paste -d "\t" test3/specimen_list1.txt test3/sample_list.txt > test3/specimen_list.txt`
-  `rm test3/specimen_list1.txt`
+3. Make list of specimens and then make one tab delimited file named `specimen_list.txt` (genome and samplefile on same line). Genome in format: GSPP_UWCATNUM_SNUM with all "-" changed to "_", samplefile same as in sample_list. Do this by running:
+  `cut -c27- test3/sample_list.txt | sed "s/.....$//" > test3/specimen_list_1.txt`
+  `cat test3/specimen_list1.txt| awk '{gsub (/-/,"_")}1' > test3/specimen_list_2.txt`
+  `paste -d "\t" test3/specimen_list2.txt test3/sample_list.txt > test3/specimen_list.txt`
+  `rm test3/specimen_list_*.txt`
 
 4. Check that the each snum is only found on one line meaning the columns match. If all it outputs is "Checking file" then file is good, otherwise will list "SNUM lines don't match"
   `bash specimen_list_check.sh`
@@ -59,8 +60,9 @@ All pseudo-genomes put together and indexed in folder `12_bowtie/ref_genomes`
    you can use 2> to redirect stdout to a file (bowtie writes the summary log files to stdout)
 
 #### For all files need to Loop over each sample fastq file and align it to genome, then output a sam file
-
-Use script saved as `bowtie_align.sh`
+Edit `bowtie_align.sh` and change all references to appropriate test folder (change test2 to test3)
+  `mkdir test3/3_sam_paired/`
+  `bash bowtie_align.sh`
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
 Filter the bam files based on Eleni's settings using *samtools*:
