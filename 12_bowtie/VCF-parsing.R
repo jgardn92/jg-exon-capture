@@ -76,8 +76,12 @@ for(i in 1:length(genomes)){
 head(vcf.grp)
 
 tbls.raw.grp <- list()
-tbls.filt.grp <- list()
+tbls.filt1.grp <- list()
+tbls.filt2.grp <- list()
 raw.depth.hist.grp <- list()
+MA.freq.hist.grp <- list()
+TA.freq.hist.grp <- list()
+ID.list <- list()
 
 for(i in 1:length(vcf.grp)){
   dp <- extract.gt(vcf.grp[[i]], element = "DP", as.numeric = TRUE)
@@ -93,11 +97,43 @@ for(i in 1:length(vcf.grp)){
   dp.ad.tbl$Third_Allele <- dp.ad.tbl$Depth - (dp.ad.tbl$A1_Count + dp.ad.tbl$A2_Count)
   dp.ad.tbl$MA_Freq <- dp.ad.tbl$Minor_Allele/dp.ad.tbl$Depth
   dp.ad.tbl$TA_Freq <- dp.ad.tbl$Third_Allele/dp.ad.tbl$Depth
-  depth.hist <- hist(dp.ad.tbl$Depth, xlab = "Raw Depths before filtering", main = paste("Raw depth histogram for", ID.name, sept =""))
+  n <- length(dp.ad.tbl$Depth)
+  #depth.hist <- hist(dp.ad.tbl$Depth, xlab = "Raw Depths before filtering", main = paste("Raw depth histogram for", ID.name,n))
+  dp.ad.filt1 <- dp.ad.tbl %>% filter(Depth > 20)
   tbls.raw.grp[[i]] <- dp.ad.tbl
   raw.depth.hist.grp[[i]] <- depth.hist
+  if(length(dp.ad.filt1$Depth)>0){
+    #ma.filt.hist <- hist(dp.ad.filt1$MA_Freq,xlab = "Minor Allele Frequency after depth filter", 
+                       #main = paste("Minor Allele Frequency for", ID.name, sept =""))
+    ta.filt.hist <- hist(dp.ad.filt1$TA_Freq,xlab = "Third Allele Frequency after depth filter", 
+                       main = paste("Third Allele Frequency for", ID.name, sept =""))
+    tbls.filt1.grp[[i]] <- dp.ad.filt
+    MA.freq.hist.grp[[i]] <- ma.filt.hist
+    TA.freq.hist.grp[[i]] <- ta.filt.hist
+    ID.list[[i]] <- ID.name
+  } else {
+      print(paste(ID.name, "had no reads with depth >20"))
+    }
 }
 
+tbls.loc.grp <- list()
+
+for(i in 1:length(tbls.filt1.grp)){
+  ID.name <- "spp"
+  tbl.filt1 <- tbls.filt1.grp[[i]]
+  tbl.filt2 <- tbl.filt1 %>% filter(MA_Freq > 0.1 & TA_Freq > 0.01)
+  tbl.filt2$Locus <- rownames(tbl.filt2)
+  tbl.filt2$Locus <- sub('\\.fas.*', '', tbl.filt2$Locus)
+  tbl.by.loc <- tbl.filt2 %>% group_by(Locus) %>% summarize(n = n(), mean(Depth), mean(MA_Freq), mean(TA_Freq))
+  n <- length(tbl.by.loc$Locus)
+  #hist(tbl.by.loc$`mean(Depth)`,xlab = "Average Depth", 
+      #main = paste("Average Depth for", ID.name, "for", n, "genes"))
+  hist(tbl.by.loc$`mean(MA_Freq)`,xlab = "Average Minor Allele Frequency", 
+       main = paste("Average Minor Allele Frequency for", ID.name, "for", n, "genes"))
+  #hist(tbl.by.loc$`mean(TA_Freq)`,xlab = "Average Third Allele Frequency", 
+       #main = paste("Average Third Allele Frequency for", ID.name, "for", n, "genes"))
+  tbls.loc.grp[[i]] <- tbl.by.loc
+}
 
 
 
