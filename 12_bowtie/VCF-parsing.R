@@ -2,6 +2,8 @@
 
 library(vcfR)
 library(tidyverse)
+library(stringr)
+
 setwd("~/Documents/GitHub/jg-exon-capture/12_bowtie/")
 
 #### Practice 1 ####
@@ -72,3 +74,32 @@ for(i in 1:length(genomes)){
 }
 
 head(vcf.grp)
+
+tbls.raw.grp <- list()
+tbls.filt.grp <- list()
+raw.depth.hist.grp <- list()
+
+for(i in 1:length(vcf.grp)){
+  dp <- extract.gt(vcf.grp[[i]], element = "DP", as.numeric = TRUE)
+  dp.whole.name <- colnames(dp)
+  ID.name <- str_sub(dp.whole.name, 39, -20)
+  ad <- extract.gt(vcf.grp[[i]], element = "AD")
+  ad.allele1 <- masplit(ad, sort = 0, record = 1)
+  ad.allele2 <- masplit(ad, sort = 0, record = 2)
+  dp.ad.tbl <- as.data.frame(cbind(dp, ad.allele1, ad.allele2))
+  colnames(dp.ad.tbl) <- c("Depth", "A1_Count", "A2_Count")
+  dp.ad.tbl$Minor_Allele <- ifelse(dp.ad.tbl$A1_Count > dp.ad.tbl$A2_Count, dp.ad.tbl$A2_Count,
+                                   ifelse(dp.ad.tbl$A1_Count < dp.ad.tbl$A2_Count, dp.ad.tbl$A1_Count, dp.ad.tbl$A2_Count))
+  dp.ad.tbl$Third_Allele <- dp.ad.tbl$Depth - (dp.ad.tbl$A1_Count + dp.ad.tbl$A2_Count)
+  dp.ad.tbl$MA_Freq <- dp.ad.tbl$Minor_Allele/dp.ad.tbl$Depth
+  dp.ad.tbl$TA_Freq <- dp.ad.tbl$Third_Allele/dp.ad.tbl$Depth
+  depth.hist <- hist(dp.ad.tbl$Depth, xlab = "Raw Depths before filtering", main = paste("Raw depth histogram for", ID.name, sept =""))
+  tbls.raw.grp[[i]] <- dp.ad.tbl
+  raw.depth.hist.grp[[i]] <- depth.hist
+}
+
+
+
+
+
+
