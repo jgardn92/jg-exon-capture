@@ -5,5 +5,5 @@ set -o pipefail
 while read -r SNUM
  do
   echo $SNUM
-  ls ../1_trimmed/ | grep $SNUM >> test3/sample_list_suffix.txt
-done < test3/snum_list.txt
+  ls ../1_trimmed/ | grep $SNUM >> test4_remaining/sample_list_suffix.txt
+done < test4_remaining/snum_list.txt

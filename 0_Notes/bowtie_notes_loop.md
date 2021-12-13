@@ -15,7 +15,11 @@ NOTE: for each iteration will need to make new test folder and replace that test
 ## Step 1: Set up samples
 Select samples and make names lists
 
-1. Select samples and make txt file of Sxxx numbers save as `12_bowtie/test3/snum_list.txt`
+1. Select samples and make txt file of Sxxx numbers save as `12_bowtie/test4_remaining/snum_list.txt`
+  - Get all Snums from 1_trimmed using:
+  `ls ../1_trimmed/ | cut -c40- | sed "s/..............$//" | sort -u | gsed 's/.*_//' > test4_remaining/all_snum.txt`
+  - Remove Snums that were already run or didn't assemble (S435 and S436):
+  ` grep -v -f test4_remaining/snums_already_done.txt test4_remaining/all_snum.txt > test4_remaining/snum_list.txt`
   - will have to edit samples_suffix.sh to change what file it is reading with each new iteration
 
 2. Run the following to get `sample_list.txt` to be used with SAMTOOLS later and to make specimen list.
