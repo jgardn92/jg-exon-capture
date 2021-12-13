@@ -25,20 +25,21 @@ Select samples and make names lists
 2. Run the following to get `sample_list.txt` to be used with SAMTOOLS later and to make specimen list.
   `cd 12_bowtie`
   `bash samples_suffix.sh`
-  `sed "s/.........$//" test3/sample_list_suffix.txt > test3/sample_list_dup.txt`
-  `sort -u test3/sample_list_dup.txt > test3/sample_list.txt`
-  `rm sample_list_*.txt`
+  `sed "s/.........$//" test4_remaining/sample_list_suffix.txt > test4_remaining/sample_list_dup.txt`
+  `sort -u test4_remaining/sample_list_dup.txt > test4_remaining/sample_list.txt`
+  `rm test4_remaining/sample_list_*.txt`
 
 3. Make list of specimens and then make one tab delimited file named `specimen_list.txt` (genome and samplefile on same line). Genome in format: GSPP_UWCATNUM_SNUM with all "-" changed to "_", samplefile same as in sample_list. Do this by running:
-  `cut -c27- test3/sample_list.txt | sed "s/.....$//" > test3/specimen_list_1.txt`
-  `cat test3/specimen_list1.txt| awk '{gsub (/-/,"_")}1' > test3/specimen_list_2.txt`
-  `paste -d "\t" test3/specimen_list2.txt test3/sample_list.txt > test3/specimen_list.txt`
-  `rm test3/specimen_list_*.txt`
+  `cut -c27- test4_remaining/sample_list.txt | sed "s/.....$//" > test4_remaining/specimen_list_1.txt`
+  `cat test4_remaining/specimen_list_1.txt| awk '{gsub (/-/,"_")}1' > test4_remaining/specimen_list_2.txt`
+  `paste -d "\t" test4_remaining/specimen_list_2.txt test4_remaining/sample_list.txt > test4_remaining/specimen_list.txt`
+  `rm test4_remaining/specimen_list_*.txt`
 
 4. Check that the each snum is only found on one line meaning the columns match. If all it outputs is "Checking file" then file is good, otherwise will list "SNUM lines don't match"
   `bash specimen_list_check.sh`
 
-5. Copy selected samples using sample_list.txt to test3/1_trimmed:
+5. **SKIP THIS STEP TO AVOID LARGE FILE REDUNDANCY.** - edited `bowtie_align.sh` to call directly from `jg-exon-capture/1_trimmed/`
+  Copy selected samples using sample_list.txt to test3/1_trimmed:
   `mkdir test3/1_trimmed`
   `bash copy_trimmed.sh`
 
@@ -65,9 +66,10 @@ All pseudo-genomes put together and indexed in folder `12_bowtie/ref_genomes`
 
 #### For all files need to Loop over each sample fastq file and align it to genome, then output a sam file
 Edit `bowtie_align.sh` and change all references to appropriate test folder (change test2 to test3)
-  `mkdir test3/3_sam_paired/`
+  `mkdir test4_remaining/3_sam_paired/`
   `bash bowtie_align.sh`
 Test3 run of 15 started at 16:25 and ended at 18:00
+Test4 run of 77 started at 12:32 and ended at 
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
 Filter the bam files based on Eleni's settings using *samtools*:
