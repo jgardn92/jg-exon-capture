@@ -1,0 +1,11 @@
+PASS	Basic Statistics	PSEMELA_UW154235_S57_R2.fastq
+PASS	Per base sequence quality	PSEMELA_UW154235_S57_R2.fastq
+PASS	Per tile sequence quality	PSEMELA_UW154235_S57_R2.fastq
+PASS	Per sequence quality scores	PSEMELA_UW154235_S57_R2.fastq
+FAIL	Per base sequence content	PSEMELA_UW154235_S57_R2.fastq
+WARN	Per sequence GC content	PSEMELA_UW154235_S57_R2.fastq
+PASS	Per base N content	PSEMELA_UW154235_S57_R2.fastq
+WARN	Sequence Length Distribution	PSEMELA_UW154235_S57_R2.fastq
+WARN	Sequence Duplication Levels	PSEMELA_UW154235_S57_R2.fastq
+WARN	Overrepresented sequences	PSEMELA_UW154235_S57_R2.fastq
+PASS	Adapter Content	PSEMELA_UW154235_S57_R2.fastq

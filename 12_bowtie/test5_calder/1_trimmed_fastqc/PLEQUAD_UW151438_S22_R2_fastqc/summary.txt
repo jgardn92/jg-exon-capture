@@ -1,0 +1,11 @@
+PASS	Basic Statistics	PLEQUAD_UW151438_S22_R2.fastq
+PASS	Per base sequence quality	PLEQUAD_UW151438_S22_R2.fastq
+PASS	Per tile sequence quality	PLEQUAD_UW151438_S22_R2.fastq
+PASS	Per sequence quality scores	PLEQUAD_UW151438_S22_R2.fastq
+FAIL	Per base sequence content	PLEQUAD_UW151438_S22_R2.fastq
+WARN	Per sequence GC content	PLEQUAD_UW151438_S22_R2.fastq
+PASS	Per base N content	PLEQUAD_UW151438_S22_R2.fastq
+WARN	Sequence Length Distribution	PLEQUAD_UW151438_S22_R2.fastq
+FAIL	Sequence Duplication Levels	PLEQUAD_UW151438_S22_R2.fastq
+WARN	Overrepresented sequences	PLEQUAD_UW151438_S22_R2.fastq
+PASS	Adapter Content	PLEQUAD_UW151438_S22_R2.fastq

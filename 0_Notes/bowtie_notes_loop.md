@@ -69,7 +69,7 @@ Edit `bowtie_align.sh` and change all references to appropriate test folder (cha
   `mkdir test4_remaining/3_sam_paired/`
   `bash bowtie_align.sh`
 Test3 run of 15 started at 16:25 and ended at 18:00
-Test4 run of 77 started at 12:32 and ended at 
+Test4 run of 77 started at 12:32 and ended at about 19:00
 
 ## Step 3: Convert sam files to bam format, filter, remove PCR duplicates, and index bam files
 Filter the bam files based on Eleni's settings using *samtools*:
@@ -104,7 +104,7 @@ Filter the bam files based on Eleni's settings using *samtools*:
 
 samtools.sh currently set with -q 30 -m 30; ran previously with -q 100 and that filtered out everything
 Run of 15 took from 13:33 - 13:40
-
+Run of 77 took from 20:58 - 21:28
 ## Step 4: Variant Calling and Filtering
 
 ## Variant calling in modern herring samples
@@ -147,13 +147,13 @@ INFO/ADR    .. Total allelic depths on the reverse strand (Number=R,Type=Integer
 
 #1. Create list of bam files then add genomes
 
-  `ls test3/4_bam/*.bam > test3/4_bam/mybamlist1.txt`
-  `paste test3/specimen_list.txt test3/4_bam/mybamlist1.txt | awk '{$2=""; print $0}' > test3/4_bam/mybamlist.txt`
-  `rm test3/4_bam/mybamlist1.txt`
+  `ls test4_remaining/4_bam/*.bam > test4_remaining/4_bam/mybamlist1.txt`
+  `paste test4_remaining/specimen_list.txt test4_remaining/4_bam/mybamlist1.txt | awk '{$2=""; print $0}' > test4_remaining/4_bam/mybamlist.txt`
+  `rm test4_remaining/4_bam/mybamlist1.txt`
 #2. Create multi-way pileup
 Use script `mpileup.sh`
 Run of 15 took about 1 minute
-
+Run of 31 ran from 21:31 - 21:35
 ### Using *bcftools version 1.9*, use *call* command to do SNP variant calling from VCF/BCF file created in the previous step (mpileup)
 
 Usage:   bcftools call [options] <in.vcf.gz>
@@ -171,10 +171,11 @@ Usage:   bcftools call [options] <in.vcf.gz>
 -f, --format-fields <list>      output format fields: GQ,GP
 
 run this using `bcftools_call.sh`
-`mkdir test3/5_variants`
+`mkdir test4_remaining/5_variants`
 `bash bcftools_call.sh`
 
 runs very quickly (<20 seconds for run of 15)
+Run of 77 ran from 21:35 - 21:35 (less than 1 min)
 ### Filter the genotypes for quality using *bcftools* and missing data using *vcftools*
 
 I did this iteratively, starting with very permissive thresholds (MINQ== 30; missing data = 75%) and visualizing the distribution of samples and genotypes. I observed that relatively few individuals and SNPs were characterized by large amounts of low-quality or missing data, so I happily proceeded to filter the genotypes using more stringent thresholds (minQ==900; missing data = 20%, minDP= 10, min-meanDP =10, maf = 0.05). For the sake of brevity, I show the final filtering criteria here:
@@ -184,7 +185,7 @@ I did this iteratively, starting with very permissive thresholds (MINQ== 30; mis
 --max-missing 0.8: filter out genotypes called in less than 80% of all samples (this syntax is kind of counter-intuitive, so be careful)
 
 `bash vcftools_recode.sh`
-runs very quickly (<10 seconds for run of 15)
+runs very quickly (<10 seconds for run of 15; <30 seconds for run of 77)
 
 #### Use vcftools to output some useful summary statistics for plotting
 Don't have to run this because plotting in R from vcf file not summaries  but to run:
@@ -198,7 +199,7 @@ When you use the --consensus-caller model in bcftools, the vcf header lacks the 
 Thus, you have to copy and paste these header lines to the top of your vcf file before other programs can read in the vcf.
 Use `vcf_filelines.sh` to do it
 
-  `mkdir test3/6_recoded_vcfs`
+  `mkdir test4_remaining/6_recoded_vcfs`
   `bash vcf_filelines.sh`
 runs very quickly (<10 seconds for run of 15)
 

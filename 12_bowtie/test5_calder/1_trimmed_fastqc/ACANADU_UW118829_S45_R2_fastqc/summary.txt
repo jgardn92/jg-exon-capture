@@ -1,0 +1,11 @@
+PASS	Basic Statistics	ACANADU_UW118829_S45_R2.fastq
+PASS	Per base sequence quality	ACANADU_UW118829_S45_R2.fastq
+PASS	Per tile sequence quality	ACANADU_UW118829_S45_R2.fastq
+PASS	Per sequence quality scores	ACANADU_UW118829_S45_R2.fastq
+FAIL	Per base sequence content	ACANADU_UW118829_S45_R2.fastq
+WARN	Per sequence GC content	ACANADU_UW118829_S45_R2.fastq
+PASS	Per base N content	ACANADU_UW118829_S45_R2.fastq
+WARN	Sequence Length Distribution	ACANADU_UW118829_S45_R2.fastq
+FAIL	Sequence Duplication Levels	ACANADU_UW118829_S45_R2.fastq
+WARN	Overrepresented sequences	ACANADU_UW118829_S45_R2.fastq
+PASS	Adapter Content	ACANADU_UW118829_S45_R2.fastq

@@ -79,7 +79,7 @@ In 1_trimmed rename files to .fastq instead of .fq
 
 Then run fastqc for every file in directory
 
-    `for FILE in 1_trimmed/*.fastq
+    `for FILE in 1_trimmed_zipped/*.fastq
     do
     fastqc -f fastq --extract -o 1_trimmed_fastqc $FILE
     done`
