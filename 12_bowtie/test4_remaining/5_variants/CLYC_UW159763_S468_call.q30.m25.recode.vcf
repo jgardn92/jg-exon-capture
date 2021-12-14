@@ -1,0 +1,857 @@
+##bcftoolsVersion=1.13+htslib-1.13
+##bcftoolsCommand=mpileup --fasta-ref ref_genomes/fastas/CLYC_UW159763_S468.fasta --skip-indels --output test4_remaining/4_bam/CLYC_UW159763_S468_pileup.bcf --output-type b --annotate FORMAT/AD,FORMAT/ADF,FORMAT/ADR,FORMAT/DP,INFO/AD,INFO/ADF,INFO/ADR test4_remaining/4_bam/lane8-s468-index-TGGTTGAC-CLYC_UW159763_S468_L008_sorted_rd.bam
+##reference=file://ref_genomes/fastas/CLYC_UW159763_S468.fasta
+##contig=<ID=Danio_rerio.1.18292940.18293133.fas,Length=186,IDX=0>
+##contig=<ID=Danio_rerio.1.18296121.18296321.fas,Length=201,IDX=1>
+##contig=<ID=Danio_rerio.1.25002370.25002537.fas,Length=165,IDX=2>
+##contig=<ID=Danio_rerio.1.31116778.31116951.fas,Length=147,IDX=3>
+##contig=<ID=Danio_rerio.1.44070566.44070840.fas,Length=213,IDX=4>
+##contig=<ID=Danio_rerio.1.46310620.46310764.fas,Length=138,IDX=5>
+##contig=<ID=Danio_rerio.1.47116698.47116488.fas,Length=174,IDX=6>
+##contig=<ID=Danio_rerio.1.54644075.54644233.fas,Length=156,IDX=7>
+##contig=<ID=Danio_rerio.1.582997.582839.fas,Length=159,IDX=8>
+##contig=<ID=Danio_rerio.1.688057.687910.fas,Length=141,IDX=9>
+##contig=<ID=Danio_rerio.10.11325041.11325192.fas,Length=135,IDX=10>
+##contig=<ID=Danio_rerio.10.1635981.1635790.fas,Length=192,IDX=11>
+##contig=<ID=Danio_rerio.10.23337334.23337142.fas,Length=174,IDX=12>
+##contig=<ID=Danio_rerio.10.33338435.33338270.fas,Length=162,IDX=13>
+##contig=<ID=Danio_rerio.10.6742138.6742289.fas,Length=150,IDX=14>
+##contig=<ID=Danio_rerio.11.10908119.10908000.fas,Length=120,IDX=15>
+##contig=<ID=Danio_rerio.11.18258004.18257861.fas,Length=138,IDX=16>
+##contig=<ID=Danio_rerio.11.19924211.19924416.fas,Length=204,IDX=17>
+##contig=<ID=Danio_rerio.11.37306870.37306718.fas,Length=150,IDX=18>
+##contig=<ID=Danio_rerio.12.14814302.14814448.fas,Length=117,IDX=19>
+##contig=<ID=Danio_rerio.12.14821486.14821635.fas,Length=129,IDX=20>
+##contig=<ID=Danio_rerio.12.15572131.15572277.fas,Length=141,IDX=21>
+##contig=<ID=Danio_rerio.12.18982229.18982429.fas,Length=201,IDX=22>
+##contig=<ID=Danio_rerio.12.23921131.23921334.fas,Length=204,IDX=23>
+##contig=<ID=Danio_rerio.12.25087890.25088114.fas,Length=186,IDX=24>
+##contig=<ID=Danio_rerio.12.26434797.26434590.fas,Length=207,IDX=25>
+##contig=<ID=Danio_rerio.12.30807362.30807550.fas,Length=174,IDX=26>
+##contig=<ID=Danio_rerio.12.31968923.31969112.fas,Length=147,IDX=27>
+##contig=<ID=Danio_rerio.12.33347692.33347836.fas,Length=144,IDX=28>
+##contig=<ID=Danio_rerio.12.35305933.35305693.fas,Length=237,IDX=29>
+##contig=<ID=Danio_rerio.13.1277793.1277399.fas,Length=363,IDX=30>
+##contig=<ID=Danio_rerio.13.2170123.2170243.fas,Length=120,IDX=31>
+##contig=<ID=Danio_rerio.13.24125183.24125443.fas,Length=216,IDX=32>
+##contig=<ID=Danio_rerio.13.31106791.31106922.fas,Length=126,IDX=33>
+##contig=<ID=Danio_rerio.13.41312188.41312330.fas,Length=141,IDX=34>
+##contig=<ID=Danio_rerio.13.4236446.4236586.fas,Length=141,IDX=35>
+##contig=<ID=Danio_rerio.13.43900428.43900215.fas,Length=201,IDX=36>
+##contig=<ID=Danio_rerio.13.5659043.5659173.fas,Length=126,IDX=37>
+##contig=<ID=Danio_rerio.13.9224282.9224136.fas,Length=144,IDX=38>
+##contig=<ID=Danio_rerio.14.12420546.12420755.fas,Length=210,IDX=39>
+##contig=<ID=Danio_rerio.14.12710238.12710417.fas,Length=180,IDX=40>
+##contig=<ID=Danio_rerio.14.12721300.12721484.fas,Length=183,IDX=41>
+##contig=<ID=Danio_rerio.14.27470066.27469940.fas,Length=126,IDX=42>
+##contig=<ID=Danio_rerio.14.40057081.40057251.fas,Length=165,IDX=43>
+##contig=<ID=Danio_rerio.14.4155878.4155603.fas,Length=132,IDX=44>
+##contig=<ID=Danio_rerio.14.47705546.47705684.fas,Length=135,IDX=45>
+##contig=<ID=Danio_rerio.14.53372394.53372227.fas,Length=168,IDX=46>
+##contig=<ID=Danio_rerio.15.14504669.14504877.fas,Length=207,IDX=47>
+##contig=<ID=Danio_rerio.15.15149106.15148971.fas,Length=132,IDX=48>
+##contig=<ID=Danio_rerio.15.1538012.1538188.fas,Length=141,IDX=49>
+##contig=<ID=Danio_rerio.15.1546296.1546436.fas,Length=135,IDX=50>
+##contig=<ID=Danio_rerio.15.1884737.1884901.fas,Length=165,IDX=51>
+##contig=<ID=Danio_rerio.15.1886823.1886972.fas,Length=123,IDX=52>
+##contig=<ID=Danio_rerio.15.25309293.25309139.fas,Length=153,IDX=53>
+##contig=<ID=Danio_rerio.15.25891396.25891070.fas,Length=300,IDX=54>
+##contig=<ID=Danio_rerio.15.27601857.27601666.fas,Length=189,IDX=55>
+##contig=<ID=Danio_rerio.15.27602714.27602585.fas,Length=126,IDX=56>
+##contig=<ID=Danio_rerio.15.27606169.27605977.fas,Length=192,IDX=57>
+##contig=<ID=Danio_rerio.15.31913616.31913942.fas,Length=279,IDX=58>
+##contig=<ID=Danio_rerio.15.43084570.43084430.fas,Length=129,IDX=59>
+##contig=<ID=Danio_rerio.15.44047704.44047440.fas,Length=114,IDX=60>
+##contig=<ID=Danio_rerio.15.46583426.46583554.fas,Length=126,IDX=61>
+##contig=<ID=Danio_rerio.16.14284107.14284333.fas,Length=126,IDX=62>
+##contig=<ID=Danio_rerio.16.16034840.16034990.fas,Length=141,IDX=63>
+##contig=<ID=Danio_rerio.16.18352845.18353006.fas,Length=135,IDX=64>
+##contig=<ID=Danio_rerio.16.29428678.29428816.fas,Length=138,IDX=65>
+##contig=<ID=Danio_rerio.16.42715246.42715402.fas,Length=156,IDX=66>
+##contig=<ID=Danio_rerio.16.46124581.46124704.fas,Length=123,IDX=67>
+##contig=<ID=Danio_rerio.16.46138119.46137966.fas,Length=150,IDX=68>
+##contig=<ID=Danio_rerio.16.48762784.48762940.fas,Length=147,IDX=69>
+##contig=<ID=Danio_rerio.16.55608807.55608626.fas,Length=180,IDX=70>
+##contig=<ID=Danio_rerio.16.56182262.56181994.fas,Length=267,IDX=71>
+##contig=<ID=Danio_rerio.16.567906.567280.fas,Length=114,IDX=72>
+##contig=<ID=Danio_rerio.16.7946469.7949094.fas,Length=447,IDX=73>
+##contig=<ID=Danio_rerio.16.8603325.8603452.fas,Length=126,IDX=74>
+##contig=<ID=Danio_rerio.17.177823.177615.fas,Length=207,IDX=75>
+##contig=<ID=Danio_rerio.17.19279316.19279177.fas,Length=138,IDX=76>
+##contig=<ID=Danio_rerio.17.22445169.22445362.fas,Length=192,IDX=77>
+##contig=<ID=Danio_rerio.17.227059.226883.fas,Length=177,IDX=78>
+##contig=<ID=Danio_rerio.17.227463.227323.fas,Length=141,IDX=79>
+##contig=<ID=Danio_rerio.17.230285.230136.fas,Length=141,IDX=80>
+##contig=<ID=Danio_rerio.17.232056.230980.fas,Length=639,IDX=81>
+##contig=<ID=Danio_rerio.17.24439918.24440142.fas,Length=219,IDX=82>
+##contig=<ID=Danio_rerio.17.25269830.25269952.fas,Length=123,IDX=83>
+##contig=<ID=Danio_rerio.17.50011322.50011469.fas,Length=147,IDX=84>
+##contig=<ID=Danio_rerio.17.50045427.50045552.fas,Length=126,IDX=85>
+##contig=<ID=Danio_rerio.17.50048600.50048729.fas,Length=108,IDX=86>
+##contig=<ID=Danio_rerio.17.51577517.51577330.fas,Length=186,IDX=87>
+##contig=<ID=Danio_rerio.17.51611735.51611568.fas,Length=165,IDX=88>
+##contig=<ID=Danio_rerio.17.51618618.51618498.fas,Length=102,IDX=89>
+##contig=<ID=Danio_rerio.17.53886579.53886459.fas,Length=117,IDX=90>
+##contig=<ID=Danio_rerio.17.7445971.7446131.fas,Length=159,IDX=91>
+##contig=<ID=Danio_rerio.17.8434532.8434348.fas,Length=180,IDX=92>
+##contig=<ID=Danio_rerio.17.8654820.8654991.fas,Length=171,IDX=93>
+##contig=<ID=Danio_rerio.18.14930957.14930819.fas,Length=138,IDX=94>
+##contig=<ID=Danio_rerio.18.18784958.18784737.fas,Length=222,IDX=95>
+##contig=<ID=Danio_rerio.18.20275163.20275387.fas,Length=225,IDX=96>
+##contig=<ID=Danio_rerio.18.26231782.26231977.fas,Length=195,IDX=97>
+##contig=<ID=Danio_rerio.18.26262685.26262825.fas,Length=141,IDX=98>
+##contig=<ID=Danio_rerio.18.36679109.36678938.fas,Length=171,IDX=99>
+##contig=<ID=Danio_rerio.18.44061827.44061959.fas,Length=123,IDX=100>
+##contig=<ID=Danio_rerio.19.12564665.12564526.fas,Length=138,IDX=101>
+##contig=<ID=Danio_rerio.19.19853256.19853135.fas,Length=120,IDX=102>
+##contig=<ID=Danio_rerio.19.32827618.32827484.fas,Length=114,IDX=103>
+##contig=<ID=Danio_rerio.19.32828385.32828257.fas,Length=129,IDX=104>
+##contig=<ID=Danio_rerio.19.3530431.3530277.fas,Length=153,IDX=105>
+##contig=<ID=Danio_rerio.19.44522766.44522375.fas,Length=210,IDX=106>
+##contig=<ID=Danio_rerio.19.47473373.47472829.fas,Length=174,IDX=107>
+##contig=<ID=Danio_rerio.2.10692384.10692036.fas,Length=348,IDX=108>
+##contig=<ID=Danio_rerio.2.13632602.13633206.fas,Length=165,IDX=109>
+##contig=<ID=Danio_rerio.2.16642251.16642105.fas,Length=126,IDX=110>
+##contig=<ID=Danio_rerio.2.1990667.1990815.fas,Length=144,IDX=111>
+##contig=<ID=Danio_rerio.2.2479674.2479521.fas,Length=150,IDX=112>
+##contig=<ID=Danio_rerio.2.27975885.27975672.fas,Length=210,IDX=113>
+##contig=<ID=Danio_rerio.2.29896263.29896097.fas,Length=159,IDX=114>
+##contig=<ID=Danio_rerio.2.35330492.35330621.fas,Length=129,IDX=115>
+##contig=<ID=Danio_rerio.2.35781500.35781650.fas,Length=147,IDX=116>
+##contig=<ID=Danio_rerio.2.36914158.36914304.fas,Length=147,IDX=117>
+##contig=<ID=Danio_rerio.2.44686510.44686671.fas,Length=159,IDX=118>
+##contig=<ID=Danio_rerio.2.45037351.45037511.fas,Length=153,IDX=119>
+##contig=<ID=Danio_rerio.2.5077756.5077605.fas,Length=129,IDX=120>
+##contig=<ID=Danio_rerio.20.19519698.19519495.fas,Length=204,IDX=121>
+##contig=<ID=Danio_rerio.20.2568697.2568492.fas,Length=204,IDX=122>
+##contig=<ID=Danio_rerio.20.30961284.30961102.fas,Length=180,IDX=123>
+##contig=<ID=Danio_rerio.20.32523380.32523545.fas,Length=165,IDX=124>
+##contig=<ID=Danio_rerio.20.38815078.38814923.fas,Length=156,IDX=125>
+##contig=<ID=Danio_rerio.20.38844228.38844097.fas,Length=126,IDX=126>
+##contig=<ID=Danio_rerio.20.43709469.43709601.fas,Length=129,IDX=127>
+##contig=<ID=Danio_rerio.20.50207737.50207864.fas,Length=126,IDX=128>
+##contig=<ID=Danio_rerio.20.50227040.50227164.fas,Length=123,IDX=129>
+##contig=<ID=Danio_rerio.20.50394564.50394884.fas,Length=315,IDX=130>
+##contig=<ID=Danio_rerio.21.29759768.29759470.fas,Length=153,IDX=131>
+##contig=<ID=Danio_rerio.21.3478758.3478937.fas,Length=156,IDX=132>
+##contig=<ID=Danio_rerio.21.9124967.9124663.fas,Length=303,IDX=133>
+##contig=<ID=Danio_rerio.22.10493392.10493264.fas,Length=126,IDX=134>
+##contig=<ID=Danio_rerio.22.11642231.11642790.fas,Length=222,IDX=135>
+##contig=<ID=Danio_rerio.22.32304537.32304349.fas,Length=189,IDX=136>
+##contig=<ID=Danio_rerio.22.32304768.32304638.fas,Length=126,IDX=137>
+##contig=<ID=Danio_rerio.22.32341510.32341682.fas,Length=144,IDX=138>
+##contig=<ID=Danio_rerio.22.32587398.32587223.fas,Length=174,IDX=139>
+##contig=<ID=Danio_rerio.23.18022575.18022332.fas,Length=240,IDX=140>
+##contig=<ID=Danio_rerio.23.18026219.18025905.fas,Length=138,IDX=141>
+##contig=<ID=Danio_rerio.23.21587977.21588167.fas,Length=189,IDX=142>
+##contig=<ID=Danio_rerio.23.21600040.21600319.fas,Length=231,IDX=143>
+##contig=<ID=Danio_rerio.23.21608146.21608303.fas,Length=141,IDX=144>
+##contig=<ID=Danio_rerio.23.21620280.21620438.fas,Length=159,IDX=145>
+##contig=<ID=Danio_rerio.23.21622553.21622780.fas,Length=228,IDX=146>
+##contig=<ID=Danio_rerio.23.21627158.21627374.fas,Length=213,IDX=147>
+##contig=<ID=Danio_rerio.23.21635190.21635311.fas,Length=120,IDX=148>
+##contig=<ID=Danio_rerio.23.21637744.21637921.fas,Length=141,IDX=149>
+##contig=<ID=Danio_rerio.23.21647606.21647799.fas,Length=192,IDX=150>
+##contig=<ID=Danio_rerio.23.24529955.24529825.fas,Length=123,IDX=151>
+##contig=<ID=Danio_rerio.23.28757111.28757348.fas,Length=234,IDX=152>
+##contig=<ID=Danio_rerio.23.28757427.28757771.fas,Length=354,IDX=153>
+##contig=<ID=Danio_rerio.23.28770180.28770403.fas,Length=219,IDX=154>
+##contig=<ID=Danio_rerio.23.29210460.29210289.fas,Length=135,IDX=155>
+##contig=<ID=Danio_rerio.23.29224430.29224258.fas,Length=147,IDX=156>
+##contig=<ID=Danio_rerio.23.29635796.29635592.fas,Length=135,IDX=157>
+##contig=<ID=Danio_rerio.23.36734359.36734222.fas,Length=102,IDX=158>
+##contig=<ID=Danio_rerio.23.7651910.7652059.fas,Length=147,IDX=159>
+##contig=<ID=Danio_rerio.24.21785506.21785642.fas,Length=135,IDX=160>
+##contig=<ID=Danio_rerio.24.22331945.22332066.fas,Length=120,IDX=161>
+##contig=<ID=Danio_rerio.24.22337089.22337324.fas,Length=216,IDX=162>
+##contig=<ID=Danio_rerio.24.24578459.24578640.fas,Length=180,IDX=163>
+##contig=<ID=Danio_rerio.24.38734055.38733907.fas,Length=147,IDX=164>
+##contig=<ID=Danio_rerio.24.7673169.7673032.fas,Length=138,IDX=165>
+##contig=<ID=Danio_rerio.24.8299296.8299142.fas,Length=153,IDX=166>
+##contig=<ID=Danio_rerio.25.13636769.13637533.fas,Length=246,IDX=167>
+##contig=<ID=Danio_rerio.25.13645305.13645496.fas,Length=189,IDX=168>
+##contig=<ID=Danio_rerio.25.17694344.17694468.fas,Length=120,IDX=169>
+##contig=<ID=Danio_rerio.25.17695674.17695853.fas,Length=168,IDX=170>
+##contig=<ID=Danio_rerio.25.17701345.17701494.fas,Length=150,IDX=171>
+##contig=<ID=Danio_rerio.25.17701730.17701910.fas,Length=171,IDX=172>
+##contig=<ID=Danio_rerio.25.20081942.20081819.fas,Length=120,IDX=173>
+##contig=<ID=Danio_rerio.3.16011441.16011288.fas,Length=129,IDX=174>
+##contig=<ID=Danio_rerio.3.18741377.18742142.fas,Length=627,IDX=175>
+##contig=<ID=Danio_rerio.3.32021560.32021284.fas,Length=231,IDX=176>
+##contig=<ID=Danio_rerio.3.33603067.33602945.fas,Length=120,IDX=177>
+##contig=<ID=Danio_rerio.3.34007978.34007774.fas,Length=195,IDX=178>
+##contig=<ID=Danio_rerio.3.40162775.40162937.fas,Length=159,IDX=179>
+##contig=<ID=Danio_rerio.3.53980618.53980780.fas,Length=159,IDX=180>
+##contig=<ID=Danio_rerio.3.61201649.61201261.fas,Length=387,IDX=181>
+##contig=<ID=Danio_rerio.4.15053537.15053670.fas,Length=129,IDX=182>
+##contig=<ID=Danio_rerio.4.15059292.15059430.fas,Length=135,IDX=183>
+##contig=<ID=Danio_rerio.4.16341047.16340889.fas,Length=129,IDX=184>
+##contig=<ID=Danio_rerio.4.16716541.16716750.fas,Length=210,IDX=185>
+##contig=<ID=Danio_rerio.4.1920998.1921117.fas,Length=120,IDX=186>
+##contig=<ID=Danio_rerio.4.2442747.2442586.fas,Length=153,IDX=187>
+##contig=<ID=Danio_rerio.4.457377.457208.fas,Length=168,IDX=188>
+##contig=<ID=Danio_rerio.5.13989225.13989445.fas,Length=219,IDX=189>
+##contig=<ID=Danio_rerio.5.21248641.21248889.fas,Length=138,IDX=190>
+##contig=<ID=Danio_rerio.5.32708698.32708827.fas,Length=129,IDX=191>
+##contig=<ID=Danio_rerio.5.33713839.33713965.fas,Length=117,IDX=192>
+##contig=<ID=Danio_rerio.5.38164273.38164151.fas,Length=120,IDX=193>
+##contig=<ID=Danio_rerio.5.38183008.38182808.fas,Length=201,IDX=194>
+##contig=<ID=Danio_rerio.5.43261080.43260889.fas,Length=153,IDX=195>
+##contig=<ID=Danio_rerio.5.56089665.56088866.fas,Length=174,IDX=196>
+##contig=<ID=Danio_rerio.5.71745006.71745148.fas,Length=141,IDX=197>
+##contig=<ID=Danio_rerio.6.16563331.16563184.fas,Length=144,IDX=198>
+##contig=<ID=Danio_rerio.6.21628270.21628423.fas,Length=153,IDX=199>
+##contig=<ID=Danio_rerio.6.2263043.2263253.fas,Length=207,IDX=200>
+##contig=<ID=Danio_rerio.6.27062551.27062696.fas,Length=144,IDX=201>
+##contig=<ID=Danio_rerio.6.29101227.29101401.fas,Length=165,IDX=202>
+##contig=<ID=Danio_rerio.6.33627405.33627284.fas,Length=120,IDX=203>
+##contig=<ID=Danio_rerio.6.40486753.40486879.fas,Length=123,IDX=204>
+##contig=<ID=Danio_rerio.6.40759925.40759718.fas,Length=204,IDX=205>
+##contig=<ID=Danio_rerio.6.44090612.44090470.fas,Length=141,IDX=206>
+##contig=<ID=Danio_rerio.6.46387908.46388030.fas,Length=123,IDX=207>
+##contig=<ID=Danio_rerio.6.51516474.51516288.fas,Length=99,IDX=208>
+##contig=<ID=Danio_rerio.6.8099502.8099738.fas,Length=237,IDX=209>
+##contig=<ID=Danio_rerio.6.9320841.9320985.fas,Length=102,IDX=210>
+##contig=<ID=Danio_rerio.7.25640133.25639647.fas,Length=312,IDX=211>
+##contig=<ID=Danio_rerio.7.25763095.25762927.fas,Length=159,IDX=212>
+##contig=<ID=Danio_rerio.7.35697706.35697471.fas,Length=234,IDX=213>
+##contig=<ID=Danio_rerio.7.67305282.67305467.fas,Length=186,IDX=214>
+##contig=<ID=Danio_rerio.7.69753288.69754083.fas,Length=705,IDX=215>
+##contig=<ID=Danio_rerio.7.69813677.69813832.fas,Length=132,IDX=216>
+##contig=<ID=Danio_rerio.7.69838197.69838331.fas,Length=135,IDX=217>
+##contig=<ID=Danio_rerio.8.10280911.10281123.fas,Length=111,IDX=218>
+##contig=<ID=Danio_rerio.8.12187596.12187724.fas,Length=129,IDX=219>
+##contig=<ID=Danio_rerio.8.12264492.12264303.fas,Length=186,IDX=220>
+##contig=<ID=Danio_rerio.8.16150702.16150405.fas,Length=219,IDX=221>
+##contig=<ID=Danio_rerio.8.16842250.16842096.fas,Length=153,IDX=222>
+##contig=<ID=Danio_rerio.8.17068615.17068415.fas,Length=177,IDX=223>
+##contig=<ID=Danio_rerio.8.24592861.24592987.fas,Length=120,IDX=224>
+##contig=<ID=Danio_rerio.8.25157493.25157683.fas,Length=141,IDX=225>
+##contig=<ID=Danio_rerio.8.27045873.27046040.fas,Length=162,IDX=226>
+##contig=<ID=Danio_rerio.8.32258939.32258809.fas,Length=126,IDX=227>
+##contig=<ID=Danio_rerio.8.37676522.37676718.fas,Length=198,IDX=228>
+##contig=<ID=Danio_rerio.8.43306786.43306650.fas,Length=135,IDX=229>
+##contig=<ID=Danio_rerio.8.48467142.48466910.fas,Length=219,IDX=230>
+##contig=<ID=Danio_rerio.8.49390874.49391008.fas,Length=132,IDX=231>
+##contig=<ID=Danio_rerio.8.49391091.49391271.fas,Length=180,IDX=232>
+##contig=<ID=Danio_rerio.8.54109062.54108899.fas,Length=162,IDX=233>
+##contig=<ID=Danio_rerio.9.17596546.17596386.fas,Length=159,IDX=234>
+##contig=<ID=Danio_rerio.9.17596788.17596639.fas,Length=150,IDX=235>
+##contig=<ID=Danio_rerio.9.17668575.17668301.fas,Length=270,IDX=236>
+##contig=<ID=Danio_rerio.9.17677605.17677471.fas,Length=132,IDX=237>
+##contig=<ID=Danio_rerio.9.33322703.33322529.fas,Length=174,IDX=238>
+##contig=<ID=Danio_rerio.9.3384683.3384995.fas,Length=306,IDX=239>
+##contig=<ID=Danio_rerio.9.3499570.3499415.fas,Length=141,IDX=240>
+##contig=<ID=Danio_rerio.9.35991142.35991369.fas,Length=219,IDX=241>
+##contig=<ID=Danio_rerio.9.39699415.39699606.fas,Length=192,IDX=242>
+##contig=<ID=Danio_rerio.9.41942939.41942795.fas,Length=126,IDX=243>
+##contig=<ID=Danio_rerio.9.5285554.5285677.fas,Length=120,IDX=244>
+##contig=<ID=Danio_rerio.9.6336765.6336945.fas,Length=180,IDX=245>
+##contig=<ID=Danio_rerio.Zv9_NA771.84418.84281.fas,Length=138,IDX=246>
+##contig=<ID=Danio_rerio.Zv9_scaffold3485.226893.227141.fas,Length=156,IDX=247>
+##contig=<ID=Danio_rerio.Zv9_scaffold3504.59064.58935.fas,Length=129,IDX=248>
+##contig=<ID=Danio_rerio.Zv9_scaffold3540.236007.235818.fas,Length=174,IDX=249>
+##contig=<ID=Danio_rerio.Zv9_scaffold3563.176008.176154.fas,Length=141,IDX=250>
+##contig=<ID=Gasterosteus_aculeatus.groupI.10088374.10088185.fas,Length=183,IDX=251>
+##contig=<ID=Gasterosteus_aculeatus.groupI.12118444.12118610.fas,Length=159,IDX=252>
+##contig=<ID=Gasterosteus_aculeatus.groupI.12120611.12120791.fas,Length=180,IDX=253>
+##contig=<ID=Gasterosteus_aculeatus.groupI.15850768.15850956.fas,Length=186,IDX=254>
+##contig=<ID=Gasterosteus_aculeatus.groupI.15872362.15872552.fas,Length=189,IDX=255>
+##contig=<ID=Gasterosteus_aculeatus.groupI.16546017.16545896.fas,Length=120,IDX=256>
+##contig=<ID=Gasterosteus_aculeatus.groupI.17098256.17098419.fas,Length=162,IDX=257>
+##contig=<ID=Gasterosteus_aculeatus.groupI.25485754.25485888.fas,Length=129,IDX=258>
+##contig=<ID=Gasterosteus_aculeatus.groupI.4453186.4453060.fas,Length=123,IDX=259>
+##contig=<ID=Gasterosteus_aculeatus.groupI.6490602.6490724.fas,Length=123,IDX=260>
+##contig=<ID=Gasterosteus_aculeatus.groupI.7540320.7540507.fas,Length=186,IDX=261>
+##contig=<ID=Gasterosteus_aculeatus.groupI.7986568.7986770.fas,Length=198,IDX=262>
+##contig=<ID=Gasterosteus_aculeatus.groupI.7990789.7990976.fas,Length=183,IDX=263>
+##contig=<ID=Gasterosteus_aculeatus.groupI.9297590.9297741.fas,Length=150,IDX=264>
+##contig=<ID=Gasterosteus_aculeatus.groupII.10638898.10639059.fas,Length=162,IDX=265>
+##contig=<ID=Gasterosteus_aculeatus.groupII.11823837.11824061.fas,Length=201,IDX=266>
+##contig=<ID=Gasterosteus_aculeatus.groupII.13627072.13626940.fas,Length=114,IDX=267>
+##contig=<ID=Gasterosteus_aculeatus.groupII.22198624.22198758.fas,Length=135,IDX=268>
+##contig=<ID=Gasterosteus_aculeatus.groupII.5006185.5006049.fas,Length=126,IDX=269>
+##contig=<ID=Gasterosteus_aculeatus.groupII.6065685.6065828.fas,Length=138,IDX=270>
+##contig=<ID=Gasterosteus_aculeatus.groupII.9716095.9716331.fas,Length=237,IDX=271>
+##contig=<ID=Gasterosteus_aculeatus.groupIII.13697634.13697789.fas,Length=138,IDX=272>
+##contig=<ID=Gasterosteus_aculeatus.groupIII.13931238.13930971.fas,Length=267,IDX=273>
+##contig=<ID=Gasterosteus_aculeatus.groupIII.16627074.16626624.fas,Length=438,IDX=274>
+##contig=<ID=Gasterosteus_aculeatus.groupIII.6282898.6283021.fas,Length=123,IDX=275>
+##contig=<ID=Gasterosteus_aculeatus.groupIII.6875319.6875503.fas,Length=147,IDX=276>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.10594387.10594210.fas,Length=174,IDX=277>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.10934749.10934508.fas,Length=240,IDX=278>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.10936985.10936763.fas,Length=213,IDX=279>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.16501775.16501651.fas,Length=123,IDX=280>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.20012507.20012665.fas,Length=159,IDX=281>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.22995493.22996079.fas,Length=582,IDX=282>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.25511132.25511295.fas,Length=156,IDX=283>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.25859038.25858788.fas,Length=246,IDX=284>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.26195806.26195668.fas,Length=138,IDX=285>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.29005005.29005177.fas,Length=171,IDX=286>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.29470618.29470796.fas,Length=177,IDX=287>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.29519237.29519392.fas,Length=126,IDX=288>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.29562486.29562643.fas,Length=156,IDX=289>
+##contig=<ID=Gasterosteus_aculeatus.groupIV.3817767.3817926.fas,Length=147,IDX=290>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.10137685.10137513.fas,Length=147,IDX=291>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.10826489.10826128.fas,Length=291,IDX=292>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.11195301.11195125.fas,Length=177,IDX=293>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.12980024.12979858.fas,Length=153,IDX=294>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.13909548.13909411.fas,Length=135,IDX=295>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.19233197.19232893.fas,Length=282,IDX=296>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.19237881.19237709.fas,Length=171,IDX=297>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.5960342.5960162.fas,Length=180,IDX=298>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.6653353.6653589.fas,Length=192,IDX=299>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.7010124.7009852.fas,Length=273,IDX=300>
+##contig=<ID=Gasterosteus_aculeatus.groupIX.8227145.8226941.fas,Length=177,IDX=301>
+##contig=<ID=Gasterosteus_aculeatus.groupV.10881421.10881567.fas,Length=141,IDX=302>
+##contig=<ID=Gasterosteus_aculeatus.groupV.12145418.12145282.fas,Length=132,IDX=303>
+##contig=<ID=Gasterosteus_aculeatus.groupV.1828275.1827991.fas,Length=285,IDX=304>
+##contig=<ID=Gasterosteus_aculeatus.groupV.1828723.1828575.fas,Length=147,IDX=305>
+##contig=<ID=Gasterosteus_aculeatus.groupV.4815945.4816096.fas,Length=147,IDX=306>
+##contig=<ID=Gasterosteus_aculeatus.groupV.6001202.6001359.fas,Length=153,IDX=307>
+##contig=<ID=Gasterosteus_aculeatus.groupV.8019440.8019768.fas,Length=273,IDX=308>
+##contig=<ID=Gasterosteus_aculeatus.groupV.8066752.8066888.fas,Length=135,IDX=309>
+##contig=<ID=Gasterosteus_aculeatus.groupV.8301432.8301574.fas,Length=141,IDX=310>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.16424706.16424570.fas,Length=120,IDX=311>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.6988178.6987999.fas,Length=144,IDX=312>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.7336430.7335677.fas,Length=753,IDX=313>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.7645969.7646115.fas,Length=147,IDX=314>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.7854548.7854686.fas,Length=138,IDX=315>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.8140418.8140616.fas,Length=147,IDX=316>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.82876.83261.fas,Length=381,IDX=317>
+##contig=<ID=Gasterosteus_aculeatus.groupVI.8367850.8368248.fas,Length=396,IDX=318>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.13512188.13511784.fas,Length=381,IDX=319>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.14003445.14003269.fas,Length=174,IDX=320>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.17570618.17571003.fas,Length=330,IDX=321>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.17711359.17711534.fas,Length=174,IDX=322>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.21663085.21662951.fas,Length=135,IDX=323>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.22983127.22983267.fas,Length=141,IDX=324>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.26513447.26513606.fas,Length=159,IDX=325>
+##contig=<ID=Gasterosteus_aculeatus.groupVII.6666937.6667134.fas,Length=183,IDX=326>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.17298588.17298730.fas,Length=141,IDX=327>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.17300561.17300704.fas,Length=144,IDX=328>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.1734231.1734479.fas,Length=228,IDX=329>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.18683088.18683235.fas,Length=144,IDX=330>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.6004311.6004510.fas,Length=168,IDX=331>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.7737903.7738036.fas,Length=132,IDX=332>
+##contig=<ID=Gasterosteus_aculeatus.groupVIII.7901566.7901734.fas,Length=168,IDX=333>
+##contig=<ID=Gasterosteus_aculeatus.groupX.12196749.12197054.fas,Length=297,IDX=334>
+##contig=<ID=Gasterosteus_aculeatus.groupX.12897626.12897797.fas,Length=168,IDX=335>
+##contig=<ID=Gasterosteus_aculeatus.groupX.13129716.13129570.fas,Length=144,IDX=336>
+##contig=<ID=Gasterosteus_aculeatus.groupX.15431813.15431631.fas,Length=147,IDX=337>
+##contig=<ID=Gasterosteus_aculeatus.groupX.15590875.15590561.fas,Length=183,IDX=338>
+##contig=<ID=Gasterosteus_aculeatus.groupX.6446021.6445847.fas,Length=147,IDX=339>
+##contig=<ID=Gasterosteus_aculeatus.groupX.7456317.7456467.fas,Length=147,IDX=340>
+##contig=<ID=Gasterosteus_aculeatus.groupX.9481770.9482013.fas,Length=243,IDX=341>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.13417801.13417971.fas,Length=171,IDX=342>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.13673193.13673358.fas,Length=135,IDX=343>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.4775081.4774915.fas,Length=165,IDX=344>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.6378047.6378171.fas,Length=123,IDX=345>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.7392164.7392298.fas,Length=135,IDX=346>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.7756182.7756051.fas,Length=132,IDX=347>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.7873366.7873224.fas,Length=141,IDX=348>
+##contig=<ID=Gasterosteus_aculeatus.groupXI.9806019.9805800.fas,Length=219,IDX=349>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.10895298.10895837.fas,Length=471,IDX=350>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.10898024.10898206.fas,Length=180,IDX=351>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.10900882.10901060.fas,Length=171,IDX=352>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.10904395.10904786.fas,Length=390,IDX=353>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.10910131.10910271.fas,Length=138,IDX=354>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.13732754.13732400.fas,Length=321,IDX=355>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.7794558.7794428.fas,Length=129,IDX=356>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.7804594.7804403.fas,Length=192,IDX=357>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.7807879.7807650.fas,Length=228,IDX=358>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.8008167.8008356.fas,Length=189,IDX=359>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.8149110.8148957.fas,Length=153,IDX=360>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.8808010.8807761.fas,Length=246,IDX=361>
+##contig=<ID=Gasterosteus_aculeatus.groupXII.9458992.9458767.fas,Length=216,IDX=362>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.11455593.11455354.fas,Length=240,IDX=363>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.12835579.12835395.fas,Length=183,IDX=364>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.12841927.12841799.fas,Length=129,IDX=365>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.13364869.13365070.fas,Length=195,IDX=366>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.14775811.14775995.fas,Length=180,IDX=367>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.14856612.14856366.fas,Length=222,IDX=368>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.14857125.14856946.fas,Length=162,IDX=369>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.15011259.15011019.fas,Length=240,IDX=370>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.15370097.15370261.fas,Length=165,IDX=371>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.15446784.15446619.fas,Length=162,IDX=372>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.16388868.16389050.fas,Length=180,IDX=373>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.16614217.16613997.fas,Length=219,IDX=374>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.18345958.18346114.fas,Length=156,IDX=375>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.8563445.8563609.fas,Length=162,IDX=376>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.8748848.8748687.fas,Length=135,IDX=377>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.9237289.9237459.fas,Length=150,IDX=378>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.9239398.9239602.fas,Length=201,IDX=379>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.9239719.9239895.fas,Length=174,IDX=380>
+##contig=<ID=Gasterosteus_aculeatus.groupXIII.9321849.9321989.fas,Length=138,IDX=381>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.100871.100739.fas,Length=132,IDX=382>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.1087354.1087482.fas,Length=129,IDX=383>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.1320680.1320965.fas,Length=210,IDX=384>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.4271275.4271416.fas,Length=141,IDX=385>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.5910678.5910838.fas,Length=135,IDX=386>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.6000864.6001127.fas,Length=258,IDX=387>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.6589475.6589644.fas,Length=147,IDX=388>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.6957214.6957046.fas,Length=165,IDX=389>
+##contig=<ID=Gasterosteus_aculeatus.groupXIV.7366748.7366585.fas,Length=162,IDX=390>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.12053920.12054060.fas,Length=141,IDX=391>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.12708386.12708555.fas,Length=168,IDX=392>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.1761649.1761464.fas,Length=150,IDX=393>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.1767425.1767274.fas,Length=150,IDX=394>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.18733002.18732843.fas,Length=156,IDX=395>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.2404878.2405010.fas,Length=126,IDX=396>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.2971185.2971374.fas,Length=150,IDX=397>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.4472606.4471968.fas,Length=630,IDX=398>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.6856985.6857107.fas,Length=105,IDX=399>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.7096256.7096079.fas,Length=165,IDX=400>
+##contig=<ID=Gasterosteus_aculeatus.groupXIX.9055879.9056050.fas,Length=159,IDX=401>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.13154265.13154397.fas,Length=123,IDX=402>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.14111585.14111745.fas,Length=147,IDX=403>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.1773228.1773370.fas,Length=141,IDX=404>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.1794268.1794530.fas,Length=258,IDX=405>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.1997572.1997424.fas,Length=126,IDX=406>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.2873995.2874129.fas,Length=132,IDX=407>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.4920210.4920056.fas,Length=114,IDX=408>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.5417677.5417494.fas,Length=150,IDX=409>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.5439038.5438868.fas,Length=168,IDX=410>
+##contig=<ID=Gasterosteus_aculeatus.groupXV.9696816.9696604.fas,Length=213,IDX=411>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.10381095.10380883.fas,Length=186,IDX=412>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.10413131.10412991.fas,Length=138,IDX=413>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.10658663.10658541.fas,Length=117,IDX=414>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.17942470.17942670.fas,Length=198,IDX=415>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.2241831.2241968.fas,Length=111,IDX=416>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.2477738.2477980.fas,Length=237,IDX=417>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.3012640.3012490.fas,Length=147,IDX=418>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.3195927.3196079.fas,Length=141,IDX=419>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.5864181.5864431.fas,Length=243,IDX=420>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.7660834.7661017.fas,Length=180,IDX=421>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.8600325.8600459.fas,Length=132,IDX=422>
+##contig=<ID=Gasterosteus_aculeatus.groupXVI.9680696.9680571.fas,Length=126,IDX=423>
+##contig=<ID=Gasterosteus_aculeatus.groupXVII.5499489.5499766.fas,Length=276,IDX=424>
+##contig=<ID=Gasterosteus_aculeatus.groupXVII.8664195.8664342.fas,Length=144,IDX=425>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.10382563.10382417.fas,Length=144,IDX=426>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.10682118.10682294.fas,Length=132,IDX=427>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.12222245.12222489.fas,Length=243,IDX=428>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.12223119.12223396.fas,Length=267,IDX=429>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.12492229.12492059.fas,Length=171,IDX=430>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.3258327.3258166.fas,Length=162,IDX=431>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.3413358.3413221.fas,Length=135,IDX=432>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.7539187.7539023.fas,Length=165,IDX=433>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.9606470.9606276.fas,Length=195,IDX=434>
+##contig=<ID=Gasterosteus_aculeatus.groupXVIII.978292.978023.fas,Length=267,IDX=435>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.10725140.10724986.fas,Length=153,IDX=436>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.11912026.11911904.fas,Length=120,IDX=437>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.12848020.12848150.fas,Length=117,IDX=438>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.13184699.13184552.fas,Length=117,IDX=439>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.17383619.17383395.fas,Length=225,IDX=440>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.18653582.18653731.fas,Length=147,IDX=441>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.3470303.3469995.fas,Length=306,IDX=442>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.6452703.6452921.fas,Length=219,IDX=443>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.7791482.7791250.fas,Length=231,IDX=444>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.8138072.8138252.fas,Length=180,IDX=445>
+##contig=<ID=Gasterosteus_aculeatus.groupXX.8228544.8228350.fas,Length=186,IDX=446>
+##contig=<ID=Gasterosteus_aculeatus.groupXXI.2129585.2129361.fas,Length=225,IDX=447>
+##contig=<ID=Gasterosteus_aculeatus.groupXXI.2700451.2700266.fas,Length=183,IDX=448>
+##contig=<ID=Gasterosteus_aculeatus.groupXXI.7005783.7005410.fas,Length=309,IDX=449>
+##contig=<ID=Gasterosteus_aculeatus.groupXXI.7239912.7240072.fas,Length=135,IDX=450>
+##contig=<ID=Gasterosteus_aculeatus.groupXXI.9100127.9100284.fas,Length=132,IDX=451>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_126.132619.132475.fas,Length=144,IDX=452>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_128.142281.142562.fas,Length=243,IDX=453>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_27.1038639.1038391.fas,Length=246,IDX=454>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_27.1153898.1154115.fas,Length=216,IDX=455>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_27.1192636.1192509.fas,Length=126,IDX=456>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_27.1194263.1194125.fas,Length=117,IDX=457>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_27.3064071.3064227.fas,Length=150,IDX=458>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_27.3878441.3878285.fas,Length=153,IDX=459>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_47.1369221.1369429.fas,Length=198,IDX=460>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_48.1087538.1087236.fas,Length=240,IDX=461>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_48.1214068.1213901.fas,Length=135,IDX=462>
+##contig=<ID=Gasterosteus_aculeatus.scaffold_56.59563.59761.fas,Length=177,IDX=463>
+##contig=<ID=Oryzias_latipes.1.15026039.15026243.fas,Length=204,IDX=464>
+##contig=<ID=Oryzias_latipes.1.22062829.22062952.fas,Length=120,IDX=465>
+##contig=<ID=Oryzias_latipes.1.34004068.34003856.fas,Length=213,IDX=466>
+##contig=<ID=Oryzias_latipes.1.39802452.39802607.fas,Length=153,IDX=467>
+##contig=<ID=Oryzias_latipes.10.13399911.13399777.fas,Length=132,IDX=468>
+##contig=<ID=Oryzias_latipes.11.10855640.10855822.fas,Length=150,IDX=469>
+##contig=<ID=Oryzias_latipes.11.22682482.22682612.fas,Length=129,IDX=470>
+##contig=<ID=Oryzias_latipes.12.20473412.20473606.fas,Length=186,IDX=471>
+##contig=<ID=Oryzias_latipes.12.29224709.29224506.fas,Length=201,IDX=472>
+##contig=<ID=Oryzias_latipes.12.3724187.3723980.fas,Length=201,IDX=473>
+##contig=<ID=Oryzias_latipes.12.6599770.6599999.fas,Length=225,IDX=474>
+##contig=<ID=Oryzias_latipes.12.7338065.7337926.fas,Length=123,IDX=475>
+##contig=<ID=Oryzias_latipes.13.12905663.12905827.fas,Length=162,IDX=476>
+##contig=<ID=Oryzias_latipes.13.2009021.2008846.fas,Length=129,IDX=477>
+##contig=<ID=Oryzias_latipes.13.4205418.4205155.fas,Length=243,IDX=478>
+##contig=<ID=Oryzias_latipes.14.13153142.13153328.fas,Length=180,IDX=479>
+##contig=<ID=Oryzias_latipes.14.13156289.13156047.fas,Length=204,IDX=480>
+##contig=<ID=Oryzias_latipes.14.15431886.15431766.fas,Length=120,IDX=481>
+##contig=<ID=Oryzias_latipes.14.16423416.16423268.fas,Length=147,IDX=482>
+##contig=<ID=Oryzias_latipes.14.16479518.16479341.fas,Length=153,IDX=483>
+##contig=<ID=Oryzias_latipes.14.2487170.2487021.fas,Length=150,IDX=484>
+##contig=<ID=Oryzias_latipes.14.28795385.28795216.fas,Length=165,IDX=485>
+##contig=<ID=Oryzias_latipes.15.22798151.22798009.fas,Length=141,IDX=486>
+##contig=<ID=Oryzias_latipes.15.24388366.24388217.fas,Length=150,IDX=487>
+##contig=<ID=Oryzias_latipes.16.13676115.13675816.fas,Length=300,IDX=488>
+##contig=<ID=Oryzias_latipes.16.13676585.13676451.fas,Length=129,IDX=489>
+##contig=<ID=Oryzias_latipes.16.14397685.14397086.fas,Length=588,IDX=490>
+##contig=<ID=Oryzias_latipes.16.14800771.14800998.fas,Length=225,IDX=491>
+##contig=<ID=Oryzias_latipes.16.16874799.16874599.fas,Length=198,IDX=492>
+##contig=<ID=Oryzias_latipes.16.17719593.17719742.fas,Length=150,IDX=493>
+##contig=<ID=Oryzias_latipes.16.1911680.1911865.fas,Length=150,IDX=494>
+##contig=<ID=Oryzias_latipes.16.19936891.19936335.fas,Length=489,IDX=495>
+##contig=<ID=Oryzias_latipes.16.6252990.6253995.fas,Length=333,IDX=496>
+##contig=<ID=Oryzias_latipes.17.15091890.15092019.fas,Length=114,IDX=497>
+##contig=<ID=Oryzias_latipes.17.17865719.17865571.fas,Length=141,IDX=498>
+##contig=<ID=Oryzias_latipes.17.20055941.20055795.fas,Length=135,IDX=499>
+##contig=<ID=Oryzias_latipes.17.22880768.22880495.fas,Length=270,IDX=500>
+##contig=<ID=Oryzias_latipes.17.4770658.4770847.fas,Length=183,IDX=501>
+##contig=<ID=Oryzias_latipes.17.8592401.8592598.fas,Length=168,IDX=502>
+##contig=<ID=Oryzias_latipes.18.2444900.2444770.fas,Length=123,IDX=503>
+##contig=<ID=Oryzias_latipes.19.8481588.8481451.fas,Length=132,IDX=504>
+##contig=<ID=Oryzias_latipes.20.10673514.10673287.fas,Length=219,IDX=505>
+##contig=<ID=Oryzias_latipes.20.15626365.15626204.fas,Length=159,IDX=506>
+##contig=<ID=Oryzias_latipes.20.17323504.17323334.fas,Length=165,IDX=507>
+##contig=<ID=Oryzias_latipes.20.19946346.19946165.fas,Length=171,IDX=508>
+##contig=<ID=Oryzias_latipes.20.19959910.19959756.fas,Length=153,IDX=509>
+##contig=<ID=Oryzias_latipes.20.8397503.8397668.fas,Length=165,IDX=510>
+##contig=<ID=Oryzias_latipes.21.10017879.10017655.fas,Length=225,IDX=511>
+##contig=<ID=Oryzias_latipes.21.10045878.10045720.fas,Length=156,IDX=512>
+##contig=<ID=Oryzias_latipes.21.10046151.10045987.fas,Length=162,IDX=513>
+##contig=<ID=Oryzias_latipes.21.13512823.13513027.fas,Length=204,IDX=514>
+##contig=<ID=Oryzias_latipes.21.20342249.20342395.fas,Length=141,IDX=515>
+##contig=<ID=Oryzias_latipes.21.22336321.22336170.fas,Length=129,IDX=516>
+##contig=<ID=Oryzias_latipes.21.24051290.24051460.fas,Length=168,IDX=517>
+##contig=<ID=Oryzias_latipes.21.26530244.26530047.fas,Length=195,IDX=518>
+##contig=<ID=Oryzias_latipes.22.12056345.12056518.fas,Length=174,IDX=519>
+##contig=<ID=Oryzias_latipes.22.12887751.12887912.fas,Length=138,IDX=520>
+##contig=<ID=Oryzias_latipes.22.14542388.14542205.fas,Length=171,IDX=521>
+##contig=<ID=Oryzias_latipes.22.17880778.17880332.fas,Length=384,IDX=522>
+##contig=<ID=Oryzias_latipes.22.5277106.5276923.fas,Length=174,IDX=523>
+##contig=<ID=Oryzias_latipes.22.6213269.6213540.fas,Length=270,IDX=524>
+##contig=<ID=Oryzias_latipes.22.6213628.6213855.fas,Length=183,IDX=525>
+##contig=<ID=Oryzias_latipes.22.6217136.6217375.fas,Length=228,IDX=526>
+##contig=<ID=Oryzias_latipes.22.9551479.9551603.fas,Length=117,IDX=527>
+##contig=<ID=Oryzias_latipes.23.13312579.13312349.fas,Length=198,IDX=528>
+##contig=<ID=Oryzias_latipes.23.14283549.14283674.fas,Length=114,IDX=529>
+##contig=<ID=Oryzias_latipes.23.22793575.22794024.fas,Length=378,IDX=530>
+##contig=<ID=Oryzias_latipes.23.3601939.3602098.fas,Length=159,IDX=531>
+##contig=<ID=Oryzias_latipes.24.243597.243451.fas,Length=144,IDX=532>
+##contig=<ID=Oryzias_latipes.24.4821056.4821208.fas,Length=150,IDX=533>
+##contig=<ID=Oryzias_latipes.24.4822430.4822564.fas,Length=129,IDX=534>
+##contig=<ID=Oryzias_latipes.24.5488934.5488772.fas,Length=159,IDX=535>
+##contig=<ID=Oryzias_latipes.24.6871007.6870826.fas,Length=177,IDX=536>
+##contig=<ID=Oryzias_latipes.24.9598065.9598309.fas,Length=243,IDX=537>
+##contig=<ID=Oryzias_latipes.24.9784269.9784145.fas,Length=123,IDX=538>
+##contig=<ID=Oryzias_latipes.3.13211829.13212028.fas,Length=201,IDX=539>
+##contig=<ID=Oryzias_latipes.3.14098982.14098833.fas,Length=150,IDX=540>
+##contig=<ID=Oryzias_latipes.3.14100343.14100202.fas,Length=138,IDX=541>
+##contig=<ID=Oryzias_latipes.3.15059389.15059554.fas,Length=144,IDX=542>
+##contig=<ID=Oryzias_latipes.3.20851319.20851486.fas,Length=159,IDX=543>
+##contig=<ID=Oryzias_latipes.3.32577926.32577701.fas,Length=219,IDX=544>
+##contig=<ID=Oryzias_latipes.4.12020346.12020717.fas,Length=156,IDX=545>
+##contig=<ID=Oryzias_latipes.4.17137479.17137268.fas,Length=204,IDX=546>
+##contig=<ID=Oryzias_latipes.4.19467023.19466806.fas,Length=207,IDX=547>
+##contig=<ID=Oryzias_latipes.4.23596001.23595748.fas,Length=252,IDX=548>
+##contig=<ID=Oryzias_latipes.4.30595570.30595691.fas,Length=120,IDX=549>
+##contig=<ID=Oryzias_latipes.4.308931.308762.fas,Length=168,IDX=550>
+##contig=<ID=Oryzias_latipes.4.9806990.9807173.fas,Length=180,IDX=551>
+##contig=<ID=Oryzias_latipes.4.9807476.9807731.fas,Length=249,IDX=552>
+##contig=<ID=Oryzias_latipes.5.11031860.11032041.fas,Length=180,IDX=553>
+##contig=<ID=Oryzias_latipes.5.1177891.1177706.fas,Length=183,IDX=554>
+##contig=<ID=Oryzias_latipes.5.14676645.14676811.fas,Length=141,IDX=555>
+##contig=<ID=Oryzias_latipes.5.18584842.18584985.fas,Length=132,IDX=556>
+##contig=<ID=Oryzias_latipes.5.27754399.27754600.fas,Length=201,IDX=557>
+##contig=<ID=Oryzias_latipes.5.32041775.32041915.fas,Length=129,IDX=558>
+##contig=<ID=Oryzias_latipes.5.33773489.33773346.fas,Length=141,IDX=559>
+##contig=<ID=Oryzias_latipes.5.7295516.7295788.fas,Length=270,IDX=560>
+##contig=<ID=Oryzias_latipes.6.11034226.11034349.fas,Length=114,IDX=561>
+##contig=<ID=Oryzias_latipes.6.11693552.11693677.fas,Length=126,IDX=562>
+##contig=<ID=Oryzias_latipes.6.14202930.14203086.fas,Length=153,IDX=563>
+##contig=<ID=Oryzias_latipes.6.17114476.17114597.fas,Length=120,IDX=564>
+##contig=<ID=Oryzias_latipes.6.21135151.21135019.fas,Length=129,IDX=565>
+##contig=<ID=Oryzias_latipes.6.21146270.21145984.fas,Length=285,IDX=566>
+##contig=<ID=Oryzias_latipes.6.2304355.2304533.fas,Length=177,IDX=567>
+##contig=<ID=Oryzias_latipes.7.11975444.11975578.fas,Length=120,IDX=568>
+##contig=<ID=Oryzias_latipes.7.17790818.17790955.fas,Length=135,IDX=569>
+##contig=<ID=Oryzias_latipes.7.22281722.22281564.fas,Length=156,IDX=570>
+##contig=<ID=Oryzias_latipes.7.22818776.22818904.fas,Length=129,IDX=571>
+##contig=<ID=Oryzias_latipes.7.7697085.7696912.fas,Length=171,IDX=572>
+##contig=<ID=Oryzias_latipes.7.8007681.8007865.fas,Length=183,IDX=573>
+##contig=<ID=Oryzias_latipes.7.9978097.9977956.fas,Length=141,IDX=574>
+##contig=<ID=Oryzias_latipes.8.10490575.10490323.fas,Length=249,IDX=575>
+##contig=<ID=Oryzias_latipes.8.15094086.15094259.fas,Length=171,IDX=576>
+##contig=<ID=Oryzias_latipes.9.13075113.13075267.fas,Length=150,IDX=577>
+##contig=<ID=Oryzias_latipes.9.15974238.15974034.fas,Length=189,IDX=578>
+##contig=<ID=Oryzias_latipes.9.18696849.18696645.fas,Length=192,IDX=579>
+##contig=<ID=Oryzias_latipes.9.18849296.18849493.fas,Length=198,IDX=580>
+##contig=<ID=Oryzias_latipes.9.2024905.2024732.fas,Length=171,IDX=581>
+##contig=<ID=Oryzias_latipes.9.510018.510221.fas,Length=162,IDX=582>
+##contig=<ID=Oryzias_latipes.9.9834911.9834779.fas,Length=132,IDX=583>
+##contig=<ID=Oryzias_latipes.scaffold1652.10078.10207.fas,Length=129,IDX=584>
+##contig=<ID=Oryzias_latipes.scaffold643.135985.135858.fas,Length=123,IDX=585>
+##contig=<ID=Oryzias_latipes.ultracontig101.170459.170285.fas,Length=168,IDX=586>
+##contig=<ID=Oryzias_latipes.ultracontig49.34340.34471.fas,Length=129,IDX=587>
+##contig=<ID=Oryzias_latipes.ultracontig62.1402258.1402532.fas,Length=273,IDX=588>
+##contig=<ID=Oryzias_latipes.ultracontig90.1912185.1912420.fas,Length=234,IDX=589>
+##contig=<ID=Tetraodon_nigroviridis.1.10951927.10951759.fas,Length=168,IDX=590>
+##contig=<ID=Tetraodon_nigroviridis.1.1140246.1140093.fas,Length=153,IDX=591>
+##contig=<ID=Tetraodon_nigroviridis.1.12164607.12164454.fas,Length=138,IDX=592>
+##contig=<ID=Tetraodon_nigroviridis.1.1228402.1228556.fas,Length=153,IDX=593>
+##contig=<ID=Tetraodon_nigroviridis.1.12489467.12489313.fas,Length=153,IDX=594>
+##contig=<ID=Tetraodon_nigroviridis.1.15352908.15352754.fas,Length=153,IDX=595>
+##contig=<ID=Tetraodon_nigroviridis.1.15354377.15354229.fas,Length=135,IDX=596>
+##contig=<ID=Tetraodon_nigroviridis.1.15782777.15783281.fas,Length=291,IDX=597>
+##contig=<ID=Tetraodon_nigroviridis.1.15793367.15793639.fas,Length=243,IDX=598>
+##contig=<ID=Tetraodon_nigroviridis.1.16402285.16402139.fas,Length=141,IDX=599>
+##contig=<ID=Tetraodon_nigroviridis.1.20495556.20495399.fas,Length=147,IDX=600>
+##contig=<ID=Tetraodon_nigroviridis.1.2516010.2516158.fas,Length=132,IDX=601>
+##contig=<ID=Tetraodon_nigroviridis.1.511011.510827.fas,Length=153,IDX=602>
+##contig=<ID=Tetraodon_nigroviridis.1.9135156.9135350.fas,Length=192,IDX=603>
+##contig=<ID=Tetraodon_nigroviridis.1.9714440.9714733.fas,Length=291,IDX=604>
+##contig=<ID=Tetraodon_nigroviridis.10.10552375.10552186.fas,Length=189,IDX=605>
+##contig=<ID=Tetraodon_nigroviridis.10.10576506.10576268.fas,Length=237,IDX=606>
+##contig=<ID=Tetraodon_nigroviridis.10.10578640.10578433.fas,Length=180,IDX=607>
+##contig=<ID=Tetraodon_nigroviridis.10.11919111.11918596.fas,Length=504,IDX=608>
+##contig=<ID=Tetraodon_nigroviridis.10.12724961.12724768.fas,Length=186,IDX=609>
+##contig=<ID=Tetraodon_nigroviridis.10.3734865.3734990.fas,Length=126,IDX=610>
+##contig=<ID=Tetraodon_nigroviridis.10.4326409.4326970.fas,Length=555,IDX=611>
+##contig=<ID=Tetraodon_nigroviridis.10.4992969.4992828.fas,Length=132,IDX=612>
+##contig=<ID=Tetraodon_nigroviridis.10.5837504.5837191.fas,Length=312,IDX=613>
+##contig=<ID=Tetraodon_nigroviridis.10.7805010.7805156.fas,Length=147,IDX=614>
+##contig=<ID=Tetraodon_nigroviridis.10.7809413.7809586.fas,Length=171,IDX=615>
+##contig=<ID=Tetraodon_nigroviridis.11.11125510.11125703.fas,Length=186,IDX=616>
+##contig=<ID=Tetraodon_nigroviridis.11.2653639.2653831.fas,Length=186,IDX=617>
+##contig=<ID=Tetraodon_nigroviridis.11.6042394.6042193.fas,Length=201,IDX=618>
+##contig=<ID=Tetraodon_nigroviridis.11.7448114.7448266.fas,Length=144,IDX=619>
+##contig=<ID=Tetraodon_nigroviridis.12.10757985.10758253.fas,Length=249,IDX=620>
+##contig=<ID=Tetraodon_nigroviridis.12.11036749.11036367.fas,Length=378,IDX=621>
+##contig=<ID=Tetraodon_nigroviridis.12.11589083.11588859.fas,Length=222,IDX=622>
+##contig=<ID=Tetraodon_nigroviridis.12.11834359.11834181.fas,Length=171,IDX=623>
+##contig=<ID=Tetraodon_nigroviridis.12.11922472.11922642.fas,Length=171,IDX=624>
+##contig=<ID=Tetraodon_nigroviridis.12.12265238.12265036.fas,Length=201,IDX=625>
+##contig=<ID=Tetraodon_nigroviridis.12.4529651.4529530.fas,Length=120,IDX=626>
+##contig=<ID=Tetraodon_nigroviridis.12.624348.624505.fas,Length=156,IDX=627>
+##contig=<ID=Tetraodon_nigroviridis.12.8613014.8613166.fas,Length=150,IDX=628>
+##contig=<ID=Tetraodon_nigroviridis.12.9106978.9106721.fas,Length=258,IDX=629>
+##contig=<ID=Tetraodon_nigroviridis.13.12258913.12259120.fas,Length=207,IDX=630>
+##contig=<ID=Tetraodon_nigroviridis.13.3570171.3569085.fas,Length=573,IDX=631>
+##contig=<ID=Tetraodon_nigroviridis.14.1534424.1534176.fas,Length=237,IDX=632>
+##contig=<ID=Tetraodon_nigroviridis.14.1551866.1552040.fas,Length=174,IDX=633>
+##contig=<ID=Tetraodon_nigroviridis.14.4381941.4381812.fas,Length=126,IDX=634>
+##contig=<ID=Tetraodon_nigroviridis.14.5003764.5004693.fas,Length=828,IDX=635>
+##contig=<ID=Tetraodon_nigroviridis.14.5094323.5094195.fas,Length=129,IDX=636>
+##contig=<ID=Tetraodon_nigroviridis.14.5095219.5095024.fas,Length=192,IDX=637>
+##contig=<ID=Tetraodon_nigroviridis.14.6249447.6249593.fas,Length=144,IDX=638>
+##contig=<ID=Tetraodon_nigroviridis.14.649283.649576.fas,Length=291,IDX=639>
+##contig=<ID=Tetraodon_nigroviridis.14.9020951.9021248.fas,Length=294,IDX=640>
+##contig=<ID=Tetraodon_nigroviridis.15.4689463.4689271.fas,Length=189,IDX=641>
+##contig=<ID=Tetraodon_nigroviridis.15_random.1188920.1189045.fas,Length=123,IDX=642>
+##contig=<ID=Tetraodon_nigroviridis.15_random.1343084.1343218.fas,Length=135,IDX=643>
+##contig=<ID=Tetraodon_nigroviridis.15_random.819051.818881.fas,Length=171,IDX=644>
+##contig=<ID=Tetraodon_nigroviridis.16.1199095.1199265.fas,Length=168,IDX=645>
+##contig=<ID=Tetraodon_nigroviridis.16.1657913.1657669.fas,Length=243,IDX=646>
+##contig=<ID=Tetraodon_nigroviridis.16.3251890.3252044.fas,Length=147,IDX=647>
+##contig=<ID=Tetraodon_nigroviridis.16.3252118.3252277.fas,Length=135,IDX=648>
+##contig=<ID=Tetraodon_nigroviridis.16.3392658.3392508.fas,Length=126,IDX=649>
+##contig=<ID=Tetraodon_nigroviridis.16.5672884.5672747.fas,Length=138,IDX=650>
+##contig=<ID=Tetraodon_nigroviridis.16.6265551.6265699.fas,Length=138,IDX=651>
+##contig=<ID=Tetraodon_nigroviridis.16.6517969.6517808.fas,Length=147,IDX=652>
+##contig=<ID=Tetraodon_nigroviridis.17.11175958.11176096.fas,Length=135,IDX=653>
+##contig=<ID=Tetraodon_nigroviridis.17.12016208.12016050.fas,Length=156,IDX=654>
+##contig=<ID=Tetraodon_nigroviridis.17.3178248.3178111.fas,Length=114,IDX=655>
+##contig=<ID=Tetraodon_nigroviridis.17.4091888.4091700.fas,Length=186,IDX=656>
+##contig=<ID=Tetraodon_nigroviridis.17.5587047.5587238.fas,Length=192,IDX=657>
+##contig=<ID=Tetraodon_nigroviridis.17.8101978.8102169.fas,Length=186,IDX=658>
+##contig=<ID=Tetraodon_nigroviridis.17.909512.909682.fas,Length=153,IDX=659>
+##contig=<ID=Tetraodon_nigroviridis.17.9333124.9332849.fas,Length=246,IDX=660>
+##contig=<ID=Tetraodon_nigroviridis.18.10911133.10910911.fas,Length=219,IDX=661>
+##contig=<ID=Tetraodon_nigroviridis.18.2823185.2823376.fas,Length=192,IDX=662>
+##contig=<ID=Tetraodon_nigroviridis.18.4212009.4211776.fas,Length=234,IDX=663>
+##contig=<ID=Tetraodon_nigroviridis.18.7662090.7661932.fas,Length=159,IDX=664>
+##contig=<ID=Tetraodon_nigroviridis.19.2980294.2980051.fas,Length=198,IDX=665>
+##contig=<ID=Tetraodon_nigroviridis.19.3422239.3422020.fas,Length=219,IDX=666>
+##contig=<ID=Tetraodon_nigroviridis.2.10541460.10541254.fas,Length=204,IDX=667>
+##contig=<ID=Tetraodon_nigroviridis.2.10659169.10659760.fas,Length=465,IDX=668>
+##contig=<ID=Tetraodon_nigroviridis.2.13767114.13766993.fas,Length=114,IDX=669>
+##contig=<ID=Tetraodon_nigroviridis.2.15455508.15455670.fas,Length=126,IDX=670>
+##contig=<ID=Tetraodon_nigroviridis.2.20611046.20611871.fas,Length=744,IDX=671>
+##contig=<ID=Tetraodon_nigroviridis.2.6843495.6843345.fas,Length=150,IDX=672>
+##contig=<ID=Tetraodon_nigroviridis.2.7232790.7232967.fas,Length=177,IDX=673>
+##contig=<ID=Tetraodon_nigroviridis.2.8909251.8909116.fas,Length=135,IDX=674>
+##contig=<ID=Tetraodon_nigroviridis.2.9375060.9374864.fas,Length=195,IDX=675>
+##contig=<ID=Tetraodon_nigroviridis.2.9862405.9862088.fas,Length=303,IDX=676>
+##contig=<ID=Tetraodon_nigroviridis.20.569620.569802.fas,Length=183,IDX=677>
+##contig=<ID=Tetraodon_nigroviridis.3.11617797.11618019.fas,Length=189,IDX=678>
+##contig=<ID=Tetraodon_nigroviridis.3.1196641.1196516.fas,Length=123,IDX=679>
+##contig=<ID=Tetraodon_nigroviridis.3.6326094.6326292.fas,Length=108,IDX=680>
+##contig=<ID=Tetraodon_nigroviridis.4.1029343.1029496.fas,Length=141,IDX=681>
+##contig=<ID=Tetraodon_nigroviridis.4.3720567.3720379.fas,Length=183,IDX=682>
+##contig=<ID=Tetraodon_nigroviridis.5.11207713.11207885.fas,Length=171,IDX=683>
+##contig=<ID=Tetraodon_nigroviridis.5.11213084.11213270.fas,Length=186,IDX=684>
+##contig=<ID=Tetraodon_nigroviridis.5.4306400.4306543.fas,Length=129,IDX=685>
+##contig=<ID=Tetraodon_nigroviridis.5.5173813.5173627.fas,Length=186,IDX=686>
+##contig=<ID=Tetraodon_nigroviridis.5.5174059.5173893.fas,Length=162,IDX=687>
+##contig=<ID=Tetraodon_nigroviridis.5.5268096.5267896.fas,Length=198,IDX=688>
+##contig=<ID=Tetraodon_nigroviridis.5.6333994.6333755.fas,Length=231,IDX=689>
+##contig=<ID=Tetraodon_nigroviridis.6.2366076.2365884.fas,Length=192,IDX=690>
+##contig=<ID=Tetraodon_nigroviridis.6.3544987.3545206.fas,Length=216,IDX=691>
+##contig=<ID=Tetraodon_nigroviridis.6.3580712.3580583.fas,Length=129,IDX=692>
+##contig=<ID=Tetraodon_nigroviridis.6.4663709.4663584.fas,Length=126,IDX=693>
+##contig=<ID=Tetraodon_nigroviridis.6.5001799.5001952.fas,Length=150,IDX=694>
+##contig=<ID=Tetraodon_nigroviridis.7.1292424.1292690.fas,Length=240,IDX=695>
+##contig=<ID=Tetraodon_nigroviridis.7.2774803.2774609.fas,Length=192,IDX=696>
+##contig=<ID=Tetraodon_nigroviridis.7.5501498.5501272.fas,Length=189,IDX=697>
+##contig=<ID=Tetraodon_nigroviridis.7.5504357.5504169.fas,Length=153,IDX=698>
+##contig=<ID=Tetraodon_nigroviridis.7.5935473.5935254.fas,Length=216,IDX=699>
+##contig=<ID=Tetraodon_nigroviridis.7.5940700.5940581.fas,Length=111,IDX=700>
+##contig=<ID=Tetraodon_nigroviridis.8.2409415.2409633.fas,Length=219,IDX=701>
+##contig=<ID=Tetraodon_nigroviridis.8.3670359.3670039.fas,Length=138,IDX=702>
+##contig=<ID=Tetraodon_nigroviridis.8.7061095.7060928.fas,Length=144,IDX=703>
+##contig=<ID=Tetraodon_nigroviridis.8.8678765.8679146.fas,Length=372,IDX=704>
+##contig=<ID=Tetraodon_nigroviridis.9.1435959.1435825.fas,Length=132,IDX=705>
+##contig=<ID=Tetraodon_nigroviridis.9.1801539.1802059.fas,Length=414,IDX=706>
+##contig=<ID=Tetraodon_nigroviridis.9.2499844.2499700.fas,Length=141,IDX=707>
+##contig=<ID=Tetraodon_nigroviridis.9.3209555.3209401.fas,Length=147,IDX=708>
+##contig=<ID=Tetraodon_nigroviridis.9.3584659.3584877.fas,Length=198,IDX=709>
+##contig=<ID=Tetraodon_nigroviridis.9.3602563.3602870.fas,Length=261,IDX=710>
+##contig=<ID=Tetraodon_nigroviridis.9.4153801.4153646.fas,Length=153,IDX=711>
+##contig=<ID=Tetraodon_nigroviridis.9.4711544.4711884.fas,Length=279,IDX=712>
+##contig=<ID=Tetraodon_nigroviridis.9.5723174.5722998.fas,Length=177,IDX=713>
+##contig=<ID=Tetraodon_nigroviridis.9.642023.642154.fas,Length=132,IDX=714>
+##contig=<ID=Tetraodon_nigroviridis.9.7147368.7147221.fas,Length=147,IDX=715>
+##contig=<ID=Tetraodon_nigroviridis.9.948265.948133.fas,Length=129,IDX=716>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.13372107.13371920.fas,Length=183,IDX=717>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.16701726.16701866.fas,Length=141,IDX=718>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.20230713.20230553.fas,Length=156,IDX=719>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.2061822.2061662.fas,Length=159,IDX=720>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.22924522.22924363.fas,Length=132,IDX=721>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.23022403.23022562.fas,Length=144,IDX=722>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.2936515.2937009.fas,Length=489,IDX=723>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.30878726.30878590.fas,Length=132,IDX=724>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.30881410.30881157.fas,Length=174,IDX=725>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.31223845.31224002.fas,Length=156,IDX=726>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.32021626.32021883.fas,Length=258,IDX=727>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.34047705.34047576.fas,Length=114,IDX=728>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.38109708.38109473.fas,Length=210,IDX=729>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.39781780.39781653.fas,Length=123,IDX=730>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.45686170.45686435.fas,Length=234,IDX=731>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.53398444.53398678.fas,Length=234,IDX=732>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.54338027.54337848.fas,Length=144,IDX=733>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.67198066.67197931.fas,Length=132,IDX=734>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.67858626.67858952.fas,Length=303,IDX=735>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.73107685.73107840.fas,Length=153,IDX=736>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.79568838.79568667.fas,Length=156,IDX=737>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.80307321.80307067.fas,Length=252,IDX=738>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.8285278.8285425.fas,Length=141,IDX=739>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.86192535.86192387.fas,Length=147,IDX=740>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.8649562.8649420.fas,Length=141,IDX=741>
+##contig=<ID=Tetraodon_nigroviridis.Un_random.87121673.87121551.fas,Length=114,IDX=742>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Number of high-quality bases">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths (high-quality bases)">
+##FORMAT=<ID=ADF,Number=R,Type=Integer,Description="Allelic depths on the forward strand (high-quality bases)">
+##FORMAT=<ID=ADR,Number=R,Type=Integer,Description="Allelic depths on the reverse strand (high-quality bases)">
+##INFO=<ID=AD,Number=R,Type=Integer,Description="Total allelic depths (high-quality bases)">
+##INFO=<ID=ADF,Number=R,Type=Integer,Description="Total allelic depths on the forward strand (high-quality bases)">
+##INFO=<ID=ADR,Number=R,Type=Integer,Description="Total allelic depths on the reverse strand (high-quality bases)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AF2,Number=1,Type=Float,Description="Max-likelihood estimate of the first and second group ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias>
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward >
+##bcftools_callVersion=1.13+htslib-1.13
+##bcftools_callCommand=call --variants-only --consensus-caller --keep-alts --format-fields GQ --output-type b --output test4_remaining/5_variants/CLYC_UW159763_S468_call.bcf test4_remaining/4_bam/CLYC_UW159763_S468_pileup.bcf; Date=Mon Dec 13 21:35:31 2021
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	test4_remaining/4_bam/lane8-s468-index-TGGTTGAC-CLYC_UW159763_S468_L008_sorted_rd.bam
+Danio_rerio.17.232056.230980.fas	519	.	G	A	49.9722	.	DP=3;ADF=0,0;ADR=0,3;AD=0,3;VDB=0.793693;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,3;MQ=42;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:82,9,0:3:0,0:0,3:0,3:16
+Danio_rerio.17.232056.230980.fas	567	.	C	T	43.7647	.	DP=2;ADF=0,0;ADR=0,2;AD=0,2;VDB=0.14;SGB=-0.453602;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,2;MQ=42;FQ=-32.988	GT:PL:DP:ADF:ADR:AD:GQ	1/1:75,6,0:2:0,0:0,2:0,2:10
+Danio_rerio.20.50394564.50394884.fas	191	.	G	T	62.0073	.	DP=7;ADF=0,2;ADR=2,1;AD=2,3;VDB=0.949352;SGB=-0.511536;RPBZ=1.1547;MQBZ=0.333333;MQSBZ=-1.33333;BQBZ=-0.592349;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,2,2,1;MQ=41;FQ=33.0145;PV4=0.4,1,1,0.250109	GT:PL:DP:ADF:ADR:AD:GQ	0/1:92,0,60:5:0,2:2,1:2,3:63
+Danio_rerio.20.50394564.50394884.fas	219	.	A	G	38.0077	.	DP=5;ADF=0,0;ADR=2,3;AD=2,3;VDB=0.0221621;SGB=-0.511536;RPBZ=0;MQBZ=0.333333;BQBZ=-0.816497;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,2,0,3;MQ=41;FQ=32.3786;PV4=1,0.247513,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:68,0,60:5:0,0:2,3:2,3:62
+Danio_rerio.20.50394564.50394884.fas	252	.	C	T	57.0073	.	DP=5;ADF=0,0;ADR=2,3;AD=2,3;VDB=0.0221621;SGB=-0.511536;RPBZ=0;MQBZ=0.333333;BQBZ=-0.816497;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,2,0,3;MQ=41;FQ=33.0086;PV4=1,0.247513,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:87,0,60:5:0,0:2,3:2,3:63
+Danio_rerio.3.18741377.18742142.fas	323	.	C	T	151.008	.	DP=36;ADF=8,21;ADR=7,0;AD=15,21;VDB=0.00598369;SGB=-0.692352;RPBZ=-0.953102;MQBZ=-0.707107;MQSBZ=1.02764;BQBZ=-2.16192;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=8,7,21,0;MQ=42;FQ=154.017;PV4=0.000770873,0.0811242,0.24374,0.118816	GT:PL:DP:ADF:ADR:AD:GQ	0/1:181,0,255:36:8,21:7,0:15,21:99
+Danio_rerio.3.18741377.18742142.fas	329	.	T	C	157.009	.	DP=36;ADF=9,20;ADR=7,0;AD=16,20;VDB=0.0162179;SGB=-0.692067;RPBZ=-1.21809;MQBZ=-1.87083;MQSBZ=1.02764;BQBZ=0.373388;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=9,7,20,0;MQ=42;FQ=160.017;PV4=0.00137044,1,0.030126,0.150543	GT:PL:DP:ADF:ADR:AD:GQ	0/1:187,0,255:36:9,20:7,0:16,20:99
+Danio_rerio.3.18741377.18742142.fas	400	.	T	C	154.008	.	DP=33;ADF=1,18;ADR=14,0;AD=15,18;VDB=0.0409749;SGB=-0.691153;RPBZ=3.46409;MQBZ=-1.63299;MQSBZ=1.53554;BQBZ=0.506508;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=1,14,18,0;MQ=42;FQ=156.995;PV4=1.83193e-08,0.304385,0.051628,1.31266e-06	GT:PL:DP:ADF:ADR:AD:GQ	0/1:184,0,207:33:1,18:14,0:15,18:99
+Danio_rerio.3.18741377.18742142.fas	465	.	G	C	225.009	.	DP=35;ADF=0,4;ADR=12,14;AD=12,18;VDB=0.607196;SGB=-0.691153;RPBZ=-1.58749;MQBZ=-1.46566;MQSBZ=1.05612;BQBZ=1.96093;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,12,4,14;MQ=42;FQ=124.016;PV4=0.129721,1,0.0728346,0.297082	GT:PL:DP:ADF:ADR:AD:GQ	0/1:255,0,151:30:0,4:12,14:12,18:99
+Danio_rerio.3.18741377.18742142.fas	549	.	A	G	142.194	.	DP=23;ADF=0,0;ADR=2,21;AD=2,21;VDB=2.30874e-08;SGB=-0.692352;RPBZ=1.68964;MQBZ=-0.560612;BQBZ=0.642772;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,2,0,21;MQ=42;FQ=-34.9872;PV4=1,1,0.293496,0.304864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:174,8,0:23:0,0:2,21:2,21:14
+Danio_rerio.3.61201649.61201261.fas	31	.	C	G	49.9722	.	DP=3;ADF=0,3;ADR=0,0;AD=0,3;VDB=0.0649539;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,3,0;MQ=42;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:82,9,0:3:0,3:0,0:0,3:16
+Danio_rerio.3.61201649.61201261.fas	92	.	G	A	31.0104	.	DP=5;ADF=3,2;ADR=0,0;AD=3,2;VDB=0.02;SGB=-0.453602;RPBZ=-1.82574;BQBZ=1.33333;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=3,0,2,0;MQ=42;FQ=33.227;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:61,0,68:5:3,2:0,0:3,2:63
+Danio_rerio.3.61201649.61201261.fas	147	.	A	C	39.0076	.	DP=7;ADF=2,3;ADR=0,0;AD=2,3;VDB=0.490096;SGB=-0.511536;RPBZ=-0.608581;BQBZ=-1.82574;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,0,3,0;MQ=42;FQ=35.0432;PV4=1,0.0546643,1,0.369826	GT:PL:DP:ADF:ADR:AD:GQ	0/1:69,0,63:5:2,3:0,0:2,3:65
+Danio_rerio.3.61201649.61201261.fas	276	.	C	T	31.0104	.	DP=5;ADF=0,0;ADR=3,2;AD=3,2;VDB=0.02;SGB=-0.453602;RPBZ=-1.82574;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,3,0,2;MQ=42;FQ=34.0099;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:61,0,89:5:0,0:3,2:3,2:64
+Danio_rerio.7.35697706.35697471.fas	21	.	T	C	89.5135	.	DP=4;ADF=0,4;ADR=0,0;AD=0,4;VDB=0.00671048;SGB=-0.556411;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,4,0;MQ=41;FQ=-38.9864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:122,12,0:4:0,4:0,0:0,4:21
+Danio_rerio.7.35697706.35697471.fas	159	.	T	G	154.067	.	DP=12;ADF=0,4;ADR=0,3;AD=0,7;VDB=0.105704;SGB=-0.636426;MQSBZ=1.1547;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,4,3;MQ=40;FQ=-47.986	GT:PL:DP:ADF:ADR:AD:GQ	1/1:187,21,0:7:0,4:0,3:0,7:39
+Danio_rerio.7.69753288.69754083.fas	102	.	G	A	97.0078	.	DP=7;ADF=2,5;ADR=0,0;AD=2,5;VDB=0.0349142;SGB=-0.590765;RPBZ=-1.21752;FS=0;MQ0F=0;AF1=0.500001;AC1=1;DP4=2,0,5,0;MQ=42;FQ=28.0219;PV4=1,1,1,0.256428	GT:PL:DP:ADF:ADR:AD:GQ	0/1:127,0,55:7:2,5:0,0:2,5:58
+Danio_rerio.7.69753288.69754083.fas	331	.	T	C	52.0072	.	DP=8;ADF=2,0;ADR=3,3;AD=5,3;VDB=0.0221621;SGB=-0.511536;RPBZ=-0.458258;MQBZ=0.774597;MQSBZ=1.73205;BQBZ=1.18322;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,3,0,3;MQ=42;FQ=55.0154;PV4=0.464286,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:82,0,142:8:2,0:3,3:5,3:85
+Danio_rerio.7.69753288.69754083.fas	357	.	G	C	41.0074	.	DP=12;ADF=2,0;ADR=7,3;AD=9,3;VDB=0.0221621;SGB=-0.511536;RPBZ=0.83942;MQBZ=0.57735;MQSBZ=2.23607;BQBZ=1.32007;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,7,0,3;MQ=42;FQ=44.0154;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:71,0,188:12:2,0:7,3:9,3:74
+Danio_rerio.7.69753288.69754083.fas	369	.	A	C	208.2	.	DP=13;ADF=0,3;ADR=1,9;AD=1,12;VDB=0.696154;SGB=-0.680642;RPBZ=-1.6147;MQBZ=-0.426401;MQSBZ=2.6968;BQBZ=-0.654204;FS=0;MQ0F=0;AF1=0.730437;AC1=1;DP4=0,1,3,9;MQ=42;FQ=-24.9994;PV4=1,0.288969,0.344349,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:237,0,2:13:0,3:1,9:1,12:5
+Gasterosteus_aculeatus.groupIV.22995493.22996079.fas	206	.	A	C	43.7647	.	DP=2;ADF=0,2;ADR=0,0;AD=0,2;VDB=0.84;SGB=-0.453602;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,2,0;MQ=42;FQ=-32.988	GT:PL:DP:ADF:ADR:AD:GQ	1/1:75,6,0:2:0,2:0,0:0,2:10
+Gasterosteus_aculeatus.groupVI.7336430.7335677.fas	174	.	G	A	67.9724	.	DP=3;ADF=0,3;ADR=0,0;AD=0,3;VDB=0.732596;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,3,0;MQ=42;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:100,9,0:3:0,3:0,0:0,3:16
+Gasterosteus_aculeatus.groupVI.7336430.7335677.fas	327	.	T	G	41.0101	.	DP=4;ADF=0,3;ADR=1,0;AD=1,3;VDB=0.549396;SGB=-0.511536;RPBZ=0.447214;BQBZ=-0.57735;FS=0;MQ0F=0;AF1=0.500315;AC1=1;DP4=0,1,3,0;MQ=42;FQ=4.1333;PV4=0.25,0.333333,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:71,0,29:4:0,3:1,0:1,3:32
+Gasterosteus_aculeatus.groupVI.8367850.8368248.fas	50	.	C	A	127.066	.	DP=7;ADF=0,7;ADR=0,0;AD=0,7;VDB=0.00102666;SGB=-0.636426;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,7,0;MQ=42;FQ=-47.986	GT:PL:DP:ADF:ADR:AD:GQ	1/1:160,21,0:7:0,7:0,0:0,7:39
+Gasterosteus_aculeatus.groupVI.8367850.8368248.fas	144	.	T	C	160.007	.	DP=10;ADF=0,10;ADR=0,0;AD=0,10;VDB=0.000542974;SGB=-0.670168;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,10,0;MQ=42;FQ=-56.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:193,30,0:10:0,10:0,0:0,10:57
+Gasterosteus_aculeatus.groupVI.8367850.8368248.fas	180	.	A	G	147.009	.	DP=11;ADF=2,6;ADR=0,1;AD=2,7;VDB=0.339906;SGB=-0.636426;RPBZ=-0.590481;BQBZ=1.28932;FS=0;MQ0F=0;AF1=0.500125;AC1=1;DP4=2,0,6,1;MQ=42;FQ=6.98503;PV4=1,1,1,0.423581	GT:PL:DP:ADF:ADR:AD:GQ	0/1:177,0,33:9:2,6:0,1:2,7:36
+Gasterosteus_aculeatus.groupVI.8367850.8368248.fas	232	.	C	T	107.009	.	DP=10;ADF=0,0;ADR=2,7;AD=2,7;VDB=0.038698;SGB=-0.651104;RPBZ=-1.08112;BQBZ=0.147087;FS=0;MQ0F=0;AF1=0.500158;AC1=1;DP4=0,2,0,8;MQ=42;FQ=6.20452;PV4=1,1,1,0.0476027	GT:PL:DP:ADF:ADR:AD:GQ	0/1:137,0,32:10:0,0:2,7:2,7:35
+Gasterosteus_aculeatus.groupVI.8367850.8368248.fas	316	.	G	A	161.007	.	DP=10;ADF=0,0;ADR=0,10;AD=0,10;VDB=0.00706997;SGB=-0.670168;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,10;MQ=42;FQ=-56.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:194,30,0:10:0,0:0,10:0,10:57
+Gasterosteus_aculeatus.groupVI.8367850.8368248.fas	324	.	T	G	118.051	.	DP=8;ADF=0,0;ADR=1,7;AD=1,7;VDB=0.000473046;SGB=-0.636426;RPBZ=-1.16248;BQBZ=-0.57735;FS=0;MQ0F=0;AF1=0.505038;AC1=1;DP4=0,1,0,7;MQ=42;FQ=-10.4007;PV4=1,0.301823,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:148,0,17:8:0,0:1,7:1,7:20
+Gasterosteus_aculeatus.groupXII.10895298.10895837.fas	96	.	C	T	33.0091	.	DP=4;ADF=2,2;ADR=0,0;AD=2,2;VDB=0.1;SGB=-0.453602;RPBZ=-1.63299;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,0,2,0;MQ=42;FQ=33.0069;PV4=1,1,1,0.0148794	GT:PL:DP:ADF:ADR:AD:GQ	0/1:63,0,63:4:2,2:0,0:2,2:63
+Gasterosteus_aculeatus.groupXII.10895298.10895837.fas	112	.	G	T	33.0091	.	DP=4;ADF=2,2;ADR=0,0;AD=2,2;VDB=0.1;SGB=-0.453602;RPBZ=-1.63299;BQBZ=1;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,0,2,0;MQ=42;FQ=31.2539;PV4=1,1,1,0.211325	GT:PL:DP:ADF:ADR:AD:GQ	0/1:63,0,60:4:2,2:0,0:2,2:61
+Gasterosteus_aculeatus.groupXII.10895298.10895837.fas	141	.	A	T	33.0091	.	DP=4;ADF=2,2;ADR=0,0;AD=2,2;VDB=0.1;SGB=-0.453602;RPBZ=-1.63299;BQBZ=1.73205;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,0,2,0;MQ=42;FQ=28.2314;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:63,0,56:4:2,2:0,0:2,2:58
+Gasterosteus_aculeatus.groupXII.10895298.10895837.fas	384	.	T	C	77.5133	.	DP=4;ADF=0,0;ADR=0,4;AD=0,4;VDB=0.0238972;SGB=-0.556411;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,4;MQ=42;FQ=-38.9864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:110,12,0:4:0,0:0,4:0,4:21
+Gasterosteus_aculeatus.groupXII.10904395.10904786.fas	75	.	A	G	69.9724	.	DP=3;ADF=0,3;ADR=0,0;AD=0,3;VDB=0.431015;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,3,0;MQ=41;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:102,9,0:3:0,3:0,0:0,3:16
+Gasterosteus_aculeatus.groupXII.10904395.10904786.fas	81	.	A	C	69.9724	.	DP=3;ADF=0,3;ADR=0,0;AD=0,3;VDB=0.431015;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,3,0;MQ=41;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:102,9,0:3:0,3:0,0:0,3:16
+Gasterosteus_aculeatus.groupXIX.4472606.4471968.fas	288	.	C	T	172.221	.	DP=10;ADF=1,4;ADR=0,5;AD=1,9;VDB=0.513454;SGB=-0.662043;RPBZ=0.523823;MQBZ=1;MQSBZ=3;BQBZ=-0.787499;FS=0;MQ0F=0;AF1=0.526316;AC1=1;DP4=1,0,4,5;MQ=41;FQ=-17.0717;PV4=1,0.256944,1,0.278774	GT:PL:DP:ADF:ADR:AD:GQ	0/1:202,0,10:10:1,4:0,5:1,9:13
+Gasterosteus_aculeatus.groupXIX.4472606.4471968.fas	309	.	G	C	222.008	.	DP=10;ADF=0,4;ADR=0,6;AD=0,10;VDB=0.0313847;SGB=-0.670168;MQSBZ=3;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,4,6;MQ=41;FQ=-56.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:255,30,0:10:0,4:0,6:0,10:57
+Gasterosteus_aculeatus.groupXIX.4472606.4471968.fas	378	.	T	C	223.195	.	DP=16;ADF=0,3;ADR=1,11;AD=1,14;VDB=0.665505;SGB=-0.688148;RPBZ=1.19842;MQBZ=-0.57735;MQSBZ=1.29099;BQBZ=1.42675;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,1,4,11;MQ=42;FQ=-34.9872;PV4=1,1,0.290813,0.316855	GT:PL:DP:ADF:ADR:AD:GQ	1/1:255,8,0:16:0,3:1,11:1,14:14
+Gasterosteus_aculeatus.groupXIX.4472606.4471968.fas	488	.	T	C	105.008	.	DP=9;ADF=0,0;ADR=2,6;AD=2,6;VDB=0.837746;SGB=-0.616816;RPBZ=-0.670671;MQBZ=-1.52753;BQBZ=-0.57735;FS=0;MQ0F=0;AF1=0.500002;AC1=1;DP4=0,2,0,6;MQ=41;FQ=25.0286;PV4=1,0.301823,0.0669873,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:135,0,52:8:0,0:2,6:2,6:55
+Gasterosteus_aculeatus.groupXIX.4472606.4471968.fas	522	.	T	C	95.0186	.	DP=6;ADF=0,0;ADR=1,5;AD=1,5;VDB=0.673544;SGB=-0.590765;RPBZ=-0.297044;MQBZ=-1;BQBZ=-0.447214;FS=0;MQ0F=0;AF1=0.501256;AC1=1;DP4=0,1,0,5;MQ=41;FQ=-5.445;PV4=1,0.352,0.18695,0.274255	GT:PL:DP:ADF:ADR:AD:GQ	0/1:125,0,23:6:0,0:1,5:1,5:26
+Gasterosteus_aculeatus.groupXXI.7005783.7005410.fas	134	.	G	T	52.9722	.	DP=3;ADF=0,3;ADR=0,0;AD=0,3;VDB=0.0249187;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,3,0;MQ=42;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:85,9,0:3:0,3:0,0:0,3:16
+Oryzias_latipes.16.14397685.14397086.fas	39	.	A	G	43.7647	.	DP=2;ADF=0,2;ADR=0,0;AD=0,2;VDB=0.18;SGB=-0.453602;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,2,0;MQ=42;FQ=-32.988	GT:PL:DP:ADF:ADR:AD:GQ	1/1:75,6,0:2:0,2:0,0:0,2:10
+Oryzias_latipes.23.22793575.22794024.fas	42	.	G	C	34.01	.	DP=3;ADF=1,2;ADR=0,0;AD=1,2;VDB=0.02;SGB=-0.453602;RPBZ=1.41421;MQBZ=-1.41421;FS=0;MQ0F=0;AF1=0.500158;AC1=1;DP4=1,0,2,0;MQ=41;FQ=6.20244;PV4=1,1,0,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:64,0,32:3:1,2:0,0:1,2:35
+Oryzias_latipes.23.22793575.22794024.fas	115	.	C	A	32.1171	.	DP=3;ADF=1,2;ADR=0,0;AD=1,2;VDB=0.02;SGB=-0.453602;RPBZ=1.41421;MQBZ=-1.41421;BQBZ=1.22474;FS=0;MQ0F=0;AF1=0.512851;AC1=1;DP4=1,0,2,0;MQ=41;FQ=-14.1557;PV4=1,1,0,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:62,0,13:3:1,2:0,0:1,2:16
+Oryzias_latipes.23.22793575.22794024.fas	189	.	T	C	41.7648	.	DP=2;ADF=0,0;ADR=0,2;AD=0,2;VDB=0.02;SGB=-0.453602;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,2;MQ=40;FQ=-32.988	GT:PL:DP:ADF:ADR:AD:GQ	1/1:73,6,0:2:0,0:0,2:0,2:10
+Tetraodon_nigroviridis.10.11919111.11918596.fas	121	.	G	C	70.0183	.	DP=6;ADF=1,5;ADR=0,0;AD=1,5;VDB=0.0161322;SGB=-0.590765;RPBZ=-1.55543;BQBZ=-1.50756;FS=0;MQ0F=0;AF1=0.501256;AC1=1;DP4=1,0,5,0;MQ=42;FQ=-5.445;PV4=1,0.125408,1,0.0889039	GT:PL:DP:ADF:ADR:AD:GQ	0/1:100,0,23:6:1,5:0,0:1,5:26
+Tetraodon_nigroviridis.10.11919111.11918596.fas	216	.	T	G	93.0078	.	DP=7;ADF=2,5;ADR=0,0;AD=2,5;VDB=0.0143941;SGB=-0.590765;RPBZ=0;BQBZ=0.648074;FS=0;MQ0F=0;AF1=0.500013;AC1=1;DP4=2,0,5,0;MQ=42;FQ=16.1222;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:123,0,43:7:2,5:0,0:2,5:46
+Tetraodon_nigroviridis.10.11919111.11918596.fas	352	.	G	T	103.029	.	DP=7;ADF=0,0;ADR=1,6;AD=1,6;VDB=0.149847;SGB=-0.616816;RPBZ=-1.01835;BQBZ=-0.408248;FS=0;MQ0F=0;AF1=0.502513;AC1=1;DP4=0,1,0,6;MQ=42;FQ=-7.77799;PV4=1,0.360486,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:133,0,20:7:0,0:1,6:1,6:23
+Tetraodon_nigroviridis.10.11919111.11918596.fas	448	.	G	C	106.264	.	DP=5;ADF=0,0;ADR=0,5;AD=0,5;VDB=0.00721075;SGB=-0.590765;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,5;MQ=42;FQ=-41.9862	GT:PL:DP:ADF:ADR:AD:GQ	1/1:139,15,0:5:0,0:0,5:0,5:27
+Tetraodon_nigroviridis.10.11919111.11918596.fas	468	.	G	A	77.5133	.	DP=4;ADF=0,0;ADR=0,4;AD=0,4;VDB=0.0058656;SGB=-0.556411;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,4;MQ=42;FQ=-38.9864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:110,12,0:4:0,0:0,4:0,4:21
+Tetraodon_nigroviridis.10.4326409.4326970.fas	221	.	A	G	151.007	.	DP=10;ADF=0,10;ADR=0,0;AD=0,10;VDB=0.327896;SGB=-0.670168;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,10,0;MQ=40;FQ=-56.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:184,30,0:10:0,10:0,0:0,10:57
+Tetraodon_nigroviridis.10.4326409.4326970.fas	279	.	G	T	176.009	.	DP=22;ADF=6,13;ADR=2,1;AD=8,14;VDB=0.00146709;SGB=-0.686358;RPBZ=-1.01011;MQBZ=2.74004;MQSBZ=1.11509;BQBZ=0.712419;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=6,2,13,1;MQ=41;FQ=111.016;PV4=0.527273,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:206,0,138:22:6,13:2,1:8,14:99
+Tetraodon_nigroviridis.10.4326409.4326970.fas	280	.	G	A	202.085	.	DP=21;ADF=1,16;ADR=0,3;AD=1,19;VDB=6.08285e-05;SGB=-0.69168;RPBZ=-1.70694;MQBZ=1.52753;MQSBZ=1.19874;BQBZ=-1.80748;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=1,0,16,3;MQ=41;FQ=-46.986;PV4=1,0.0680524,1,0.375675	GT:PL:DP:ADF:ADR:AD:GQ	1/1:235,20,0:20:1,16:0,3:1,19:37
+Tetraodon_nigroviridis.10.4326409.4326970.fas	285	.	A	C	40.0075	.	DP=21;ADF=14,3;ADR=1,2;AD=15,5;VDB=0.265958;SGB=-0.590765;RPBZ=-0.582914;MQBZ=-1.64751;MQSBZ=1.19874;BQBZ=-1.50783;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=14,1,3,2;MQ=41;FQ=43.0154;PV4=0.140351,0.154916,0.0501828,0.0111862	GT:PL:DP:ADF:ADR:AD:GQ	0/1:70,0,202:20:14,3:1,2:15,5:73
+Tetraodon_nigroviridis.10.4326409.4326970.fas	297	.	G	C	222.085	.	DP=21;ADF=1,16;ADR=0,3;AD=1,19;VDB=4.61057e-05;SGB=-0.69168;RPBZ=-1.69265;MQBZ=1.52753;MQSBZ=1.19874;BQBZ=-1.76716;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=1,0,16,3;MQ=41;FQ=-46.986;PV4=1,0.00318729,1,1	GT:PL:DP:ADF:ADR:AD:GQ	1/1:255,20,0:20:1,16:0,3:1,19:37
+Tetraodon_nigroviridis.10.4326409.4326970.fas	450	.	G	A	183.999	.	DP=22;ADF=0,0;ADR=0,22;AD=0,22;VDB=0.00223905;SGB=-0.692562;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,22;MQ=41;FQ=-92.9865	GT:PL:DP:ADF:ADR:AD:GQ	1/1:217,66,0:22:0,0:0,22:0,22:99
+Tetraodon_nigroviridis.10.4326409.4326970.fas	498	.	A	G	146.022	.	DP=19;ADF=0,0;ADR=3,16;AD=3,16;VDB=0.000163941;SGB=-0.689466;RPBZ=1.392;MQBZ=2.40535;BQBZ=1.65988;FS=0;MQ0F=0;AF1=0.501582;AC1=1;DP4=0,3,0,16;MQ=41;FQ=-6.18227;PV4=1,1,1,0.0834891	GT:PL:DP:ADF:ADR:AD:GQ	0/1:176,0,22:19:0,0:3,16:3,16:25
+Tetraodon_nigroviridis.14.5003764.5004693.fas	162	.	A	C	55.0141	.	DP=4;ADF=1,3;ADR=0,0;AD=1,3;VDB=0.993922;SGB=-0.511536;RPBZ=1.41421;BQBZ=0.57735;FS=0;MQ0F=0;AF1=0.500792;AC1=1;DP4=1,0,3,0;MQ=42;FQ=-4.11551;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:85,0,25:4:1,3:0,0:1,3:28
+Tetraodon_nigroviridis.14.5003764.5004693.fas	272	.	C	T	78.0075	.	DP=7;ADF=1,4;ADR=2,0;AD=3,4;VDB=0.66971;SGB=-0.556411;RPBZ=0.713506;BQBZ=1.1547;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=1,2,4,0;MQ=42;FQ=59.9811;PV4=0.142857,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:108,0,87:7:1,4:2,0:3,4:90
+Tetraodon_nigroviridis.14.5003764.5004693.fas	303	.	A	C	135.116	.	DP=9;ADF=1,5;ADR=0,2;AD=1,7;VDB=0.86172;SGB=-0.636426;RPBZ=1.5367;BQBZ=0.225018;FS=0;MQ0F=0;AF1=0.512852;AC1=1;DP4=1,0,5,2;MQ=42;FQ=-14.1556;PV4=1,0.469896,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:165,0,13:8:1,5:0,2:1,7:16
+Tetraodon_nigroviridis.2.10659169.10659760.fas	123	.	A	C	124.133	.	DP=6;ADF=0,6;ADR=0,0;AD=0,6;VDB=0.0178597;SGB=-0.616816;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,6,0;MQ=42;FQ=-44.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:157,18,0:6:0,6:0,0:0,6:33
+Tetraodon_nigroviridis.2.10659169.10659760.fas	129	.	C	T	125.133	.	DP=6;ADF=0,6;ADR=0,0;AD=0,6;VDB=0.0178597;SGB=-0.616816;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,6,0;MQ=42;FQ=-44.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:158,18,0:6:0,6:0,0:0,6:33
+Tetraodon_nigroviridis.2.10659169.10659760.fas	131	.	C	T	125.133	.	DP=6;ADF=0,6;ADR=0,0;AD=0,6;VDB=0.0190313;SGB=-0.616816;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,6,0;MQ=42;FQ=-44.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:158,18,0:6:0,6:0,0:0,6:33
+Tetraodon_nigroviridis.2.10659169.10659760.fas	159	.	T	A	125.133	.	DP=6;ADF=0,6;ADR=0,0;AD=0,6;VDB=0.0190313;SGB=-0.616816;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,6,0;MQ=42;FQ=-44.9861	GT:PL:DP:ADF:ADR:AD:GQ	1/1:158,18,0:6:0,6:0,0:0,6:33
+Tetraodon_nigroviridis.2.20611046.20611871.fas	363	.	G	A	31.7673	.	DP=2;ADF=0,2;ADR=0,0;AD=0,2;VDB=0.02;SGB=-0.453602;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,2,0;MQ=42;FQ=-32.988	GT:PL:DP:ADF:ADR:AD:GQ	1/1:63,6,0:2:0,2:0,0:0,2:10
+Tetraodon_nigroviridis.2.20611046.20611871.fas	472	.	G	A	30.0112	.	DP=4;ADF=2,2;ADR=0,0;AD=2,2;VDB=0.02;SGB=-0.453602;RPBZ=-1.54919;BQBZ=-1;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,0,2,0;MQ=42;FQ=31.2539;PV4=1,0.211325,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:60,0,63:4:2,2:0,0:2,2:61
+Tetraodon_nigroviridis.2.20611046.20611871.fas	482	.	C	T	33.0091	.	DP=4;ADF=2,2;ADR=0,0;AD=2,2;VDB=0.02;SGB=-0.453602;RPBZ=-1.54919;BQBZ=1;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=2,0,2,0;MQ=42;FQ=31.2539;PV4=1,1,1,1	GT:PL:DP:ADF:ADR:AD:GQ	0/1:63,0,60:4:2,2:0,0:2,2:61
+Tetraodon_nigroviridis.2.20611046.20611871.fas	604	.	A	C	30.0112	.	DP=4;ADF=0,0;ADR=2,2;AD=2,2;VDB=0.02;SGB=-0.453602;RPBZ=-1.63299;BQBZ=-1;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,2,0,2;MQ=42;FQ=31.2539;PV4=1,0.211325,1,0	GT:PL:DP:ADF:ADR:AD:GQ	0/1:60,0,63:4:0,0:2,2:2,2:61
+Tetraodon_nigroviridis.2.20611046.20611871.fas	663	.	T	G	67.9724	.	DP=3;ADF=0,0;ADR=0,3;AD=0,3;VDB=0.0941127;SGB=-0.511536;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,3;MQ=42;FQ=-35.9869	GT:PL:DP:ADF:ADR:AD:GQ	1/1:100,9,0:3:0,0:0,3:0,3:16
+Tetraodon_nigroviridis.8.8678765.8679146.fas	122	.	C	T	84.5134	.	DP=4;ADF=0,4;ADR=0,0;AD=0,4;VDB=0.00671048;SGB=-0.556411;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,4,0;MQ=42;FQ=-38.9864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:117,12,0:4:0,4:0,0:0,4:21
+Tetraodon_nigroviridis.8.8678765.8679146.fas	202	.	C	A	65.5132	.	DP=4;ADF=0,4;ADR=0,0;AD=0,4;VDB=0.00766117;SGB=-0.556411;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,4,0;MQ=42;FQ=-38.9864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:98,12,0:4:0,4:0,0:0,4:21
+Tetraodon_nigroviridis.8.8678765.8679146.fas	338	.	A	C	92.5135	.	DP=4;ADF=0,0;ADR=0,4;AD=0,4;VDB=0.0058656;SGB=-0.556411;FS=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,0,4;MQ=42;FQ=-38.9864	GT:PL:DP:ADF:ADR:AD:GQ	1/1:125,12,0:4:0,0:0,4:0,4:21
+Tetraodon_nigroviridis.Un_random.2936515.2937009.fas	187	.	C	G	129.646	.	DP=9;ADF=1,8;ADR=0,0;AD=1,8;VDB=0.0450942;SGB=-0.651104;RPBZ=-1.21911;MQBZ=2.82843;BQBZ=2.82843;FS=0;MQ0F=0;AF1=0.593902;AC1=1;DP4=1,0,8,0;MQ=42;FQ=-22.013;PV4=1,1,1,0.374322	GT:PL:DP:ADF:ADR:AD:GQ	0/1:159,0,5:9:1,8:0,0:1,8:8
+Tetraodon_nigroviridis.Un_random.2936515.2937009.fas	191	.	C	A	127.461	.	DP=12;ADF=1,11;ADR=0,0;AD=1,11;VDB=0.641961;SGB=-0.676189;RPBZ=-1.33916;MQBZ=3.31662;BQBZ=0.469476;FS=0;MQ0F=0;AF1=0.829413;AC1=1;DP4=1,0,11,0;MQ=42;FQ=-25.9966;PV4=1,0.409959,1,0.277673	GT:PL:DP:ADF:ADR:AD:GQ	0/1:156,0,1:12:1,11:0,0:1,11:4
+Tetraodon_nigroviridis.Un_random.2936515.2937009.fas	406	.	A	G	58.0073	.	DP=8;ADF=0,0;ADR=4,4;AD=4,4;VDB=0.27062;SGB=-0.556411;RPBZ=-0.446505;MQBZ=-1;BQBZ=-1.52753;FS=0;MQ0F=0;AF1=0.5;AC1=1;DP4=0,4,0,4;MQ=42;FQ=60.9471;PV4=1,0.0669873,0.177959,0.39541	GT:PL:DP:ADF:ADR:AD:GQ	0/1:88,0,106:8:0,0:4,4:4,4:91

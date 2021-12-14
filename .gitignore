@@ -22,7 +22,6 @@
 12_bowtie/test3/1_trimmed/*
 12_bowtie/test3/3_sam_paired/*
 12_bowtie/test4_remaining/4_bam/*
-12_bowtie/test4_remaining/5_variants/*
 12_bowtie/test4_remaining/3_sam_paired/*
 12_bowtie/test5_calder/1_trimmed_zipped/*
 12_bowtie/test5_calder/2_assemble_result/*
