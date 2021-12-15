@@ -32,11 +32,6 @@
 12_bowtie/test5_calder/5_variants/*
 12_bowtie/test5_calder/all_recoded_vcfs
 12_bowtie/all_recoded_vcfs
-12_bowtie/test4_remaining/4_bam/lane7-s416-index-CCTTGAAT-AJOR_UW153152_S416_L007_sorted_rd.bam
-12_bowtie/test4_remaining/4_bam/lane7-s417-index-GAACGCTG-PHOL_UW153155_S417_L007_sorted_rd.bam
-12_bowtie/test4_remaining/4_bam/lane7-s418-index-CAGACCTT-CMEL_UW153307-2_S418_L007_sorted_rd.bam
-12_bowtie/test4_remaining/4_bam/lane7-s419-index-TAGCAGCC-PROS_UW153323_S419_L007_sorted_rd.bam
-12_bowtie/test4_remaining/4_bam/lane7-s420-index-GTTAAGTT-LTUN_UW154464_S420_L007_sorted_rd.bam
 12_bowtie/test4_remaining/4_bam/lane7-s421-index-CCATATAG-CSIM_UW154482-2_S421_L007_sorted_rd.bam
 12_bowtie/test4_remaining/4_bam/lane7-s422-index-AACCGAAC-CSIM_UW154482-3_S422_L007_sorted_rd.bam
 12_bowtie/test4_remaining/4_bam/lane7-s424-index-TCAATGCT-CMEL_UW154677_S424_L007_sorted_rd.bam
