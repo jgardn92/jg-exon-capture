@@ -1,5 +1,3 @@
-##fileformat=VCFv4.2
-##FILTER=<ID=PASS,Description="All filters passed">
 ##bcftoolsVersion=1.13+htslib-1.13
 ##bcftoolsCommand=mpileup --fasta-ref ref_genomes/fastas/CCYC_UW150847_S408.fasta --skip-indels --output test2/4_bam/CCYC_UW150847_S408_pileup.bcf --output-type b --annotate FORMAT/AD,FORMAT/ADF,FORMAT/ADR,FORMAT/DP,INFO/AD,INFO/ADF,INFO/ADR test2/4_bam/lane7-s408-index-AACCAACG-CCYC_UW150847_S408_L007_sorted_rd.bam
 ##reference=file://ref_genomes/fastas/CCYC_UW150847_S408.fasta

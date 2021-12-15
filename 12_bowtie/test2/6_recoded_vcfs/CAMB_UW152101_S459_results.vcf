@@ -1,5 +1,4 @@
-##fileformat=VCFv4.2
-##FILTER=<ID=PASS,Description="All filters passed">
+##fileformat=VCFv4.2##FILTER=<ID=PASS,Description="All filters passed">
 ##bcftoolsVersion=1.13+htslib-1.13
 ##bcftoolsCommand=mpileup --fasta-ref ref_genomes/fastas/CAMB_UW152101_S459.fasta --skip-indels --output test2/4_bam/CAMB_UW152101_S459_pileup.bcf --output-type b --annotate FORMAT/AD,FORMAT/ADF,FORMAT/ADR,FORMAT/DP,INFO/AD,INFO/ADF,INFO/ADR test2/4_bam/lane8-s459-index-GGTAGAAT-CAMB_UW152101_S459_L008_sorted_rd.bam
 ##reference=file://ref_genomes/fastas/CAMB_UW152101_S459.fasta
