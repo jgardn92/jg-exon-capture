@@ -30,5 +30,4 @@
 12_bowtie/test5_calder/*.txt
 12_bowtie/test5_calder/4_bam/*
 12_bowtie/test5_calder/5_variants/*
-12_bowtie/test5_calder/all_recoded_vcfs
-12_bowtie/all_recoded_vcfs
+12_bowtie/test5_calder/all_recoded_vcfs/*
