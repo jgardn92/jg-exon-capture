@@ -29,6 +29,11 @@ hist4.list <- list()
 hist5.list <- list()
 hist6.list <- list()
 hist7.list <- list()
+avg.tot.depth <- c()
+avg.filt.depth <- c()
+percent.sites.removed <- c()
+filt.SNP.num <- c()
+Gene.per.indivi <- c()
 
 for(i in 1:length(vcf.names.noM)){
   save.name <- str_sub(vcf.names.noM[i], 1, nchar(vcf.names.noM[i])-12)
@@ -40,8 +45,19 @@ for(i in 1:length(vcf.names.noM)){
   hist5.list[[i]] <- my.vcf[[5]]
   hist6.list[[i]] <- my.vcf[[6]]
   hist7.list[[i]] <- my.vcf[[7]]
+  avg.tot.depth[i] <- mean(my.vcf[[8]]$Depth)
+  avg.filt.depth[i] <- mean(my.vcf[[9]]$Depth)
+  percent.sites.removed[i] <- length(which(my.vcf[[8]]$Depth <= 20))/length(my.vcf[[8]]$Depth)
+  filt.SNP.num[i] <- length(my.vcf[[9]]$Depth)
+  Gene.per.indivi[i] <- nrow(my.vcf[[10]])
   assign(save.name, my.vcf)
 }
+
+mean(as.numeric(avg.tot.depth))
+mean(as.numeric(avg.filt.depth))
+mean(as.numeric(percent.sites.removed))
+mean(as.numeric(filt.SNP.num))
+mean(as.numeric(Gene.per.indivi))
 
 pdf("hist1_depth1.pdf", width = 11, height = 8.5, onefile = TRUE)
 for(k in seq(1,96, by = 6)){  

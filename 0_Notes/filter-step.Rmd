@@ -4,7 +4,7 @@ author: "Jennifer Gardner"
 date: "7/2/2020"
 output: html_document
 ---
-
+Updated: 1/18/22
 ## Create Genious Table
 From assembled nf folder
 File -> new folder -> nf
@@ -19,7 +19,7 @@ File -> Export -> selected sequences -> set file type to .csv -> select document
 Load dependencies and import table created by genious
 ```{r, warning = FALSE, message = FALSE}
 library(tidyverse)
-sequences <- read.csv("1_assemblednew/assemble_result_supp/4284 documents from nf.csv")
+sequences <- read.csv("../2_assemble_result_supp/4284 documents from nf.csv")
 ```
 
 ```{r}
@@ -50,20 +50,24 @@ ggplot(seq.counts) + geom_line(aes(x = NumSeqGreaterThan, y = GenesRetained)) + 
 ```{r}
 45/98
 98*.5
+69/98
+98*.7
 ```
 
 From looking at the seq.count table to retain > 3000 genes (Calder's level) need to retain genes with >45 sequences. Problem this is accounts for genes captured in fewer than 46% of the sample. To retain genes captured in greater than 50% of the sample, would result in retaining genes with greater than 49 sequences, and retains 2917 genes 
 
 ##Analyze Output about number of genes per sample
 ```{r}
-enriched <- read.csv("1_assemblednew/assemble_result_supp/enriched_gene.csv")
+enriched <- read.csv("../2_assemble_result_supp/enriched_gene.csv")
 hist(enriched$Num..of.enriched.genes)
 enriched %>% filter(Num..of.enriched.genes <= 1000)
 ```
 
 ## Filtering Plan
 1. Proceed with all samples (only two with < 1000 genes, only 1 (CspM) with less than 500)
-2. Retain genes represented in 50% of samples, 49 or greater to keep close to 1000 genes retained
+2. Retain genes represented in 50% of samples, 49 or greater to keep close to 3000 genes retained (2917)
   a. Said antoher way, filter genes represented in fewer than 49% of samples.
+3. Second try, retain genes in 70% of samples, 69 or greater to keep 2282 genes retained
+  a. Said another way, filter genes represented in fewer than 70% of samples
 
   
