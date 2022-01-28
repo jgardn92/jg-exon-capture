@@ -4,6 +4,7 @@ author: "Jennifer Gardner"
 date: "10/28/2020"
 output: pdf_document
 ---
+Updated: 1/24/22 to include a way to count total number of genes compared for each species pair
 load dependencies
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -19,8 +20,9 @@ library(rstatix)
 * Return list of taxa with identical sequences
   * Flag those that are different species (not concerned if same species have identical sequences)
 * Make a taxa-by-taxa table with sums of number of genes where two taxa have identical sequences
-*Make a second table with list of genes and number of identical sequences within each gene
+* Make a second table with list of genes and number of identical sequences within each gene
   * This will help identify contamination vs. highly conserved loci
+* Make table with count of total number of genes compared for each species pair to standardize identical counts to percentages
 
 
 ## Part 1: Coding Regions
@@ -73,6 +75,33 @@ write.csv(identical_sequences, "Identical_Sequences.csv")
 write.csv(gene_data, "Gene_Data.csv", row.names = FALSE)
 ```
 
+### Generate Total genes database
+```{r}
+filenames <- list.files(path = "../4_Run_2/7_nf_aligned_orn/") #make list of filenames of gene alignment fastas
+total_sequences <- matrix(data=0, nrow = 97, ncol = 97) #make matrix for tallying total genes found in both species in the pair
+fullnames <- as.vector(read.csv("full_names.csv")) #read in full names
+colnames(total_sequences) <- fullnames[,1] #name columns for full matrix
+rownames(total_sequences) <- fullnames[,1] #name rows for full matrix
+for (i in 1:97){ #loop over total number of species
+  sp1_name <- fullnames[i,1] #assign species 1
+    for (j in 1:96){ #loop over total species -1
+      species2_names <- fullnames[-i,1] #get list of names without sp1
+      sp2_name <- species2_names[j] #assign sp2
+      for (k in 1:length(filenames)){#loop over filename list to do action for each gene in folder
+        gene_name <- filenames[k] #get gene for each run
+        gene <- read.FASTA(paste("../4_Run_2/7_nf_aligned_orn/",gene_name, sep = "")) #read in gene alignment
+        gene_sp1 <- gene[paste(sp1_name)]
+        gene_sp1_length <- length(gene_sp1[[1]])
+        gene_sp2 <- gene[paste(sp2_name)]
+        gene_sp2_length <- length(gene_sp2[[1]])
+        if(gene_sp1_length > 0 & gene_sp2_length > 0){
+          total_sequences[sp1_name, sp2_name] <- total_sequences[sp1_name, sp2_name] + 1
+        }
+      }
+    }
+}
+write.csv(total_sequences, "Total_Sequences.csv")
+```
 
 Generate data for scatterplot of pdistance vs locus length
 ```{r}

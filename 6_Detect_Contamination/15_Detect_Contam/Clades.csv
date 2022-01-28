@@ -1,20 +1,80 @@
-Liparis,,,,,,Not in Orr 2019,,Own
-Careliparis,Liparis,Lyoliparis,Polypera,,,C. curlianus,,Acantholiparis
-L. dennyi,L. fabricii,L. pulchellus,L. callyodon,,,C. ectenes,,Crystallichthys
-L. gibbus,L. tunicatus,,L. curilensis,,,C. lycoperiscus,,Eumicrotremus
-,,,L. florae,,,C. sp. M,,Liparis cyclopus
-,,,L. greeni,,,L. marmoratus,,Liparis fucensis
-,,,,,,L. shimishurae,,Liparis ochotensis
-Clade Q (Paraliparia),,,,,,P. albeolus,,Lipariscus
-Clade M,Clade K,Clade J,Clade I,Rhinoliparis,,P. holomelas,,Lopholiparis flerxi
-P. garmani,P. cephalus,P. copei,P. ulochir,R. attenuatus,,,,Nectoliparis
-,P. mento,P. rosaeceus,,R. barbulifer,,,,Paraliparis pectoralis
-,,,,,,,,Paraliparis penicillus
-Clade E (Aenigmoliparia),,,,,,,,Prognatholiparis
-sp. A group,Temnocora,Allocareproctus,Elassodisca,Clade P,Clade O,Clade N,,
-C. sp. A,C. comus,A. jordani,C. bowersianus,P. dactylosus,C. gilberti,C. ambustus,,
-,C. faunus,A. tanix,E. caudatus,P. grandis,C. lerikimae,C. colletti,,
-,C. iacchus,A. unangas,E. tremebundus,,C. ostentum,C. cypselurus,,
-,C. staufferi,A. ungak,,,C. phasma,C. furcellus,,
-,,,,,C. scottae,C. melanurus,,
-,,,,,,C. simus,,
+Groupings used in Detect Contam 3 and Plotting Identical Sequences w/in and between groups,,,,,,,,,,
+Liparis,,,,,,,,Own,,Not in Orr 2019
+Careliparis,Liparis,Lyoliparis,Polypera,,,,,Acantholiparis,,C. curlianus
+L. dennyi,L. fabricii,L. pulchellus,L. callyodon,,,,,Crystallichthys,,C. ectenes
+L. gibbus,L. tunicatus,,L. curilensis,,,,,Eumicrotremus,,C. lycoperiscus
+,,,L. florae,,,,,Liparis cyclopus,,C. sp. M
+,,,L. greeni,,,,,Liparis fucensis,,L. marmoratus
+,,,,,,,,Liparis ochotensis,,L. shimishurae
+Clade Q (Paraliparia),,,,,,,,Lipariscus,,P. albeolus
+Clade M,Clade K,Clade J,Clade I,Rhinoliparis,,,,Lopholiparis flerxi,,P. holomelas
+P. garmani,P. cephalus,P. copei,P. ulochir,R. attenuatus,,,,Nectoliparis,,
+,P. mento,P. rosaeceus,,R. barbulifer,,,,Paraliparis pectoralis,,
+,,,,,,,,Paraliparis penicillus,,
+Clade E (Aenigmoliparia),,,,,,,,Prognatholiparis,,
+sp. A group,Temnocora,Allocareproctus,Elassodisca,Clade P,Clade O,Clade N,,,,
+C. sp. A,C. comus,A. jordani,C. bowersianus,P. dactylosus,C. gilberti,C. ambustus,,,,
+,C. faunus,A. tanix,E. caudatus,P. grandis,C. lerikimae,C. colletti,,,,
+,C. iacchus,A. unangas,E. tremebundus,,C. ostentum,C. cypselurus,,,,
+,C. staufferi,A. ungak,,,C. phasma,C. furcellus,,,,
+,,,,,C. scottae,C. melanurus,,,,
+,,,,,,C. simus,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+Groupings overall for tree color coding,,,,,,Color Codes,,,,
+Larger group (color),Smaller group (collapse by,My Spp in smaller group,,Not in Orr 2019,,Group,Color,"R, G, B",,
+Aenigmoliparia,NA,Acantholiparis,,C. curlianus,,Aenigmo,Blue,"0, 126, 255",,
+Aenigmo,NA,Lopholiparis flerxi,,C. ectenes,,Paraliparia,Orange,"255, 126, 0",,
+Aenigmo,NA,Paraliparis penicillus,,C. lycoperiscus,,Crystalichthyes,Pink,"230, 0, 230",,
+Aenigmo,NA,Prognatholiparis,,C. sp. M,,Liparis,Green,"0, 164, 0",,
+Aenigmo,NA,SpA,,L. marmoratus,,Liparis fucensis,Dark Green,"0, 88, 0",,
+Aenigmo,Temnocora,C. comus,,L. shimishurae,,Nectoliparis,Red,"255, 0, 0",,
+Aenigmo,,C. faunus,,P. albeolus,,Eumicrotremus,Brown,"150, 75, 0",,
+Aenigmo,,C. iacchus,,P. holomelas,,,,,,
+Aenigmo,,C. staufferi,,,,,,,,
+Aenigmo,Allocareproctus,A. jordani,,,,,,,,
+Aenigmo,,A. tanix,,,,,,,,
+Aenigmo,,A. unangas,,,,,,,,
+Aenigmo,,A. ungak,,,,,,,,
+Aenigmo,Elassodisca,C. bowersianus,,,,,,,,
+Aenigmo,,E. caudatus,,,,,,,,
+Aenigmo,,E. tremebundus,,,,,,,,
+Aenigmo,P. dact grouo,P. dactylosus,,,,,,,,
+Aenigmo,,P. grandis,,,,,,,,
+Aenigmo,Sub Careproctus,C. gilberti,,,,,,,,
+Aenigmo,,C. lerikimae,,,,,,,,
+Aenigmo,,C. ostentum,,,,,,,,
+Aenigmo,,C. phasma,,,,,,,,
+Aenigmo,,C. scottae,,,,,,,,
+Aenigmo,Melanura,C. ambustus,,,,,,,,
+Aenigmo,,C. colletti,,,,,,,,
+Aenigmo,,C. cypselurus,,,,,,,,
+Aenigmo,,C. furcellus,,,,,,,,
+Aenigmo,,C. melanurus,,,,,,,,
+Aenigmo,,C. simus,,,,,,,,
+Paraliparia,NA,Lipariscus nanus,,,,,,,,
+Paraliparia,NA,Paraliparis pectoralis,,,,,,,,
+Paraliparia,Sub Paralipais,P. garmani,,,,,,,,
+Paraliparia,Sub Amitrichthys,P. cephalus,,,,,,,,
+Paraliparia,,P. mento,,,,,,,,
+Paraliparia,P. copei group,P. copei,,,,,,,,
+Paraliparia,,P. rosaeceus,,,,,,,,
+Paraliparia,P. ulochir group,P. ulochir,,,,,,,,
+Paraliparia,Rhinoliparis,R. attenuatus,,,,,,,,
+Paraliparia,,R. barbulifer,,,,,,,,
+Liparis,NA,Liparis cyclopus,,,,,,,,
+Liparis,NA,Liparis ochotensis,,,,,,,,
+Liparis,Sub Careliparis,L. dennyi,,,,,,,,
+Liparis,,L. gibbus,,,,,,,,
+Liparis,Sub Liparis,L. fabricii,,,,,,,,
+Liparis,,L. tunicatus,,,,,,,,
+Liparis,Sub Lyoliparis,L. pulchellus,,,,,,,,
+Liparis,Sub Polypera,L. callyodon,,,,,,,,
+Liparis,,L. curilensis,,,,,,,,
+Liparis,,L. florae,,,,,,,,
+Liparis,,L. greeni,,,,,,,,
+Clade H,Clade H,Crystallichthys,,,,,,,,
+Out1,Sister to all above,Liparis fucensis,,,,,,,,
+Out2,Sister to all above,Nectoliparis pelagicus,,,,,,,,
+Out3,Outgroup,Eumicrotremus,,,,,,,,

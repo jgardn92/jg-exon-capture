@@ -1,0 +1,116 @@
+---
+title: "Ch2Results_Figures"
+author: "Jennifer Gardner"
+date: "1/24/2022"
+output: html_document
+---
+# Figures to make
+  1. All the trees
+  2. Histogram of identity
+  3. VCF histograms
+
+
+load dependencies
+```{r}
+library(tidyverse)
+library(ape)
+library(rstatix)
+library(phytools)
+```
+
+
+## Percent Identical Histogram
+Load in data and standardize matrix
+```{r}
+identical_sequences <- read.csv("Identical_Sequences_files/Identical_Sequences.csv", row.names = 1)
+total_sequences <- read.csv("Identical_Sequences_files/Total_Sequences.csv", row.names = 1)
+percent_identical <- identical_sequences/total_sequences
+```
+
+Compare percent identical between members of same species (same_spp_pairs.csv; n =35 spp pairs) vs.
+Percent identical between members of same clade but no same species (same_clade_pairs.csv; 162 pairs) vs.
+percent identical between all spp pairs not in the same Orr et al. small clades (total.pairs - same_clade_spp_pairs.csv)
+  Note: makeup of pairs done in percent_ident_groups.xlsx
+  
+Get list of all pairwise comparisons (should be 4465 for 95 pairwise comparisons; make from all_lip_samples.csv)
+```{r}
+all.lip.samples <- read.csv("Identical_Sequences_files/all_lip_samples.csv", header = FALSE)
+all.lip.samples <- as.vector(all.lip.samples$V1)
+all.pairs <- as.data.frame(matrix(nrow = 0, ncol = 3, data = NA))
+colnames(all.pairs) <- c("COLUMN","ROW","Percent.Ident")
+for(i in 1:length(all.lip.samples)){
+  column <- all.lip.samples[i]
+  for(j in 1:(length(all.lip.samples)-i)){
+    row.start <- i+1
+    row.spp <- all.lip.samples[row.start:length(all.lip.samples)]
+    row <- row.spp[j]
+    percent.ident <- percent_identical[row,column]
+    rowdat <- c(column, row, percent.ident)
+    all.pairs <- rbind(all.pairs, rowdat)
+  }
+}
+colnames(all.pairs) <- c("COLUMN","ROW","Percent.Ident")
+all.pairs <- all.pairs[1:4465,]
+all.pairs$Percent.Ident <- as.numeric(all.pairs$Percent.Ident)
+```
+
+Remove rows with same clade or same species pairs (should remove 197 and end up with 4268)
+Get same clade (n = 162) and same spp (n = 35) dataframes as well
+```{r}
+all.same.clade <- read.csv("Identical_Sequences_files/same_clade_all.csv", header = FALSE)
+colnames(all.same.clade) <- c("COLUMN","ROW")
+
+same.clade.pairs <- read.csv("Identical_Sequences_files/same_clade_pairs.csv", header = FALSE)
+colnames(same.clade.pairs) <- c("COLUMN","ROW")
+
+same.spp.pairs <- read.csv("Identical_Sequences_files/same_spp_pairs.csv", header = FALSE)
+colnames(same.spp.pairs) <- c("COLUMN","ROW")
+
+nonclade.pairs <- anti_join(all.pairs, all.same.clade, by = c("COLUMN","ROW"))
+
+clade.pairs <- inner_join(all.pairs, same.clade.pairs,  by = c("COLUMN","ROW"))
+
+spp.pairs <- inner_join(all.pairs, same.spp.pairs,  by = c("COLUMN","ROW"))
+```
+
+
+Plot boxplots
+```{r}
+boxplot(spp.pairs$Percent.Ident, clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, ylab = "Percent of Idenitcal Sequences",
+        yaxt = "n", xaxt = "n", ylim = c(0, 0.51))
+axis(2, at = seq(0,0.5, by = 0.1),labels = c("0%","10%","20%","30%","40%","50%"))
+axis(1, at = c(1,2,3),labels = c("Same Species","Same Clade","Different Clades"))
+
+```
+
+## SNP read depth histograms
+
+read in data
+```{r}
+all.depth <- read.csv("../12_bowtie/All_Dp_AD_combined.csv")
+all.filt <- read.csv("../12_bowtie/All_Dp_AD_filtered.csv")
+```
+
+raw read depth hist
+```{r}
+hist(all.depth$Depth, main = "", xlab = "Read Depth for each SNP", xlim = c(0,325), ylim = c(0,50000))
+abline(v=20, col = "red", lwd = 2)
+```
+
+"minor" allele frequency for all snps after filtering
+```{r}
+hist(all.filt$MA_Freq, main="", xlab = "Minor Allele Frequency")
+
+```
+
+read depth vs minor allele frequency
+```{r}
+plot(all.filt$Depth~all.filt$MA_Freq)
+```
+
+## Making Pretty Trees
+
+```{r}
+
+```
+
