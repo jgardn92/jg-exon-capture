@@ -118,6 +118,7 @@ for (i in 1:length(filenames)){ #loop over filename list to do action for each g
   gene_data <- rbind(gene_data,rowdata)
 }
 gene_ps<- as.data.frame(gene_data)
+write.csv(gene_ps, "P_distances_bygene.csv", row.names = FALSE)
 
 ```
 

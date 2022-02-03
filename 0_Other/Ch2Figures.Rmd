@@ -16,6 +16,7 @@ library(tidyverse)
 library(ape)
 library(rstatix)
 library(phytools)
+library(mgcv)
 ```
 
 
@@ -73,14 +74,30 @@ clade.pairs <- inner_join(all.pairs, same.clade.pairs,  by = c("COLUMN","ROW"))
 spp.pairs <- inner_join(all.pairs, same.spp.pairs,  by = c("COLUMN","ROW"))
 ```
 
+Do stats to check if groups are different
+```{r}
+var.test(spp.pairs$Percent.Ident, clade.pairs$Percent.Ident) #var equal
+var.test(spp.pairs$Percent.Ident, nonclade.pairs$Percent.Ident) #var diff
+var.test(clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident) #var diff
+```
+
+```{r}
+t.test(spp.pairs$Percent.Ident, clade.pairs$Percent.Ident, var.equal = TRUE)
+t.test(spp.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, var.equal = FALSE) #var diff
+t.test(clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, var.equal = FALSE) #var diff
+```
+
 
 Plot boxplots
 ```{r}
+tiff(filename = "../../../../Desktop/Percent_ident_boxplot.tiff", width = 7, height = 5, units = "in", res = 300)
 boxplot(spp.pairs$Percent.Ident, clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, ylab = "Percent of Idenitcal Sequences",
         yaxt = "n", xaxt = "n", ylim = c(0, 0.51))
 axis(2, at = seq(0,0.5, by = 0.1),labels = c("0%","10%","20%","30%","40%","50%"))
 axis(1, at = c(1,2,3),labels = c("Same Species","Same Clade","Different Clades"))
-
+axis(1, at = c(1,2,3), labels = c("N = 33", "N = 162", "N = 4268"), line = 1 , tick = FALSE)
+text(x = 3, y = 0.5, "*", cex = 4)
+dev.off()
 ```
 
 ## SNP read depth histograms
@@ -93,24 +110,74 @@ all.filt <- read.csv("../12_bowtie/All_Dp_AD_filtered.csv")
 
 raw read depth hist
 ```{r}
-hist(all.depth$Depth, main = "", xlab = "Read Depth for each SNP", xlim = c(0,325), ylim = c(0,50000))
+tiff(filename = "../../../../Desktop/Read_Depth_hist.tiff", width = 7, height = 5, units = "in", res = 300)
+hist(all.depth$Depth, main = "", xlab = "", xlim = c(0,325), ylim = c(0,50000))
 abline(v=20, col = "red", lwd = 2)
+axis(1, at = 150, labels = c("Read Depth per Locus"), line = 1.5, tick = FALSE)
+axis(1, at = 150, labels = c("N = 105,844 filtered SNP Loci"), line = 2.5, tick = FALSE)
+dev.off()
 ```
 
 "minor" allele frequency for all snps after filtering
 ```{r}
-hist(all.filt$MA_Freq, main="", xlab = "Minor Allele Frequency")
-
+tiff(filename = "../../../../Desktop/MA_freq_hist.tiff", width = 7, height = 5, units = "in", res = 300)
+hist(all.filt$MA_Freq, main="", xlab = "")
+axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
+axis(1, at = 0.25, labels = c("N = 61204 filtered SNPs"), line = 2.5, tick = FALSE)
+dev.off()
 ```
 
-read depth vs minor allele frequency
+read depth vs minor allele frequency test plots
 ```{r}
-plot(all.filt$Depth~all.filt$MA_Freq)
+summary(gam(all.filt$Depth~s(all.filt$MA_Freq, bs = "cs"))) #r2 = 0.05
+summary(lm(all.filt$Depth~all.filt$MA_Freq)) #r2 = 0.02
+summary(lm(all.filt$Depth~poly(all.filt$MA_Freq,2))) #r2 = 0.03
+
+ggplot(all.filt, aes(x=MA_Freq, y=Depth)) + geom_point()
+ggplot(all.filt, aes(x=MA_Freq, y=Depth)) + geom_smooth(method = lm)
+ggplot(all.filt, aes(x=MA_Freq, y=Depth)) + geom_smooth(formula = y ~ poly(x,2))
+ggplot(all.filt, aes(x=MA_Freq, y=Depth)) + geom_smooth()
+
+ggplot(all.filt, aes(x=MA_Freq, y=Depth)) + geom_point() +
+  geom_smooth(method = lm, colour = "grey50") + 
+  geom_smooth(colour = "orange") +
+  geom_smooth(formula = y ~ poly(x,2), colour = "blue") 
+  
 ```
+
+Final Plot (quadratic only)
+```{r}
+tiff(filename = "../../../../Desktop/Depth_MAfreq.tiff", width = 7, height = 5, units = "in", res = 300)
+ggplot(all.filt, aes(x=MA_Freq, y=Depth)) + 
+  geom_point(colour = "grey80") + 
+  theme_classic() +
+  geom_smooth(formula = y ~ poly(x,2), colour = "black") + 
+  labs(x = "Occurence Rate of Minor Allele", y = "Read Depth") +
+  theme(axis.title.x = element_text(size=14, face="bold"),axis.title.y = element_text(size=14, face="bold"),
+        axis.text=element_text(size=12, colour = "black")) +
+  geom_text(x=0.48, y=320, label=expression(r^2 == 0.03))
+dev.off()
+```
+
+
+## Making P-distance histogram
+read in data
+```{r}
+p.dists <- read.csv("P_distances_bygene.csv", header = TRUE)
+max(p.dists$avg_pdist)
+```
+
+make hist
+```{r}
+tiff(filename = "../../../../Desktop/pdist_hist.tiff", width = 7, height = 5, units = "in", res = 300)
+hist(p.dists$avg_pdist, main = "", xlab = "Average p-distance for each of 2917 exons", xlim = c(0,0.2), ylim = c(0,900))
+dev.off()
+```
+
 
 ## Making Pretty Trees
 
 ```{r}
-
+run6read.newick()
 ```
 
