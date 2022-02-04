@@ -74,6 +74,28 @@ clade.pairs <- inner_join(all.pairs, same.clade.pairs,  by = c("COLUMN","ROW"))
 spp.pairs <- inner_join(all.pairs, same.spp.pairs,  by = c("COLUMN","ROW"))
 ```
 
+Get results stats
+```{r}
+summary(spp.pairs$Percent.Ident) #min = 4.6 %; Mean = 25.2% +/- 10.7%; max = 47.9%; N = 35;
+length(spp.pairs$Percent.Ident)
+sd(spp.pairs$Percent.Ident)
+
+summary(clade.pairs$Percent.Ident) #min = 8.9 %; Mean = 23.6% +/- 8.6%; max = 43.0%; N = 162;
+length(clade.pairs$Percent.Ident)
+sd(clade.pairs$Percent.Ident)
+
+summary(nonclade.pairs$Percent.Ident) #min = 1.9 %; Mean = 14.4% +/- 4.1%; max = 36.6%; N = 4268;
+length(nonclade.pairs$Percent.Ident)
+sd(nonclade.pairs$Percent.Ident)
+
+```
+
+General Stats
+Spp.pairs = min = 4.6 %; Mean = 25.2% +/- 10.7%; max = 47.9%; N = 35;
+clade.pairs = min = 8.9 %; Mean = 23.6% +/- 8.6%; max = 43.0%; N = 162
+nonclade.pairs = min = 1.9 %; Mean = 14.4% +/- 4.1%; max = 36.6%; N = 4268
+
+
 Do stats to check if groups are different
 ```{r}
 var.test(spp.pairs$Percent.Ident, clade.pairs$Percent.Ident) #var equal
@@ -83,8 +105,8 @@ var.test(clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident) #var diff
 
 ```{r}
 t.test(spp.pairs$Percent.Ident, clade.pairs$Percent.Ident, var.equal = TRUE)
-t.test(spp.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, var.equal = FALSE) #var diff
-t.test(clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, var.equal = FALSE) #var diff
+t.test(spp.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, var.equal = FALSE, alternative = "greater") #var diff
+t.test(clade.pairs$Percent.Ident, nonclade.pairs$Percent.Ident, var.equal = FALSE, alternative = "greater") #var diff
 ```
 
 
@@ -107,6 +129,18 @@ read in data
 all.depth <- read.csv("../12_bowtie/All_Dp_AD_combined.csv")
 all.filt <- read.csv("../12_bowtie/All_Dp_AD_filtered.csv")
 ```
+
+Minor allele occurence stats
+```{r}
+mean(all.filt$MA_Freq)
+sd(all.filt$MA_Freq)
+
+sd(all.filt$Depth)
+
+max(all.depth$Depth)
+length(which(all.depth$Depth > 200))/length(all.depth$Depth)
+```
+
 
 raw read depth hist
 ```{r}
@@ -165,6 +199,8 @@ read in data
 ```{r}
 p.dists <- read.csv("P_distances_bygene.csv", header = TRUE)
 max(p.dists$avg_pdist)
+mean(p.dists$avg_pdist)
+sd(p.dists$avg_pdist)
 ```
 
 make hist
@@ -173,6 +209,23 @@ tiff(filename = "../../../../Desktop/pdist_hist.tiff", width = 7, height = 5, un
 hist(p.dists$avg_pdist, main = "", xlab = "Average p-distance for each of 2917 exons", xlim = c(0,0.2), ylim = c(0,900))
 dev.off()
 ```
+
+## Thinking about read depth
+for illumina hiseq 3000 output is typically 300,000,000-400,000,000 reads per lane. Target 500 reads per gene per individual with 4434 loci. will go with lower estimate to be conservative.
+Most genes recovered is 3753
+Calder's average raw reads = 6.4 mill and trimmed reads = 6 mill
+My data's average raw reads = 12 mill and trimmed reads = 11 mill - more reads but also more reads trimmed on average than Calder's
+
+```{r}
+11e6/4434 # should have read depth of over 2000 reads per indidual per locus -> so clearly a large proportion of reads are not mapping to genes (expected)
+500*4434 # to get 500 reads per roughly 2 million reads per individual (reasonable goal)
+300/25 # could reasonably expected roughtly 12 million reads per individual if only 25 in poopl
+400/25 # up to 16 million reads per indidivual with upper limit of reads per lane from hiseq 3000.
+
+300/11
+
+```
+
 
 
 ## Making Pretty Trees
