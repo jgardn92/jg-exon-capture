@@ -177,7 +177,7 @@ RAxML results from concatinated file in 18_concatinate_r4
 `raxmlHPC-PTHREADS-AVX -T 4 -n 28_r6 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 27_concatinate_r6/27_concat.phy `
 
 #### 28_RAxML_r6_bl
-Rerun RAxML tree with -k specified so that bootstrap tree will have branch lengths for making consensus trees in ape. Run started 2022-02-06 21:00; 2022-02-07 xx:xx (duration x hours)
+Rerun RAxML tree with -k specified so that bootstrap tree will have branch lengths for making consensus trees in ape. Run started 2022-02-06 21:30; 2022-02-07 xx:xx (duration x hours)
 `raxmlHPC-PTHREADS-AVX -T 4 -n 28_r6_bl -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 27_concatinate_r6/27_concat.phy`
 
 ## 10_Gene_Trees
