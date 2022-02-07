@@ -237,5 +237,23 @@ run2.consensus <- consensus(run2, p = 0.5, check.labels = TRUE, rooted = FALSE)
 run2.consensus.bl <- consensus.edges(run2)
 plotTree(run2.consensus)
 plotTree(run2.consensus.bl)
+write.tree(run2.consensus.bl, file = "TreeFigures/Run2_consensus.tree", digits = 20)
 ```
 
+```{r}
+run6 <- read.tree(file = "../9_Run_6/28_RAxML_r6_bl/RAxML_bootstrap.28_r6_bl")
+run6.consensus <- consensus(run6, p = 0.5, check.labels = TRUE, rooted = FALSE)
+run6.consensus.bl <- consensus.edges(run6)
+plotTree(run6.consensus)
+plotTree(run6.consensus.bl)
+write.tree(run6.consensus.bl, file = "TreeFigures/Run6_consensus.tree", digits = 20)
+```
+
+```{r}
+rungene <- read.tree(file = "../10_Gene_Trees/32_RAxML_full_bl/RAxML_bootstrap.32_full_bl")
+rungene.consensus <- consensus(rungene, p = 0.5, check.labels = TRUE, rooted = FALSE)
+rungene.consensus.bl <- consensus.edges(rungene)
+plotTree(rungene.consensus)
+plotTree(rungene.consensus.bl)
+write.tree(rungene.consensus.bl, file = "TreeFigures/Rungene_consensus.tree", digits = 20)
+```
