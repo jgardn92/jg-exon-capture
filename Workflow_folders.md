@@ -77,7 +77,7 @@ RAxML runs on concatinated files in 8_concatinate_orn_rm
 Concsensus tree runs from bootstrap trees produced in 9_RAxML_orn_rm to collapse nodes with low support and get a better idea about potential contamination.
 
 #### 9_RAxML_orn_rm_bl
-Rerun RAxML tree with -k specified so that bootstrap tree will have branch lengths for making consensus trees in ape. Run started 2022-02-06 11:37; predicted end 4:15 ended 2022-02-
+Rerun RAxML tree with -k specified so that bootstrap tree will have branch lengths for making consensus trees in ape. Run started 2022-02-06 11:37; predicted end 4:15 ended 2022-02-06 20:45 (duration 9 hours)
 `raxmlHPC-PTHREADS-AVX -T 4 -n 9_orn_bl -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 8_concatinate_orn_rm/8_concat_orn.phy`
 ***
 
@@ -175,6 +175,10 @@ Concatination files and num of genes captured file from run 5.
 #### 28_RAxML_nf_r6
 RAxML results from concatinated file in 18_concatinate_r4
 `raxmlHPC-PTHREADS-AVX -T 4 -n 28_r6 -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -s 27_concatinate_r6/27_concat.phy `
+
+#### 28_RAxML_r6_bl
+Rerun RAxML tree with -k specified so that bootstrap tree will have branch lengths for making consensus trees in ape. Run started 2022-02-06 21:00; 2022-02-07 xx:xx (duration x hours)
+`raxmlHPC-PTHREADS-AVX -T 4 -n 28_r6_bl -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 27_concatinate_r6/27_concat.phy`
 
 ## 10_Gene_Trees
 
