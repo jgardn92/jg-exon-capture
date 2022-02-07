@@ -75,6 +75,10 @@ RAxML runs on concatinated files in 8_concatinate_orn_rm
 
 #### 9_RAxML_consensus_tree
 Concsensus tree runs from bootstrap trees produced in 9_RAxML_orn_rm to collapse nodes with low support and get a better idea about potential contamination.
+
+#### 9_RAxML_orn_rm_bl
+Rerun RAxML tree with -k specified so that bootstrap tree will have branch lengths for making consensus trees in ape. Run started 2022-02-06 11:37; predicted end 4:15 ended 2022-02-
+`raxmlHPC-PTHREADS-AVX -T 4 -n 9_orn_bl -y -f a -# 100 -p 12345 -x 12345 -m GTRCAT -k -s 8_concatinate_orn_rm/8_concat_orn.phy`
 ***
 
 ## 5_Run_3
