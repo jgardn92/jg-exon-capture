@@ -232,8 +232,10 @@ My data's average raw reads = 12 mill and trimmed reads = 11 mill - more reads b
 Filenames_bootstrap.whatever is the file with all raxml trees present but no branch lengths
 
 ```{r}
-run2 <- read.newick(file = "../4_Run_2/9_RAxML_orn_rm/RAxML_bootstrap.9_orn")
+run2 <- read.tree(file = "../4_Run_2/9_RAxML_orn_rm_bl/RAxML_bootstrap.9_orn_bl")
 run2.consensus <- consensus(run2, p = 0.5, check.labels = TRUE, rooted = FALSE)
+run2.consensus.bl <- consensus.edges(run2)
 plotTree(run2.consensus)
+plotTree(run2.consensus.bl)
 ```
 
