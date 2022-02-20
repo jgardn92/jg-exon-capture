@@ -17,6 +17,7 @@ library(ape)
 library(rstatix)
 library(phytools)
 library(mgcv)
+library(truncnorm)
 ```
 
 
@@ -128,6 +129,7 @@ read in data
 ```{r}
 all.depth <- read.csv("../12_bowtie/All_Dp_AD_combined.csv")
 all.filt <- read.csv("../12_bowtie/All_Dp_AD_filtered.csv")
+all.seq.filt <- all.filt %>% filter(MA_Freq > 0.01)
 ```
 
 Minor allele occurence stats
@@ -139,6 +141,23 @@ sd(all.filt$Depth)
 
 max(all.depth$Depth)
 length(which(all.depth$Depth > 200))/length(all.depth$Depth)
+```
+
+
+
+Generate data for simulated allele frequency from expected distribution
+```{r}
+rtruncnorm(30602, a = 0, b = Inf, mean = 0, sd = 0.075)
+bimod <- c(rnorm(30602, 0, 0.05), rnorm(30602, 0.5, 0.05))
+bimod.trunc <- c(rtruncnorm(30602, a = -Inf, b = 0.5, mean = 0.5, sd = 0.01))
+par(mfrow = c(2,1))
+hist(bimod.trunc, xlim = c(0,0.5), breaks = 2, main = "", xlab = "")
+axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
+axis(1, at = 0.25, labels = c("N = 61204 hypothetical SNPs"), line = 2.5, tick = FALSE)
+hist(all.seq.filt$MA_Freq, main="", xlab = "", breaks = 20)
+axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
+axis(1, at = 0.25, labels = c("N = 61204 filtered SNPs"), line = 2.5, tick = FALSE)
+
 ```
 
 
@@ -154,7 +173,11 @@ dev.off()
 
 "minor" allele frequency for all snps after filtering
 ```{r}
-tiff(filename = "../../../../Desktop/MA_freq_hist.tiff", width = 7, height = 5, units = "in", res = 300)
+tiff(filename = "../../../../Desktop/MA_freq_hist.tiff", width = 7, height = 8.5, units = "in", res = 300)
+par(mfrow = c(2,1))
+hist(bimod.trunc, xlim = c(0,0.5), breaks = 10, main = "", xlab = "")
+axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
+axis(1, at = 0.25, labels = c("N = 61204 hypothetical loci"), line = 2.5, tick = FALSE)
 hist(all.filt$MA_Freq, main="", xlab = "")
 axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
 axis(1, at = 0.25, labels = c("N = 61204 filtered SNPs"), line = 2.5, tick = FALSE)
@@ -256,4 +279,10 @@ rungene.consensus.bl <- consensus.edges(rungene)
 plotTree(rungene.consensus)
 plotTree(rungene.consensus.bl)
 write.tree(rungene.consensus.bl, file = "TreeFigures/Rungene_consensus.tree", digits = 20)
+```
+```{r}
+run.da <- read.tree(file = "../0_da_test/Da_Tree/RAxML_bootstrap.DA_tree2_bl")
+run.da.consensus.bl <- consensus.edges(run.da)
+plotTree(run.da.consensus.bl)
+write.tree(run.da.consensus.bl, file = "TreeFigures/Runda_consensus.tree", digits = 20)
 ```
