@@ -18,6 +18,9 @@ library(rstatix)
 library(phytools)
 library(mgcv)
 library(truncnorm)
+library(vcfR)
+library(stringr)
+source("../12_bowtie/vcf-parse-function.R")
 ```
 
 
@@ -130,12 +133,37 @@ read in data
 all.depth <- read.csv("../12_bowtie/All_Dp_AD_combined.csv")
 all.filt <- read.csv("../12_bowtie/All_Dp_AD_filtered.csv")
 all.seq.filt <- all.filt %>% filter(MA_Freq > 0.01)
+all.seq.filt2 <- all.filt %>% filter(MA_Freq > 0.05)
 ```
+
+Read in and process PLEQUAD data from Calder's
+```{r}
+plequad.vcf <- vcf.parser("../12_bowtie/test5_calder/all_recoded_vcfs/PLEQUAD_UW151438_S22_results.vcf")
+plequad.filt1 <- plequad.vcf[[9]]
+plequad.filt2 <- plequad.filt1 %>% filter(MA_Freq >0.05)
+
+acandu.vcf <- vcf.parser("../12_bowtie/test5_calder/all_recoded_vcfs/ACANADU_UW118829_S45_results.vcf")
+acandu.filt1 <- acandu.vcf[[9]]
+acandu.filt2 <- acandu.filt1 %>% filter(MA_Freq >0.05)
+
+psemela.vcf <- vcf.parser("../12_bowtie/test5_calder/all_recoded_vcfs/PSEMELA_UW154235_S57_results.vcf")
+psemela.filt1 <- psemela.vcf[[9]]
+psemela.filt2 <- psemela.filt1 %>% filter(MA_Freq >0.05)
+
+par(mfrow=c(2,3))
+hist(all.seq.filt$MA_Freq, xlim = c(0,0.5), breaks = 10)
+hist(psemela.filt2$MA_Freq, xlim = c(0,0.5), breaks = 10)
+hist(acandu.filt2$MA_Freq, xlim = c(0,0.5), breaks = 10)
+hist(plequad.filt2$MA_Freq, xlim = c(0,0.5), breaks = 10)
+
+hist(all.seq.filt2$MA_Freq, xlim = c(0,0.5), breaks = 10)
+```
+
 
 Minor allele occurence stats
 ```{r}
-mean(all.filt$MA_Freq)
-sd(all.filt$MA_Freq)
+mean(all.seq.filt2$MA_Freq) #0.24
+sd(all.seq.filt2$MA_Freq) #0.13
 
 sd(all.filt$Depth)
 
@@ -175,12 +203,16 @@ dev.off()
 ```{r}
 tiff(filename = "../../../../Desktop/MA_freq_hist.tiff", width = 7, height = 8.5, units = "in", res = 300)
 par(mfrow = c(2,1))
-hist(bimod.trunc, xlim = c(0,0.5), breaks = 10, main = "", xlab = "")
-axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
-axis(1, at = 0.25, labels = c("N = 61204 hypothetical loci"), line = 2.5, tick = FALSE)
-hist(all.filt$MA_Freq, main="", xlab = "")
-axis(1, at = 0.25, labels = c("Rate of Occurence of Minor Allele"), line = 1.5, tick = FALSE)
-axis(1, at = 0.25, labels = c("N = 61204 filtered SNPs"), line = 2.5, tick = FALSE)
+hist(plequad.filt2$MA_Freq, xlim = c(0,0.5), breaks = 10, main = "", xlab = "", freq = FALSE, ylab = "", yaxt = "n")
+axis(1, at = 0.25, labels = c("Minor Allele Frequency at Heterozygous Sites"), line = 1.5, tick = FALSE)
+axis(1, at = 0.25, labels = c("N = 762 filtered SNPs"), line = 2.5, tick = FALSE)
+axis(2, at = seq(0,4, by =1), labels = c("0%", "10%", "20%", "30%","40%"))
+axis(2, at = 2, labels = "Percentage of Sites", line = 1.5, tick = FALSE)
+hist(all.seq.filt2$MA_Freq, xlim = c(0,0.5), breaks = 10, main="", xlab = "", freq = FALSE, ylab = "", yaxt = "n")
+axis(1, at = 0.25, labels = c("Minor Allele Frequency at Heterozygous Sites"), line = 1.5, tick = FALSE)
+axis(1, at = 0.25, labels = c("N = 28807 filtered SNPs"), line = 2.5, tick = FALSE)
+axis(2, at = seq(0,4, by =1), labels = c("0%", "10%", "20%", "30%","40%"))
+axis(2, at = 2, labels = "Percentage of Sites", line = 1.5, tick = FALSE)
 dev.off()
 ```
 
@@ -209,7 +241,7 @@ ggplot(all.filt, aes(x=MA_Freq, y=Depth)) +
   geom_point(colour = "grey80") + 
   theme_classic() +
   geom_smooth(formula = y ~ poly(x,2), colour = "black") + 
-  labs(x = "Occurence Rate of Minor Allele", y = "Read Depth") +
+  labs(x = "Minor Allele Frequency at Heterozygous Sites", y = "Read Depth") +
   theme(axis.title.x = element_text(size=14, face="bold"),axis.title.y = element_text(size=14, face="bold"),
         axis.text=element_text(size=12, colour = "black")) +
   geom_text(x=0.48, y=320, label=expression(r^2 == 0.03))

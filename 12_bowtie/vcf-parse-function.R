@@ -1,5 +1,6 @@
 vcf.parser <- function(vcf.name) {
-  my.vcf <- read.vcfR(paste("all_recoded_vcfs/",vcf.name, sep = ""), verbose = FALSE)
+  #my.vcf <- read.vcfR(paste("all_recoded_vcfs/",vcf.name, sep = ""), verbose = FALSE)
+  my.vcf <- read.vcfR(vcf.name, verbose = FALSE)
   ID.name <- str_sub(vcf.name, 1, nchar(vcf.name)-12)
   dp <- extract.gt(my.vcf, element = "DP", as.numeric = TRUE)
   ad <- extract.gt(my.vcf, element = "AD")
